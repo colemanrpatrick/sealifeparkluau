@@ -85,7 +85,6 @@ for (var i = 0; i < $_inputs.length; i++) {
 
 };
 
-
 function numIncrement(numberInput, increase){
   var myInputObject = document.getElementById(numberInput);
   if (increase) {
@@ -143,6 +142,9 @@ buttonEvents();
 var $_cartBottom = document.getElementsByClassName("row")[1];
 $_cartBottom.setAttribute("id","cart-bottom");
 
+//==== datepicker validation fix ====//
+document.getElementsByClassName("datepicker")[0].readOnly = true;
+//=================================//
 // ;
 //==================//
 // let states = [

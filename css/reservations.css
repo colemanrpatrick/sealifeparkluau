@@ -1,0 +1,262 @@
+/*===========*/
+.date-input {
+  height: 0;
+  width: 0;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+#reservation-window{
+width: 100%;
+height: 100%;
+position: fixed;
+z-index: 998;
+background-color: #000000cf;
+top: 0;
+left: 0;
+}
+#reservation-window.hidden{
+  display: none;
+}
+#reservation-window.active{
+  display: block;
+}
+#reservation-container {
+background: #FFDFD6;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%,-50%);
+padding: 1em;
+border-radius: 1em;
+width: 90%;
+max-width: 50em;
+}
+#close-reservation {
+position: absolute;
+right: 0.5em;
+top: 0.5em;
+background: none;
+border: 0.15em solid;
+color: #333;
+border-radius: 50%;
+cursor: pointer;
+}
+#close-reservation .material-symbols-outlined{
+ font-size: 2.5em;
+}
+/* custom JQUERY UI Datepicker */
+.ui-datepicker-inline.ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all {
+max-width: 50em;
+width: 100%;
+}
+.ui-state-default {
+height: 5em;
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+border: 1px solid #C08092;
+background: #C08092;
+font-weight: normal;
+color: #ffffff;
+}
+/*===========================*/
+.package-title {
+font-family: 'kontikialohajfregular', 'Lobster', sans-serif;
+text-transform: capitalize;
+color: #9d3124;
+line-height: 1em;
+padding-bottom: 0.75em;
+}
+.next-btn,
+.prev-btn{
+background-color: #9D3124;
+color: #FAFAFA;
+font-size: 1em;
+padding: 0.5em 2.5em;
+border-radius: 2em;
+text-transform: capitalize;
+border: 0;
+margin-top: 0.5em;
+margin-left: 0.5em;
+cursor: pointer;
+transition: 0.3s;
+}
+.next-btn:hover,
+.prev-btn:hover{
+background-color: #FE9494;
+}
+.reservation-page.hidden{
+display: none;
+}
+.reservation-page.active{
+display: block;
+text-align: center;
+padding-top: 2em;
+padding-bottom: 2em;
+}
+/*===========================*/
+.price-container {
+display: table;
+list-style-type: none;
+width: 100%;
+margin-top: 0.5em;
+padding-bottom: 0.5em;
+border-bottom: 0.1em solid #f7795629;
+vertical-align: center !important;
+}
+.price-container li:nth-child(1) {
+width: 20%;
+display: table-cell;
+text-align: center;
+}
+.price-container li:nth-child(2) {
+display: table-cell;
+width: 50%;
+text-align: center;
+padding: 0em 1em;
+}
+.price-container li:nth-child(3) {
+display: table-cell;
+text-align: center;
+}
+.price-container .price-control {
+height: 0;
+width: 0;
+border: 0;
+}
+.list-price,
+.sale-price{
+display: inline-block;
+width: 5em;
+text-align: center;
+color: #333;
+font-size: 1.1em;
+}
+.sale-price{
+font-weight: bolder;
+}
+.list-price::before {
+content:"list";
+display: block;
+font-size: 0.8em;
+text-transform: capitalize;
+text-align: center;
+font-weight: lighter;
+}
+.sale-price::before{
+content:"sale";
+display: block;
+font-size: 0.8em;
+text-transform: capitalize;
+font-weight: lighter;
+}
+.price-list {
+text-align: center;
+}
+.price-container li {
+vertical-align: middle;
+}
+
+.collector-container {
+padding: 1em;
+text-align: center;
+display: inline-block;
+width: 50%;
+}
+.collector-container label {
+display: block;
+font-family: 'kontikialohajfregular', 'Lobster', sans-serif;
+color: #333;
+}
+.collector-container input[type=text],
+.collector-container input[type=email]{
+padding: 1em;
+width: 100%;
+max-width: 25em;
+margin: 1em auto;
+border-radius: 0.75em;
+border: 0.15em solid gainsboro;
+text-transform: capitalize;
+}
+.collector-container select {
+padding: 1em;
+width: 100%;
+max-width: 25em;
+margin: 1em auto;
+border-radius: 0.75em;
+border: 0.15em solid gainsboro;
+font-family: ;
+background: white;
+cursor: pointer;
+}
+.spinner {
+width: 2em;
+font-size: 1em;
+vertical-align: middle;
+display: inline-block;
+border: 0;
+padding: 0.25em 0.2em;
+text-align: center;
+}
+
+.minus-button,
+.plus-button{
+color: #C08092;
+background: transparent;
+border: 0;
+border-radius: 5em;
+cursor: pointer;
+padding: 0.25em;
+}
+.spinner-container {
+border-radius: 5em;
+padding-top: 0.25em;
+padding-bottom: 0.25em;
+max-width: 6em;
+background: white;
+}
+
+@media(max-width: 650px){
+.spinner-container{
+  max-width: 2.5em;
+  text-align: center;
+  transform: scaleY(-1);
+  height: auto;
+}
+.spinner{
+  display: block;
+  margin: 0 auto;
+  transform: scaleY(-1);
+}
+.price-container li:nth-child(1){
+  width: 15%;
+}
+
+.collector-container {
+  width: 100%;
+}
+  .minus-button,
+.plus-button{
+padding: 0;
+}
+}
+#reservation-controls {
+text-align: center;
+}
+#reserve-now{
+display: none;
+}
+
+#addToCartSubmit {
+background-color: #9D3124;
+color: #FAFAFA;
+font-size: 1em;
+padding: 0.5em 2.5em;
+border-radius: 2em;
+text-transform: capitalize;
+border: 0;
+margin-top: 0.5em;
+margin-left: 0.5em;
+cursor: pointer;
+transition: 0.3s;
+}

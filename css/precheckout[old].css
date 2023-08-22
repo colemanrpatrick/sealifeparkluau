@@ -1,0 +1,433 @@
+/*============*/
+#checkout-window {
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+}
+#checkout-window {
+	display: none;
+}
+#checkout-window.active {
+	display: block;
+}
+#checkout-content {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background: #ece8e3;
+	width: 100%;
+	max-width: 1200px;
+	box-shadow: 0em 0em 1em #00000038;
+	overflow-y: scroll;
+	height: 90%;
+}
+#checkout-content header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 1em 0em 1em 2em;
+}
+#checkout-header {
+	color: #031e29;
+	font-size: 2em;
+}
+.linethru {
+	text-decoration: line-through;
+	color: #ccbca7;
+}
+.price-prices span {
+	display: block;
+	font-size: 1.15em;
+	text-align: center;
+}
+.price-prices p {
+	display: inline-block;
+	margin: 0em 0.5em;
+	text-transform: capitalize;
+	text-align: center;
+	min-width: 3em;
+}
+.price-prices span:not(.linethru) {
+	color: #333;
+	font-weight: bolder;
+}
+#checkout-content header button {
+	color: #0c6b9e;
+	text-transform: capitalize;
+	font-weight: bold;
+	cursor: poMontserrat;
+	border: 0;
+	background: none;
+}
+#checkout-content header button .material-symbols-outlined {
+	font-size: 3em;
+	font-weight: bold;
+	border: 0.05em solid;
+	border-radius: 2em;
+}
+.addToCartPage {
+	display: none;
+}
+.addToCartPage.active {
+	display: block;
+}
+/* datepicker custom styling */
+
+.ui-widget {
+	font-family: system-ui;
+}
+.ui-datepicker {
+	width: auto;
+	max-width: 40em;
+}
+.ui-datepicker .ui-datepicker-title {
+	padding: 0.75em;
+}
+.ui-datepicker-calendar th span {
+	font-weight: normal;
+}
+.ui-widget.ui-widget-content {
+	margin: 0 auto;
+	border: none;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-button, .ui-button {
+	border: none;
+	background: #0c6b9e;
+	color: white;
+	padding: 2em 0.25em 0.25em 2em;
+}
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-button:hover, .ui-button:focus {
+	border: none;
+	background: white;
+	font-weight: normal;
+	color: #212121;
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+	background: gold !important;
+	color: #0c6b9e !important;
+	font-weight: bold;
+}
+.ui-widget-header {
+	border: none;
+	color: #0c6b9e;
+	width: 100%;
+	background: #f9d365;
+}
+.ui-state-disabled .ui-state-default {
+	height: 3.82em;
+}
+input#dateInput {
+	position: absolute;
+	z-index: -1;
+	height: 0;
+	width: 0;
+	overflow: hidden;
+	opacity: 0;
+}
+.numberSpinner {
+	text-align: left;
+	display: inline-block;
+	overflow: hidden;
+}
+#datepicker {
+	padding-top: 0em;
+}
+@media(max-width:1200px) {
+	#datepicker {
+		margin: 3em 0em;
+		padding-top: 0 !important;
+	}
+}
+#checkout-window .numberSpinner section {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	background: #ece8e3;
+	font-size: 1em;
+	max-width: 2em;
+	white-space: nowrap;
+}
+.numberSpinner input:not[type="number"] {
+	border: 0;
+	color: #085c8e;
+	margin: 0;
+	vertical-align: middle;
+	display: inline-block;
+	background: #ece8e3;
+	font-size: 1em;
+	max-width: 1em;
+}
+.numberSpinner input:not[type="number"] {
+	-moz-appearance: textfield;
+}
+#checkout-window .numberSpinner .material-symbols-outlined {
+	font-size: 2.5em;
+}
+.numberSpinner button {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	border: 0;
+	font-weight: bold;
+	color: #085c8e;
+	transition: 0.3s;
+	padding: 0;
+	border-radius: 0;
+	background: none;
+	cursor: pointer;
+}
+.numberSpinner button:hover {
+	opacity: 0.7;
+}
+.numberSpinner button:active {
+	background-color: gold;
+}
+.price-option {
+	display: table;
+	width: 90%;
+	margin: 0em auto;
+	padding-bottom: 0.25em;
+}
+.price-spinner-cont {
+	width: 25%;
+}
+.price-prices {
+}
+.price-description {
+	text-align: center;
+}
+.numberMinus {
+	border-top-left-radius: 1em;
+	border-bottom-left-radius: 1em;
+}
+.numberPlus {
+	border-top-right-radius: 1em;
+	border-bottom-right-radius: 1em;
+}
+.price-option {
+	display: table;
+	width: 90%;
+	margin: 0em auto;
+	padding-bottom: 1em;
+	border-bottom: 2px solid #c1b3a136;
+}
+.price-option li {
+	display: table-cell;
+	vertical-align: middle;
+}
+.price-spinner-cont {
+	width: 3.5em;
+	text-align: center;
+}
+.price-prices {
+	text-align: right;
+}
+.price-description {
+	text-align: center;
+}
+.numberMinus {
+	border-top-left-radius: 1em;
+	border-bottom-left-radius: 1em;
+}
+.numberPlus {
+	border-top-right-radius: 1em;
+	border-bottom-right-radius: 1em;
+}
+.prev-btn {
+	background: #0c6b9e;
+	border: 0;
+	color: white;
+	text-transform: capitalize;
+	padding: 0.75em 3em;
+	border-radius: 2em;
+	cursor: pointer;
+	font-size: 1em;
+}
+.next-btn {
+	background: #0c6b9e;
+	border: 0;
+	color: white;
+	text-transform: capitalize;
+	padding: 0.75em 3em;
+	border-radius: 2em;
+	cursor: pointer;
+	font-size: 1em;
+}
+.prev-btn:hover,
+.next-btn:hover{
+	background-color: #0988cc;
+}
+.prev-btn:active,
+.next-btn:active{
+	background-color:#00a6ff;
+}
+.checkout-footer {
+	text-align: center;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+#addToCartSubmit {
+	background: #f9d365;
+	border: 0;
+	color: #0c6b9e;
+	text-transform: capitalize;
+	padding: 0.75em 3em;
+	border-radius: 2em;
+	cursor: poMontserrat;
+	font-size: 1em;
+}
+.collector {
+	font-family: "Montserrat", sans-serif;
+	padding: 1em;
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+.collector input[type=text] {
+	display: block;
+	margin: 0 auto;
+	padding: 1em;
+	width: 90%;
+	max-width: 24em;
+	font-size: 0.9em;
+	border-radius: 0em;
+	border: 0;
+	margin-top: 1em;
+}
+.collector label {
+	color: #0c6b9e;
+}
+.collector, #email-collector, #phone-collector {
+	font-family: "Montserrat", sans-serif;
+	padding: 1em;
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+.collector input[type=text], #email, #phone {
+	display: block;
+	margin: 0 auto;
+	padding: 1em;
+	width: 90%;
+	max-width: 24em;
+	font-size: 0.9em;
+	border: 0.15em solid #e6d4bf;
+	margin-top: 1em;
+	border-radius: 1em;
+	background: #fdf8f2;
+}
+.collector select {
+	display: block;
+	margin: 0 auto;
+	margin-top: 0px;
+	padding: 1em;
+	width: 90%;
+	max-width: 24em;
+	font-size: 0.9em;
+	border: 0.15em solid #e6d4bf;
+	margin-top: 1em;
+	border-radius: 1em;
+	background: #fdf8f2;
+	cursor: poMontserrat;
+}
+.collector input[type="checkbox"] {
+	transform: scale(1.3) translateY(-0.05em);
+	margin-left: 0.5em;
+	cursor: poMontserrat;
+}
+.collector label, #email-collector label, #phone-collector label {
+	color: #0c6b9e;
+}
+#date-error, #price-error {
+	color: #970000;
+	text-transform: capitalize;
+	font-family: "Montserrat";
+	font-size: 1.25em;
+	display: block;
+	text-align: center;
+	height: 1em;
+	line-height: 1em;
+}
+.date-error, .price-error {
+	width: 0;
+	overflow: hidden;
+}
+.date-error.active, .price-error.active {
+	width: auto;
+}
+@media(max-width:600px) {
+	#checkout-window .numberSpinner:not[type="number"] {
+		transform: rotate(-90deg);
+		/*! width: 7em; */
+		transform-origin: center;
+	}
+	#checkout-window .numberSpinner section {
+		transform: rotate(-90deg);
+		transform-origin: center;
+	}
+}
+@media(max-width:450px) {
+	#checkout-window {
+		background(0, 0, 0, 0);
+	}
+	.price-prices {
+		font-size: 0.8em;
+	}
+	.price-description {
+		font-size: 0.8em;
+	}
+	#checkout-content {
+		width: 100%;
+		height: 100%;
+	}
+}
+.group {
+	border: 0.25em solid #ccbca7;
+	margin: 1em;
+	padding: 0em;
+}
+.group-header {
+	width: 100%;
+	text-align: center;
+	padding: 1em;
+	font-size: 1em;
+	cursor: poMontserrat;
+	border-radius: 0;
+	border: 0;
+	background: #0c6b9e;
+	position: relative;
+}
+.group-title {
+	color: white;
+}
+.group-header-btn {
+	color: white;
+	position: absolute;
+	right: 1em;
+	top: 50%;
+	transform: translateY(-50%);
+	text-transform: capitalize;
+	font-size: 1em;
+}
+.group .group-section {
+	height: 0;
+	overflow: hidden;
+}
+.group.active .group-section {
+	height: auto;
+}
+
+.numberSpinner input {
+  max-width: 2.5em;
+  font-size: 1.15em;
+}
+.price-description p {
+  text-align: left;
+  padding-left: 1em;
+  color: #054c73;
+}
