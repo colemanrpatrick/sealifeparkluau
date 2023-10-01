@@ -75,7 +75,7 @@
 @media(max-width:1000px){
   #hero header{
     width: 90%;
-    right auto;
+    right: auto;
     left: 50%;
     transform: translateX(-50%);
     max-width: 40em;

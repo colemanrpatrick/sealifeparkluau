@@ -403,7 +403,6 @@ footer {
 #footer-map .material-symbols-outlined {
   display: inline-block;
   font-weight: bold;
-  float: ;
 }
 #footer-map p {
   display: inline-block;
@@ -509,7 +508,7 @@ footer {
   }
   #book-here header {
 	font-size: 2em;
-	font-family: "kontikialohajfregular", sans-serif
+	font-family: "kontikialohajfregular", sans-serif;
 	line-height: 1em;
 	padding: 0.5em;
 	color: #9d3124;
