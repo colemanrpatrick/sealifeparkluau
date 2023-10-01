@@ -121,8 +121,24 @@ let createCalendar = (page,$name) => {
 
   datePicker.setAttribute("id", "datepicker");
 
+  let calendarMessage = document.createElement("div");
+  calendarMessage.setAttribute("id","calendar-message");
+  calendarMessage.setAttribute("class","hidden");
+  calendarMessage.innerHTML = "<span class='material-symbols-outlined'>edit_calendar</span><p>Select a date to continue</p>";
+
   document.getElementById(page).appendChild(dateInput);
   document.getElementById(page).appendChild(datePicker);
+  document.getElementById(page).appendChild(calendarMessage);
+
+};
+
+let validateCart = ($id,$visible) => {
+  calendarMsg = document.getElementById($id);
+  if($visible){
+    calendarMsg.className = "visible";
+  }else{
+    calendarMsg.className = "hidden";
+  }
 };
 
 //________________________________________________________
@@ -131,7 +147,11 @@ let createCalendar = (page,$name) => {
 //________________________________________________________
 //________________________________________________________
 
-let showCalendar = (page, disabledDates,$name) => {
+let showCalendar = (page, $collector) => {
+  
+  let disabledDates = $collector.Availabilities[0].ClosedDates;
+  let $name = $collector.Collectors[0].ControlName;
+
   createCalendar(page,$name);
 
   let dateToday = new Date();
@@ -141,14 +161,22 @@ let showCalendar = (page, disabledDates,$name) => {
   }
   $("#datepicker").datepicker({
     minDate: dateToday,
+    defaultDate: "0M",
     beforeShowDay: function (date) {
       var disabledDatesString = jQuery.datepicker.formatDate("mm-dd-yy", date);
       return [disabledDates.indexOf(disabledDatesString) == -1];
     },
   });
-  if (dateInput.value == null || dateInput.value == undefined) {
-    dateInput.value = "";
-  }
+  console.log($collector.Collectors[0].Value);
+  if ($collector.Collectors[0].Value !== null) {
+    console.log($collector.Collectors[0].Value);
+    $("#datepicker").datepicker("setDate",$collector.Collectors[0].Value);
+    $("#dateInput").prop("value", $collector.Collectors[0].Value);
+  }else{
+    console.log("no value")
+    $("#datepicker").val("");
+    $("#dateInput").prop("value", "");
+  };
 
   /*====== datepicker / date input events ======*/
 
@@ -156,24 +184,17 @@ let showCalendar = (page, disabledDates,$name) => {
     $("#datepicker").datepicker("setDate", $(this).val()).trigger("change");
   });
   $("#datepicker").change(function (disabledDates) {
+
     if ($("#dateInput").val() !== disabledDates) {
       $("#dateInput").prop("value", $(this).val());
+    };
+
+    if ($("#dateInput").val() !== "") {
+      validateCart("calendar-message",false);
+    }else{
+      validateCart("calendar-message",true);
     }
   });
-
-  /*========== jQuery UI datepicker functions ==========*/
-
-  if (
-    typeof $("#dateInput") !== undefined &&
-    typeof $("#datepicker") !== undefined
-  ) {
-    if ($("#dateInput").val().length > 0) {
-      $("#datepicker").datepicker("setDate", $("#dateInput").val());
-    } else {
-      $(".ui-datepicker-current-day").removeClass("ui-datepicker-current-day");
-      $("#datepicker").val("");
-    }
-  }
 };
 
 //________________________________________________________
@@ -191,7 +212,7 @@ var $createNewLiElement = ($parentElement,$elem) => {
 function numIncrement(numberInput, increase) {
 
   var myInputObject = document.getElementById(numberInput);
-  console.log(myInputObject);
+  //console.log(myInputObject);
 
   if (increase) {
       myInputObject.value++;
@@ -208,17 +229,17 @@ function numIncrement(numberInput, increase) {
 
 };
 
-let spinnerFunction = (elem) => {
-  console.log(this.id);
+let spinnerFunction = (elem,$value) => {
+  //console.log(this.id);
 };
 
-let createSpinners = (controlName) =>{
+let createSpinners = (controlName,$value) =>{
   let $priceInput = document.createElement("input");
   $priceInput.setAttribute("type","text"); 
   $priceInput.setAttribute("id",controlName);
   $priceInput.setAttribute("name",controlName);
   $priceInput.setAttribute("class","price-control");
-  $priceInput.value = 0;
+
 
   let $spinnerTemplate = document.createElement("div");
   $spinnerTemplate.setAttribute("class","spinner-container");
@@ -226,8 +247,11 @@ let createSpinners = (controlName) =>{
   $spinner = document.createElement("input");
   $spinner.setAttribute("type","text");
   $spinner.setAttribute("class","spinner");
-  $spinner.setAttribute("id","spinner-"+controlName)
-  $spinner.setAttribute("placeholder","0");
+  $spinner.setAttribute("id","spinner-"+controlName);
+
+  $priceInput.value = $value;
+  $spinner.value = $value;
+
   $spinner.setAttribute("readonly","true");
 
   $minusButton = createButton("spinner-minus-"+controlName,"<span class='material-symbols-outlined'>remove</span>","minus-button");
@@ -248,6 +272,7 @@ let createPrices = (page,priceGroupArg) => {
   let priceDescription = priceGroupArg[1];
   let listPrice = priceGroupArg[2];
   let salePrice = priceGroupArg[3];
+  let $quantity = priceGroupArg[4];
 
   let $priceContainer = document.createElement("UL");
   $priceContainer.setAttribute("class","price-container");
@@ -274,10 +299,9 @@ let createPrices = (page,priceGroupArg) => {
 
   document.getElementById("" + page + "").appendChild($priceContainer);
 
-  $createNewLiElement($priceContainer,createSpinners(controlName));
+  $createNewLiElement($priceContainer,createSpinners(controlName,$quantity));
   $createNewLiElement($priceContainer,$description);
   $createNewLiElement($priceContainer,$priceList);
-  
 };
 
 //________________________________________________________
@@ -293,13 +317,22 @@ let showPrices = (page,dataPrices,priceGroup) => {
     value.ControlName,
     value.Description,
     value.ListPrice,
-    value.Saleprice
+    value.Saleprice,
+    value.Quantity
     ];
     if(value.Grouping == priceGroup){
       createPrices(page,priceGroupArg);
     }
   });
 };
+
+let addPriceMessage = (page) =>{
+  let priceMessage = document.createElement("div");
+  priceMessage.setAttribute("id","price-message");
+  priceMessage.setAttribute("class","hidden");
+  priceMessage.innerHTML = "<span class='material-symbols-outlined'>edit_calendar</span><p>At least one participant must be added to continue</p>";  
+  document.getElementById(page).appendChild(priceMessage);
+}
 //________________________________________________________
 //________________________________________________________
 //Prices Events
@@ -312,6 +345,9 @@ let $spinnerEvents = () => {
 
     for (let i = 0; i < $plusButton.length; i++) {
       $plusButton[i].addEventListener("click",({target}) => {
+
+        validateCart("price-message",false);
+
         let $spinner = target.parentElement.previousElementSibling;
         let $input = $spinner.parentElement.firstElementChild;
         numIncrement( $spinner.getAttribute("id"), true);
@@ -322,6 +358,9 @@ let $spinnerEvents = () => {
 
     for (let i = 0; i < $minusButton.length; i++) {
       $minusButton[i].addEventListener("click",({target}) => {
+
+        validateCart("price-message",false);
+
         let $spinner = target.parentElement.nextElementSibling;
         let $input = $spinner.parentElement.firstElementChild;
         numIncrement( $spinner.getAttribute("id"), false);
@@ -329,7 +368,6 @@ let $spinnerEvents = () => {
       });
     };
 };
-
 
 let multiInputValidate = function (elem) {
   let $inputs = document.getElementsByClassName(elem);
@@ -368,27 +406,37 @@ let createCollectors = (page,$collector) => {
     switch ($dataType) {
 
       case 0:
-        //console.log("input type text : ", $collector);
 
         let $textLabel = document.createElement("label");
         let $textInput = document.createElement("input");
 
-        $textLabel.innerHTML = $collector.Name;
+        if($collector.Value === null){
+          $textInput.value = "";
+        }else{
+          $textInput.value = $collector.Value;
+        };
+
+        if($collector.DisplayAlias !== null){
+          $textLabel.innerHTML = $collector.DisplayAlias;
+          $textInput.setAttribute("placeholder",$collector.DisplayAlias);
+        }else{
+          $textLabel.innerHTML = $collector.Name;
+          $textInput.setAttribute("placeholder",$collector.Name);
+        }
+        
         $textLabel.setAttribute("for",$collector.ControlName);
         $textInput.setAttribute("type","text");
         $textInput.setAttribute("id",$collector.ControlName);
         $textInput.setAttribute("name",$collector.ControlName);
-        $textInput.setAttribute("placeholder",$collector.Name);
 
         $collectorContainer.appendChild($textLabel);
         $collectorContainer.appendChild($textInput);
 
         document.getElementById("" + page + "").appendChild($collectorContainer);
+
         break;
 
       case 1:
-
-        //console.log("input type bit", $collector);
 
         let $bitLabel = document.createElement("label");
         $bitLabel.innerHTML = $collector.Name;
@@ -397,6 +445,12 @@ let createCollectors = (page,$collector) => {
         $bitInput.setAttribute("type", "checkbox");
         $bitInput.setAttribute("name", $collector.ControlName);
         $bitInput.setAttribute("Id", $collector.ControlName);
+
+        if($collector.Value === null){
+          $bitInput.checked = false;
+        }else{
+          $bitInput.checked = true;
+        };
 
         $collectorContainer.appendChild($bitLabel);
         $collectorContainer.appendChild($bitInput);
@@ -407,15 +461,14 @@ let createCollectors = (page,$collector) => {
 
       case 7:
 
-        //console.log("select", $collector);
-
         let $selectCollector = document.createElement("SELECT");
         let $selectLabel = document.createElement("Label");
 
         $selectLabel.setAttribute("for",$collector.ControlName);
         $selectLabel.innerHTML = $collector.Name; 
 
-        $selectCollector.setAttribute("ID", $collector.ControlName);
+        $selectCollector.setAttribute("name", $collector.ControlName);
+        $selectCollector.setAttribute("id", $collector.ControlName);
 
         let $selectCollectorList = $collector.ListMember.ListMembers;
 
@@ -428,18 +481,27 @@ let createCollectors = (page,$collector) => {
             $selectCollectorOption.innerHTML = element.Shortcode;
             $selectCollectorOption.setAttribute("value", "" + element.ID + "");
             $selectCollector.appendChild($selectCollectorOption);
-
+            
+            if(element.Selected == true){
+              $selectCollector.value = $selectCollectorOption.id;
+            };
         });
 
         $collectorContainer.appendChild($selectLabel);
         $collectorContainer.appendChild($selectCollector);
         document.getElementById("" + page + "").appendChild($collectorContainer);
 
+        $selectCollector.addEventListener("change",() => {
+           let selectOption = $selectCollector.options[$selectCollector.selectedIndex];
+           let selectOptionId = selectOption.id;
+           $selectCollector.value = selectOptionId;
+        });
+
         break;
 
       default:
 
-        console.log("no collectors to return", $collector);
+        //console.log("no collectors to return", $collector);
 
         break;
 
@@ -459,7 +521,6 @@ let showCollectors = (page,$collectors) => {
     const [key,value] = entry;
     createCollectors(page,value);
   });
-
 };
 
 //________________________________________________________
@@ -468,11 +529,10 @@ let showCollectors = (page,$collectors) => {
 //________________________________________________________
 //________________________________________________________
 
-let addCollectorEvent = (id) => {
+let collectorValidate = ($id,$collector) => {
 
-  let $element = document.getElementById(id);
-
-  let $dataType = $element.ApplicationDataType;
+  let $element = document.getElementById($id);
+  let $dataType = $collector.ApplicationDataType;
 
   switch ($dataType) {
 
@@ -483,6 +543,14 @@ let addCollectorEvent = (id) => {
     case 1:
 
       break;
+
+    case 2: 
+
+      if($element.value.length <= 0 ){
+        return false;
+      }else{
+        return true;
+      };
 
     case 7:
 
@@ -511,10 +579,10 @@ let createEmailPhoneCollectors = ($email,$phone) => {
   email.setAttribute("type", "email");
   email.setAttribute("id", "email");
   email.setAttribute("placeholder", "email");
+  email.setAttribute("name","Order.Customer.PrimaryEmail");
 
   let emailLabel = document.createElement("LABEL");
   emailLabel.innerHTML = "E-Mail";
-
 
   let phoneCollector = document.createElement("DIV");
   phoneCollector.setAttribute("id", "phone-collector");
@@ -523,7 +591,7 @@ let createEmailPhoneCollectors = ($email,$phone) => {
   phone.setAttribute("type", "text");
   phone.setAttribute("id", "phone");
   phone.setAttribute("placeholder", "phone");
-  phone.setAttribute("name", "phone");
+  phone.setAttribute("name", "Order.Customer.MobilePhone");
 
   let phoneLabel = document.createElement("LABEL");
   phoneLabel.innerHTML = "Phone";
@@ -556,7 +624,7 @@ let showEmailPhoneTemplate = (page) => {
     collectorContainer.appendChild(createEmailPhoneCollectors(false,true));
     document.getElementById(page).appendChild(collectorContainer);
   }else{
-      console.log("do nothing ");
+      //console.log("do nothing ");
   };
 };
 
@@ -565,6 +633,11 @@ let showEmailPhoneTemplate = (page) => {
 //helper functions
 //________________________________________________________
 //________________________________________________________
+
+let checkValue = ($id) => {
+  $element = document.getElementById($id);
+  alert($id+": "+$element.value);
+}
 
 let submitButton = (page) => {
 
@@ -575,11 +648,16 @@ let submitButton = (page) => {
 
     $submitButton = document.createElement("button");
     $submitButton.setAttribute("type","submit");
-    $submitButton.setAttribute("value","Add to Cart");
+    $submitButton.setAttribute("value","Book Now");
     $submitButton.setAttribute("id","addToCartSubmit");
     $submitButton.setAttribute("name","submit");
     $submitButton.innerHTML = "Add To Cart";
 
     document.getElementById(page).appendChild($hiddenInput);
     document.getElementById(page).appendChild($submitButton);
+    
+    $submitButton.addEventListener("click",function(){
+      // checkValue("dateInput");
+      //checkValue("SelectYourOahuHotel_2341");
+    });
 };

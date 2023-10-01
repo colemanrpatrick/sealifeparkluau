@@ -1,59 +1,24 @@
 //________________________________________________________
 //________________________________________________________
-//create Pages  
+//create Pages
 //________________________________________________________
 //________________________________________________________
-let create_bronzePage1 = () => {
+let createPage1 = () => {
     createReservationPage("page1");
-    createTitle("page1",cartData.Groupings[1].Name);
-    showCalendar("page1",cartData.Availabilities[0].ClosedDates,cartData.Collectors[0].ControlName);
+    createTitle("page1","Start By Selecting a Date");
+    showCalendar("page1",cartData);
 };
-let create_bronzePage2 = () => {
+let createPage2 = ($group) => {
     createReservationPage("page2");
-    createTitle("page2",cartData.Groupings[1].Name);
-    showPrices("page2",cartData.Prices,"Bronze Package");
+    createTitle("page2","How Many Participants?");
+    showPrices("page2",cartData.Prices,$group);
     showPrices("page2",cartData.Prices,null);
+    addPriceMessage("page2");
     $spinnerEvents();
  };
- let create_bronzePage3 = () => {
+ let createPage3 = () => {
     createReservationPage("page3");
-    createTitle("page3",cartData.Groupings[1].Name);
-    showCollectors("page3",cartData.Collectors);
-    showEmailPhoneTemplate("page3");
- };
- let create_silverPage1 = () => {
-    createReservationPage("page1");
-    createTitle("page1",cartData.Groupings[2].Name);
-    showCalendar("page1",cartData.Availabilities[0].ClosedDates,cartData.Collectors[0].ControlName);
-};
-let create_silverPage2 = () => {
-    createReservationPage("page2");
-    createTitle("page2",cartData.Groupings[2].Name);
-    showPrices("page2",cartData.Prices,"Silver Package");
-    showPrices("page2",cartData.Prices,null);
-    $spinnerEvents();
- };
- let create_silverPage3 = () => {
-    createReservationPage("page3");
-    createTitle("page3",cartData.Groupings[2].Name);
-    showCollectors("page3",cartData.Collectors);
-    showEmailPhoneTemplate("page3");
- };
- let create_goldPage1 = () => {
-    createReservationPage("page1");
-    createTitle("page1",cartData.Groupings[0].Name);
-    showCalendar("page1",cartData.Availabilities[0].ClosedDates,cartData.Collectors[0].ControlName);
-};
-let create_goldPage2 = () => {
-    createReservationPage("page2");
-    createTitle("page2",cartData.Groupings[0].Name);
-    showPrices("page2",cartData.Prices,"Gold Package");
-    showPrices("page2",cartData.Prices,null);
-    $spinnerEvents();
- };
- let create_goldPage3 = () => {
-    createReservationPage("page3");
-    createTitle("page3",cartData.Groupings[0].Name);
+    createTitle("page3","Lastly, Party Name & Details");
     showCollectors("page3",cartData.Collectors);
     showEmailPhoneTemplate("page3");
  };
@@ -68,21 +33,25 @@ let displayPage1 = () => {
     hideReservationPages("reservation-page","page1");
     document.getElementById("reservation-controls").appendChild(createButton("next-1","continue","next-btn"));
     document.getElementById("next-1").addEventListener("click",function(){
-        displayPage2();
+        if (collectorValidate("dateInput",cartData.Collectors[0])){
+            displayPage2();
+        } else {
+           validateCart("calendar-message",true)   
+        };    
     },false);
 };
 let displayPage2 = () => {
     hideReservationPages("reservation-page","page2");
     document.getElementById("reservation-controls").appendChild(createButton("prev-2","back","prev-btn"));
     document.getElementById("prev-2").addEventListener("click",function(){
-        displayPage1();
+            displayPage1();
     },false);
     document.getElementById("reservation-controls").appendChild(createButton("next-2","continue","next-btn"));
     document.getElementById("next-2").addEventListener("click",function(){
         if(multiInputValidate("price-control")){
             displayPage3();
         }else{
-            alert("please select a package");
+            validateCart("price-message",true);
         };
     },false);
 };
@@ -101,31 +70,31 @@ let displayPage3 = () => {
 //________________________________________________________
 //________________________________________________________
 
-let _bronze = document.getElementById("bronze-reservation");
-let _silver = document.getElementById("silver-reservation");
-let _gold = document.getElementById("gold-reservation");
+let showOnly = document.getElementById("show-only-reservation");
+let generalAdmission = document.getElementById("general-admission-reservation");
+let vIPadmission = document.getElementById("VIP-reservation");
 
-_bronze.addEventListener("click",() => {
+showOnly.addEventListener("click",() => {
     createReservationTemplate();
-    create_bronzePage1();
-    create_bronzePage2();
-    create_bronzePage3();
+    createPage1();
+    createPage2("Show Only Seating");
+    createPage3();
     displayPage1();
 }); 
 
-_silver.addEventListener("click",() => {
+generalAdmission.addEventListener("click",() => {
     createReservationTemplate();
-    create_silverPage1();
-    create_silverPage2();
-    create_silverPage3();
+    createPage1();
+    createPage2("General Seating");
+    createPage3();
     displayPage1();
 }); 
 
-_gold.addEventListener("click",() => {
+vIPadmission.addEventListener("click",() => {
     createReservationTemplate();
-    create_goldPage1();
-    create_goldPage2();
-    create_goldPage3();
+    createPage1();
+    createPage2("VIP Seating");
+    createPage3();
     displayPage1();
 }); 
 

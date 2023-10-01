@@ -1,5 +1,5 @@
 /*===========*/
-.date-input {
+#dateInput {
   height: 0;
   width: 0;
   position: absolute;
@@ -14,6 +14,7 @@ z-index: 998;
 background-color: #000000cf;
 top: 0;
 left: 0;
+display: none;
 }
 #reservation-window.hidden{
   display: none;
@@ -22,15 +23,19 @@ left: 0;
   display: block;
 }
 #reservation-container {
-background: #FFDFD6;
+background: #FFF;
 position: absolute;
 left: 50%;
 top: 50%;
 transform: translate(-50%,-50%);
 padding: 1em;
-border-radius: 1em;
 width: 90%;
-max-width: 50em;
+max-width: 35em;
+background-image: url("../images/SecondaryContentBG.jpg");
+background-position: top center;
+background-repeat: repeat-x;
+background-color: #ffffeb;
+border-radius: 16px;
 }
 #close-reservation {
 position: absolute;
@@ -38,9 +43,10 @@ right: 0.5em;
 top: 0.5em;
 background: none;
 border: 0.15em solid;
-color: #333;
+color: #498192;
 border-radius: 50%;
 cursor: pointer;
+background: wheat;
 }
 #close-reservation .material-symbols-outlined{
  font-size: 2.5em;
@@ -53,23 +59,58 @@ width: 100%;
 .ui-state-default {
 height: 5em;
 }
-.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
-border: 1px solid #C08092;
-background: #C08092;
-font-weight: normal;
-color: #ffffff;
+
+.ui-datepicker {
+    width: auto;
+    max-width: 40em;
 }
+.ui-widget-header {
+	background: #fff;
+	color: #498192;
+	font-weight: bold;
+	border: 0;
+}
+.ui-datepicker-calendar th span {
+    font-weight: normal;
+}
+
+.ui-widget.ui-widget-content {
+    margin: 0 auto;
+    border: none;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-button, .ui-button {
+    border: none;
+    background: #498192;
+    color: white;
+    padding: 0em 0.25em 0.25em 2em;
+}
+
+    .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-button:hover, .ui-button:focus {
+        border: none;
+        background: white;
+        font-weight: normal;
+        color: #212121;
+    }
+
+    .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+        background: #e1c115;
+        color: #498192;
+        font-weight: bold;
+    }
+
 /*===========================*/
 .package-title {
 font-family: 'kontikialohajfregular', 'Lobster', sans-serif;
 text-transform: capitalize;
-color: #9d3124;
+color: #498192;
 line-height: 1em;
-padding-bottom: 0.75em;
+font-size: 2em;
+margin-top: 1.5em;
 }
 .next-btn,
 .prev-btn{
-background-color: #9D3124;
+background-color: #fd5b6e;
 color: #FAFAFA;
 font-size: 1em;
 padding: 0.5em 2.5em;
@@ -91,8 +132,8 @@ display: none;
 .reservation-page.active{
 display: block;
 text-align: center;
-padding-top: 2em;
-padding-bottom: 2em;
+/*! padding-top: 2em; */
+/*! padding-bottom: 2em; */
 }
 /*===========================*/
 .price-container {
@@ -100,12 +141,12 @@ display: table;
 list-style-type: none;
 width: 100%;
 margin-top: 0.5em;
-padding-bottom: 0.5em;
 border-bottom: 0.1em solid #f7795629;
 vertical-align: center !important;
+padding: 0;
 }
 .price-container li:nth-child(1) {
-width: 20%;
+width: 25%;
 display: table-cell;
 text-align: center;
 }
@@ -113,7 +154,10 @@ text-align: center;
 display: table-cell;
 width: 50%;
 text-align: center;
-padding: 0em 1em;
+padding: 0em 0.25em;
+}
+.price-description {
+	font-family: sans-serif;
 }
 .price-container li:nth-child(3) {
 display: table-cell;
@@ -129,8 +173,11 @@ border: 0;
 display: inline-block;
 width: 5em;
 text-align: center;
-color: #333;
-font-size: 1.1em;
+color: #498192;
+font-size: 1.5em;
+font-family: 'kontikialohajfregular', 'Lobster', sans-serif;
+}
+.list-price {
 }
 .sale-price{
 font-weight: bolder;
@@ -142,6 +189,7 @@ font-size: 0.8em;
 text-transform: capitalize;
 text-align: center;
 font-weight: lighter;
+font-family: ;
 }
 .sale-price::before{
 content:"sale";
@@ -160,13 +208,12 @@ vertical-align: middle;
 .collector-container {
 padding: 1em;
 text-align: center;
-display: inline-block;
-width: 50%;
 }
 .collector-container label {
 display: block;
 font-family: 'kontikialohajfregular', 'Lobster', sans-serif;
 color: #333;
+font-size: 1.2em;
 }
 .collector-container input[type=text],
 .collector-container input[type=email]{
@@ -175,7 +222,7 @@ width: 100%;
 max-width: 25em;
 margin: 1em auto;
 border-radius: 0.75em;
-border: 0.15em solid gainsboro;
+border: 0.15em solid #a9a860;
 text-transform: capitalize;
 }
 .collector-container select {
@@ -184,8 +231,7 @@ width: 100%;
 max-width: 25em;
 margin: 1em auto;
 border-radius: 0.75em;
-border: 0.15em solid gainsboro;
-font-family: ;
+border: 0.15em solid #a9a860;
 background: white;
 cursor: pointer;
 }
@@ -201,27 +247,29 @@ text-align: center;
 
 .minus-button,
 .plus-button{
-color: #C08092;
+color: #498192;
 background: transparent;
 border: 0;
 border-radius: 5em;
 cursor: pointer;
 padding: 0.25em;
+vertical-align: middle;
 }
 .spinner-container {
 border-radius: 5em;
 padding-top: 0.25em;
 padding-bottom: 0.25em;
-max-width: 6em;
-background: white;
+max-width: 7em;
+background: #fff;
+border: 0.15em solid #498192;
 }
 
 @media(max-width: 650px){
 .spinner-container{
-  max-width: 2.5em;
+  /*! max-width: 2.5em; */
   text-align: center;
   transform: scaleY(-1);
-  height: auto;
+  /*! height: auto; */
 }
 .spinner{
   display: block;
@@ -231,7 +279,6 @@ background: white;
 .price-container li:nth-child(1){
   width: 15%;
 }
-
 .collector-container {
   width: 100%;
 }
@@ -248,7 +295,7 @@ display: none;
 }
 
 #addToCartSubmit {
-background-color: #9D3124;
+background-color: #FD5B6E;
 color: #FAFAFA;
 font-size: 1em;
 padding: 0.5em 2.5em;
@@ -259,4 +306,49 @@ margin-top: 0.5em;
 margin-left: 0.5em;
 cursor: pointer;
 transition: 0.3s;
+}
+#calendar-message,
+#price-message{
+  display: block;
+  background-color: #8a0000;
+  text-align: center;
+  white-space: nowrap;
+  padding: 0.25em 0em;
+  border-radius: 2em;
+  margin: 0 auto;
+  font-size: 0.9em;
+}
+#calendar-message span,
+#calendar-message p,
+#price-message span,
+#price-message p{
+  color: white;
+  font-size: 1em;
+  display: inline-block;
+  vertical-align: middle;
+}
+#calendar-message.hidden,
+#price-message.hidden{
+  width: 0; 
+  overflow: hidden;
+  height: 0;
+}
+#calendar-message.visible,
+#price-message.visible{
+  width: 100%;
+}
+#calendar-message .material-symbols-outlined,
+#price-message .material-symbols-outlined {
+  font-size: 1.25em;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 0.15em;
+  margin: 0em 0.25em;
+}
+#gold-reservation,
+#silver-reservation,
+#bronze-reservation{
+  border: 0;
+  background: transparent;
+  width: 100%;
 }

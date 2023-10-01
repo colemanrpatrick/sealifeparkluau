@@ -1,126 +1,152 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SPPHN93HRS"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag() { dataLayer.push(arguments); }
-gtag('js', new Date());
-gtag('config', 'G-SPPHN93HRS');
-</script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta charset="utf-8">
-    <title>Sea Life Park Luau - Aloha Kai Luau</title>
-            <meta name="description" content="Sea Life Park Luau known as Aloha Kai Luau is located at Sea Life Park Oahu Hawaii overlooking the Ocean.">
-            <meta name="Keywords" content="Sea Life Park Luau, Aloha Kai Luau, Tickets to Aloha Kai Luau, Luau at Sea Life Park, Best Oahu Luau, Oahu Luau, Hawaii Luau">
-            <link rel="canonical" href="https://www.sealifeparkluau.com" />
-    <meta name="viewport" content="user-scalable = yes, width=320, initial-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="css/kontikialoha.css">
-    <link href="https://fonts.googleapis.com/css2?family=Laila:wght@300&family=Lato:wght@300;900&display=swap" rel="stylesheet">
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCreSC6Ynt1JS-gwYJmTyyNAqanWCSqCAM&callback=initMap"></script>
-    <script type="text/javascript" src="js/toggle.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/jquery.lazy.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/gallery.css">
+
+    <title>Paina Luau</title>
 </head>
-  <body>
-    <!-- ================================= -->
-    <!-- ||||||||||||||||||||||||||||||||| -->
-    <!-- ================================= -->
-    <div id="masthead">
-      <ul>
-        <li class="nav-left"><a href="index.html">home</a><a href="packages.html">reservations</a><a href="dinner.html">dinner menu</a></li>
-        <li><a href="index.html" id="logo"><img src="images/design/alohakailogo.png" alt=""></a></li>
-        <li class="nav-right"> <a href="sealife.html">sealife park</a> <a href="faq.html">faq</a> <a href="contact.html">contact</a><a href="#">cart</a></li>
-      </ul>
-    </div>
-    <!-- ================================= -->
-    <!-- ||||||||||||||||||||||||||||||||| -->
-    <!-- ================================= -->
-    <div id="masthead-mobile">
-          <a href="https://colemanrpatrick.github.io/aloha-kai-luau" id="mobile-logo"><img src="images/design/alohakailogo.png" alt=""></a>
-          <button type="button" name="button" id="menu-btn" class="menu-btn" onclick="idToggle('mobile-menu','active')">
-            <span class="material-symbols-outlined">menu</span>
-          </button>
-          <div id="mobile-menu" class="mobile-menu">
-            <a href="index.html">home</a>
-            <a href="packages.html">reservations</a>
-            <a href="dinner.html">dinner menu</a>
-            <a href="sealife.html">sealife park</a>
-            <a href="faq.html">faq</a>
-            <a href="contact.html">contact</a>
-            <a href="#">cart</a>
+<body>
+
+    <!-- ========== masthead ========== -->
+
+        <nav id="main-nav">
+            <ul>
+                <li class="nav-desktop">
+                    <a href="/reservations.htm">reservations</a>
+                    <span id="nested-nav">
+                        <a href="/about.htm">about</a>
+                        <div class="/drop-down" id="drop-down">
+                            <a href="/gallery.htm">gallery</a>
+                            <a href="/waikikibeachmariot.htm">waikiki beach marriott</a>
+                            <a href="/bookwithus.htm">why book with us?</a>
+                        </div>
+                    </span>
+                    <a href="/menu.htm">menu</a>
+                </li>
+                <li class="mobile-nav">
+                    <a href="tel:+18664829775" id="phone-mobile"><span class="material-symbols-outlined">call</span></a>
+                </li>
+                <li id="logo">
+                    <a href="/">
+                        <img src="images/pa'ina-luau.png" alt="">
+                    </a>
+                </li>
+                <li class="mobile-nav">
+                    <button class="menu-btn" id="menu-btn" name="button" onclick="idToggle('menu-btn','active');idToggle('mobile-nav','active')" type="button">
+                        <hr class="menu-btn-hr-1">
+                        <hr class="menu-btn-hr-2">
+                        <hr class="menu-btn-hr-3">
+                    </button>
+                </li>
+                <li class="nav-desktop">
+                    <a href="blog.htm">blog</a>
+                    <a href="contact.htm">contact</a>
+                    <a href="cart.htm">cart</a>
+                </li>
+            </ul>
+            <a href="tel:+18664829775" id="desktop-phone"><span class="material-symbols-outlined">call</span>1-866-482-9775</a>
+        </nav>
+        <nav id="mobile-nav">
+            <a href="/reservations.htm">reservations</a>
+            <a href="/gallery.htm">gallery</a>
+            <a href="/menu.htm">menu</a>
+            <a href="/about.htm">about</a>
+            <a href="/waikikibeachmariot.htm">waikiki beach marriott</a>
+            <a href="/bookwithus.htm">why book with us?</a>
+            <a href="/blog.htm">blog</a>
+            <a href="/contact.htm">contact</a>
+            <a href="/cart.htm">cart</a>
+        </nav>
+        <a href="/reservations.htm" id="reserve-now">reserve now!</a>
+    <!-- ========== gallery ========== -->
+
+    <div id="main">
+        <div id="gallery">
+            
+          <div class="simple-header">
+            <h1>gallery</h1>
           </div>
+
+          <h3>photo gallery</h3>
+          <div id="photo-gallery" class="photo-gallery">
+            <button id="photo-close-btn"><span class="material-symbols-outlined">close</span></button>
+            <div id="photo-controls"></div>
+          </div>
+          <h3>video gallery</h3>
+          <div id="video-gallery">
+            <div id="video-controls"></div>
+          </div>
+        </div>
+        <script src="js/gallery.js"></script>
     </div>
-    <img id="bop-left" src="images/design/birdsofparadise.png" alt="">
-    <img id="bop-right"  src="images/design/birdsofparadise.png" alt="">
-    <!-- ================================= -->
-    <!-- ||||||||||||||||||||||||||||||||| -->
-    <!-- ================================= -->
-<div id="main">
-    <div id="gallery">
-      <div id="gallery-header"><h2>gallery</h2></div>
-      <h3>photo gallery</h3>
-      <div id="photo-gallery" class="photo-gallery">
-        <button id="photo-close-btn"><span class="material-symbols-outlined">close</span></button>
-        <div id="photo-controls"></div>
-      </div>
-      <h3>video gallery</h3>
-      <div id="video-gallery">
-        <div id="video-controls"></div>
-      </div>
-    </div>
-    <script src="js/gallery.js"></script>
-</div>
-<!-- ================================= -->
-<!-- ||||||||||||||||||||||||||||||||| -->
-<!-- ================================= -->
-<div id="map"></div>
-<footer>
-<ul>
-  <li>
-    <a href="https://colemanrpatrick.github.io/aloha-kai-luau" id="logo"><img src="images/design/alohakailogo.png" alt=""></a>
-    <b><a href="tel:+1808963800"><span class="material-symbols-outlined">call</span> (808) 926-3800</a></b>
-    <h4>Sealife Park</h4>
-    <br/>
-    <a href="https://www.google.com/maps/place/Sea+Life+Park+Hawaii/@21.3137242,-157.6636201,15z/data=!4m5!3m4!1s0x0:0x5def94f09ab5dc01!8m2!3d21.3137242!4d-157.6636201" target="_blank">
-      <p>41-202 Kalanianaʻole Hwy,<br/> Waimanalo, HI 96795</p>
-    </a>
-  </li>
-  <li>
-    <a href="sealife.html">sealife park</a>
-    <br/>
-    <a href="packages.html">reservations</a>
-    <br/>
-    <a href="dinner.html">dinner menu</a>
-    <br/>
-    <a href="#">cart</a>
-  </li>
-  <li>
-    <a href="faq.html">faq</a>
-    <br/>
-    <a href="contact.html">contact</a>
-    <br/>
-    <a href="privacy.html">privacy</a>
-    <br/>
-  </li>
-</ul>
-<aside>Copyright (c) 2023 Sealife Park All Rights Reserved.</aside>
-</footer>
+
+    <!-- ========== footer ========== -->
+
+    <footer>
+        <ul id="first-footer-row">
+            <li><a href="/"><img src="images/pa'ina-luau.png" alt="" id="footer-logo-img"></a></li>
+            <li></li>
+            <li><a href="/"><img src="images/marriottlogo.png" alt=""></a></li>
+        </ul>
+        <ul id="second-footer-row">
+            <li>
+            <div id="footer-phone">
+                <a href="tel:+18664829775">
+                    <span class="material-symbols-outlined">call</span>
+                    <p>1-866-482-9775</p>
+                </a>
+            </div>
+            <div id="footer-map">
+                <a href="https://www.google.com/maps/place/Paina+Waikiki/@21.2732084,-157.8249746,17z/data=!3m2!4b1!5s0x7c007270b51920d5:0x428339b87b9698d6!4m6!3m5!1s0x7c0073df79d0095b:0x552416b74ffe7405!8m2!3d21.2732084!4d-157.8223997!16s%2Fg%2F11kp9nswqt?entry=ttu">
+                    <span class="material-symbols-outlined">location_on</span>
+                    <p>2552 Kalākaua Avenue,<br>Honolulu, HI 96815, USA</p>
+                </a>
+            </div>
+            <div id="social-icons">
+                <a href=""><img src="images/twitter.svg" alt=""></a>
+                <a href=""><img src="images/facebook.svg" alt=""></a>
+                <a href=""><img src="images/instagram.svg" alt=""></a>
+                <a href=""><img src="images/youtube.svg" alt=""></a>
+            </div>
+            </li>
+            <li>
+                <a href="/reservations.htm">reservations</a>
+                <a href="/gallery.htm">gallery</a>
+                <a href="/menu.htm">menu</a>
+                <a href="/about.htm">about</a>
+                <a href="/waikikibeachmariot.htm">waikiki beach marriott</a>
+                <a href="/bookwithus.htm">why book with us?</a>
+                <a href="/blog.htm">blog</a>
+            </li>
+            <li>
+                <a href="/">home</a>
+                <a href="/cart.htm">cart</a>
+                <a href="/faq.htm">faq</a>
+                <a href="/sitemap.htm">sitemap</a>
+                <a href="/contact.htm">contact</a>
+            </li>
+        </ul>
+    </footer>
+    <br>
+    <br>
+    <br>
+    <br>
 </body>
-  <!--
-   The `defer` attribute causes the callback to execute after the full HTML
-   document has been parsed. For non-blocking uses, avoiding race conditions,
-   and consistent behavior across browsers, consider loading using Promises
-   with https://www.npmjs.com/package/@googlemaps/js-api-loader.
-  -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly" defer></script>
-  <script type="text/javascript" src="js/toggle.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
+    <!-- ================================ -->
+    <script src="js/ie9Dexclude.js"></script>
+    <script src="js/toggle.js"></script>
 </html>

@@ -1,317 +1,279 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SPPHN93HRS"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag() { dataLayer.push(arguments); }
-gtag('js', new Date());
-gtag('config', 'G-SPPHN93HRS');
-</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta charset="utf-8">
-    <title>Sea Life Park Luau - Aloha Kai Luau</title>
-            <meta name="description" content="Sea Life Park Luau known as Aloha Kai Luau is located at Sea Life Park Oahu Hawaii overlooking the Ocean.">
-            <meta name="Keywords" content="Sea Life Park Luau, Aloha Kai Luau, Tickets to Aloha Kai Luau, Luau at Sea Life Park, Best Oahu Luau, Oahu Luau, Hawaii Luau">
-            <link rel="canonical" href="https://www.sealifeparkluau.com" />
-    <meta name="viewport" content="user-scalable = yes, width=320, initial-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/checkpoint.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/kontikialoha.css">
-    <link href="https://fonts.googleapis.com/css2?family=Laila:wght@300&family=Lato:wght@300;900&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="js/toggle.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/jquery.lazy.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="js/jquery.lazy.min.js"></script>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/home.css">
+
+    <title>Paina Luau</title>
 </head>
 <body>
-    <!-- ================================= -->
-    <!-- ||||||||||||||||||||||||||||||||| -->
-    <!-- ================================= -->
-    <div id="masthead">
-        <div id="phone-main"><a href="tel:+18664829775"><span class="material-symbols-outlined">call</span> (866) 482-9775</a></div>
-        <ul>
-            <li class="nav-left"><a href="/"><span class="material-symbols-outlined">home</span></a> 
+    <!-- ========== masthead ========== -->
+        <img id="bop-left" src="images/design/birdsofparadise.png" alt="">
+        <img id="bop-right" src="images/design/birdsofparadise.png" alt="">
+        <nav id="main-nav">
+            <ul>
+                <li class="nav-desktop">
+                    <a href="/"><span class="material-symbols-outlined">home</span></a> 
+                    <a href="/reservations.htm">reservations</a>
+                    <a href="/menu.htm">dinner menu</a>
+                </li>
+                <li class="mobile-nav">
+                    <a href="tel:+18664829775" id="phone-mobile"><span class="material-symbols-outlined">call</span></a>
+                </li>
+                <li id="logo">
+                    <a href="/">
+                        <img src="images/design/sealifeparkluaulogo.png" alt="">
+                    </a>
+                </li>
+                <li class="nav-desktop">
+                    <span id="nested-nav">
+                        <a href="/about.htm">the luau</a>
+                        <div class="/drop-down" id="drop-down">
+                            <a href="/gallery.htm">gallery</a>
+                            <a href="/waikikibeachmariot.htm">sealife park</a>
+                            <a href="/bookwithus.htm">faq</a>
+                        </div>
+                    </span>
+                    <a href="/blog.htm">blog</a>
+                    <a href="/contact.htm">contact</a>
+                    <a href="/cart/edit#viewitems"><span class="material-symbols-outlined">shopping_cart</span></a>
+                </li>
+                <li class="mobile-nav">
+                    <button class="menu-btn" id="menu-btn" name="button" onclick="idToggle('menu-btn','active');idToggle('mobile-nav','active')" type="button">
+                        <hr class="menu-btn-hr-1">
+                        <hr class="menu-btn-hr-2">
+                        <hr class="menu-btn-hr-3">
+                    </button>
+                </li>
+            </ul>
+            <a href="tel:+18664829775" id="desktop-phone"><span class="material-symbols-outlined">call</span>1-866-482-9775</a>
+        </nav>
+        <nav id="mobile-nav">
             <a href="/reservations.htm">reservations</a>
-            <a href="/menu.htm">dinner menu</a>
-            </li>
-            <li><a href="/" id="logo"><img src="images/design/sealifeparkluaulogo.png" alt=""></a></li>
-            <li class="nav-right"> 
-            <span class="drop-down-menu">
-                <a href="/about.htm">the luau</a><span class="material-symbols-outlined">arrow_drop_down</span>
-                <nav>  
-                    <a href="/gallery.htm">gallery</a>
-                    <a href="/sealife.htm">sea life park</a>
-                    <a href="/faq.htm">faq</a> 
-                </nav>
-            </span>
+            <a href="/gallery.htm">dinner menu</a>
+            <a href="/menu.htm">the luau</a>
+            <a href="/about.htm">gallery</a>
+            <a href="/waikikibeachmariot.htm">sealife park</a>
+            <a href="/bookwithus.htm">faq</a>
             <a href="/blog.htm">blog</a>
             <a href="/contact.htm">contact</a>
-            <a href="/cart/edit#viewitems"><span class="material-symbols-outlined">shopping_cart</span></a>
-            </li>
-        </ul>
-    </div>
-    <!-- ================================= -->
-    <!-- ||||||||||||||||||||||||||||||||| -->
-    <!-- ================================= -->
-    <div id="masthead-mobile">
-        <a href="/" id="mobile-logo"><img src="images/design/sealifeparkluaulogo.png" alt=""></a>
+            <a href="/cart.htm">cart</a>
+        </nav>
+        <a href="/reservations.htm" id="reserve-now">reserve now!</a>
+    <!-- ========== hero ========== -->
+    <div id="hero">
+        <header>
+            <h1>Experience the official sea life park luau show</h1>
+        </header>
 
-        <button type="button" name="button" id="menu-btn" class="menu-btn" onclick="idToggle('mobile-menu','active')">
-            <span class="material-symbols-outlined">menu</span>
-        </button>
-        s
-        <a href="tel:+18664829775" id="mobile-phone">
-            <span class="material-symbols-outlined">call</span>
+        <div id="player"></div>
+
+        <a href="/reservations.html" id="starburst">
+            <img src="images/design/starburst.png" alt="">
         </a>
-        <div id="mobile-menu" class="mobile-menu">
-            <a href="/">home</a>
-            <a href="/reservations.htm">reservations</a>
-            <a href="/menu.htm">dinner menu</a>
-            <a href="/about.htm">the luau</a>
-            <a href="/gallery.htm">gallery</a>
-            <a href="/sealife.htm">seal life park</a>
-            <a href="/faq.htm">faq</a>
-            <a href="/blog.htm">blog</a>
-            <a href="/contact.htm">contact</a>
-            <a href="/cart/edit#viewitems">cart</a>
-        </div>
-    </div>
-    <img id="bop-left" src="images/design/birdsofparadise.png" alt="">
-    <img id="bop-right" src="images/design/birdsofparadise.png" alt="">
-<!-- ================================= -->
-<div id="luau-hero">
-    <h1>
-        <span>aloha kai luau</span><br/>
-        the official <span>sealife</span><br/>
-        <span>park luau</span> show
-    </h1>
-    <a href="#" id="book-now">book now</a>
-    <a href="#" id="reserve-now">
-        <p>
-            <b>summer sale</b> on<br/>
-            <b>select packages</b><br/>
-            <span>limited seating</span>
-        </p>
-    </a>
-</div>
-<!-- ================================= -->
-<!-- ||||||||||||||||||||||||||||||||| -->
-<!-- ================================= -->
-<h2 id="packages-header">the #1 luau on Hawaii<br/> <span> select a luau package below </span> </h2>
-<div id="luau-previews">
-    <a href="/reservations.htm" class="luau-preview" id="bronze-seating">
-        <header>bronze<br>package</header>
-        <hr>
-        <ul>
-            <p>• Buffet Dinner</p>
-            <p>• Cultural Activities</p>
-            <p>• Shell Lei Greeting</p>
-            <p>• Bronze Seating</p>
-            <p>• 1 Drink Tickets</p>
-        </ul>
-        <p class="package-price">from<br><span>$125</span></p>
-    </a>
-    <a href="/reservations.htm" class="luau-preview" id="silver-seating">
-        <header>silver<br>package</header>
-        <hr>
-        <ul>
-            <p>• Buffet Dinner</p>
-            <p>• Cultural Activities</p>
-            <p>• Flower Lei Greeting</p>
-            <p>• Silver Seating</p>
-            <p>• 2 Drink Tickets</p>
-            <p>• Park Admission - 5 Day Pass</p>
-            <p>• 20% off retail</p>
-            <p>• 20% off Tiki treats</p>
-        </ul>
-        <p class="package-price">from<br><span>$170</span></p>
-    </a>
-    <a href="/reservations.htm" class="luau-preview" id="gold-seating">
-        <header>gold<br>package</header>
-        <hr>
-            <p>• Buffet Dinner</p>
-            <p>• Cultural Activities</p>
-            <p>• Flower Lei Greeting</p>
-            <p>• Gold Seating</p>
-            <p>• 2 Drink Tickets</p>
-            <p>• Complimentary Welcome Mai Tai</p>
-            <p>• Souvenir Photo (1 per group)</p>
-            <p>• Park Admission - 10 Day Pass</p>
-            <p>• 20% off retail</p>
-            <p>• 20% off Tiki treats</p>
-        </ul>
-        <p class="package-price">from<br><span>$200</span></p>
-    </a>
-</div>
-<div id="book-packages">
-    <a href="/reservations.htm">book now!</a>
-</div>
-<!-- ================================= -->
-<!-- ||||||||||||||||||||||||||||||||| -->
-<!-- ================================= -->
 
-<div class="container" id="container-second">
-    <div class="reading-container">
-        <ul>
-            <li>
-                <div id="yt-video-container-a">
-                    <span class="material-symbols-outlined">play_circle</span>
-                </div>
-                    <!--- lazy youtube -->
-                <script type="text/javascript">
-                    var video = document.getElementById("yt-video-container-a");
-                    video.addEventListener("click", function () {
-                        var iframe = document.createElement("iframe");
-                        iframe.setAttribute("frameborder", "0");
-                        iframe.setAttribute("allowfullscreen", "");
-                        iframe.setAttribute("src", "https://www.youtube.com/embed/-LlPutbEJak?autoplay=1&rel=0");  //youtube video source//
-                        this.innerHTML = "";
-                        this.appendChild(iframe);
-                    });    
-                </script>
-                <!-- ============= -->
-                <a href="/bookwithus.htm" class="red-button" id="learnmore">
-                    <span>learn more</span>
-                    <span class="material-symbols-outlined">auto_stories</span>
-                </a>
-            </li>
-            <li>
-                <h3><span>experience</span>Sealife Park Luau</h3>
-                <p>At Sea Life Park Luau, we are dedicated to providing you with an unforgettable experience immersed in the beauty of the Hawaiian Islands. As the official reservation sales website, we are here to help you plan and secure your spot at one of the most captivating luau events on Oahu.</p>
-            </li>
-        </ul>
+        <script src="https://www.youtube.com/iframe_api"></script>
+        <script>
+            var videoId = '4pHd69NwdyU';
+
+            var player;
+            function onYouTubeIframeAPIReady() {
+                player = new YT.Player('player', {
+                    height: '360',
+                    width: '640',
+                    videoId: videoId,
+                    playerVars: {
+                        'autoplay': 1,    // Autoplay the video
+                        'loop': 1,        // Loop the video
+                        'controls': 0,    // Hide video controls
+                        'mute': 1         // Mute the video
+                    },
+                    events: {
+                        'onReady': onPlayerReady
+                    }
+                });
+            }
+            function onPlayerReady(event) {
+                checkInterval = setInterval(checkVideoEnded, 1000); // Check every second
+            }
+
+            function onPlayerStateChange(event) {
+                if (event.data === YT.PlayerState.PLAYING) {
+                // Video is playing.
+                    clearInterval(checkInterval); // Clear the interval
+                }
+            }
+
+            function checkVideoEnded() {
+                var currentTime = player.getCurrentTime();
+                var duration = player.getDuration();
+
+                // Check if the video has ended (considering a small buffer)
+                if (currentTime + 1 >= duration) {
+                    // Video has ended, restart the video.
+                    player.stopVideo();
+                    clearInterval(checkInterval);
+                    var playerContainer = document.getElementById('player');
+                    playerContainer.style.display = 'none';
+                }
+            }
+
+        </script>
     </div>
-</div>
-<!-- ================================= -->
-<!-- ||||||||||||||||||||||||||||||||| -->
-<!-- ================================= -->
-<div id="fourth-container">
-    <ul id="misc-content">
-        <li>
-            <img src="images/photos/fire.jpeg" alt="">
-            <article>
-                <h3>polynesian performances</h3>
-                <p>Sit and enjoy different Polynesian Performances from Tahiti to Tonga!</p>
-                <a class="white-button" href="reservations.htm"><span>reservations</span></a>
-            </article>
-        </li>
-        <li>
-            <img src="images/photos/luauactivities.jpg" alt="">
-            <article>
-                <h3>cultural activites</h3>
-                <p>Interact and enjoy Cultural activities before the Luau show like lei-making, hula lessons, headband weaving and Much More!</p>
-                <a class="white-button" href="reservations.htm"><span>reservations</span></a>
-            </article>
-        </li>
-        <li>
-            <img src="images/photos/imu.jpeg" alt="">
-            <article>
-                <h3>island dinner</h3>
-                <p>Dine on an island luau dinner with Fresh Island Fish, Kalua pork, Teriyaki Chicken, Lomi Lomi Salmon, Tossed Greens, and More!</p>
-                <a class="white-button" href="menu.htm"><span>menu</span></a>
-            </article>
-        </li>
-    </ul>
-    <script type="text/javascript">
-        var images = $('.misc-content').find('img');
-        images.each(function () {
-            images.Lazy();
-            console.log("lazy loaded", images);
-        })
-    </script>
-</div>
-<!-- ================================= -->
-<!-- ||||||||||||||||||||||||||||||||| -->
-<!-- ================================= -->
-<div id="continued-reading">
-    <ul>
-        <li>
-            <img src="images/design/alohakai_dancer.png" alt="">
-            <p>Aloha Kai Luau takes our visitors on an exciting voyage through Polynesia and Hawaii with dances, chants and activities from all across the Pacific.</p>
-        </li>
-        <li>
-            <img src="images/design/palms.png" alt="">
-            <p>Enjoy interactive cultural activities before the Luau show like lei-making, hula lessons, headband weaving and Much More!</p>
-        </li>
-        <li>
-            <img src="images/design/pineapple-2.png" alt="">
-            <p>Dine on an island luau dinner complete with seasonal fruit and a Kalua Pig ʻumu uncovering ceremony!</p>
-        </li>
-    </ul>
-</div>
-<!-- ================================= -->
-<!-- ||||||||||||||||||||||||||||||||| -->
-<!-- ================================= -->
-<div class="checkpoint">
-    <div class="container" id="container-third">
-        <div id="schedule">
-            <h3>Join Us At Sea Life Park<br />For The Aloha Kai Luau</h3>
-            <section>
-                <p>
-                   Open 6 days a week. Closed on Saturdays.
-                    <br />
-                    <b>Check-in begins at 4:30 pm</b><br />
-                    <b>Luau grounds open at 5:00 pm</b>
-                </p>
-            </section>
+    <!-- ========== video ========== -->
+    <div id="video-tile">
+        <section>
+            <h2><span>The Lūʻau at</span><br>Sealife Park<br><span>Makapu'u Meadows</span></h2>
+            <iframe id="video-player" src="https://www.youtube.com/embed/4pHd69NwdyU" frameborder="0" allowfullscreen></iframe>
+        </section>
+    </div>
+    <div class="img-tile" id="img-tile-first"></div>
+    <!-- ========== reading ========== -->
+    <div class="img-tile" id="img-tile-second"></div>
+    <div id="reading-tile">
+        <section>
+            <h3>Experience<br>Sea Life Park Luau</h3>
+            <p>At Sea Life Park Luau, we are dedicated to providing you with an unforgettable experience immersed in the beauty of the Hawaiian Islands. As the official reservation sales website, we are here to help you plan and secure your spot at one of the most captivating luau events on Oahu.</p>
+        <a href="#">learn more</a>
+        </section>
+    </div>
+    <!-- ========== luau packages ========== -->
+    <div id="luau-previews">
+
+        <div class="luau-preview" id="bronze-seating">
+            <header>bronze<br>package</header>
+            <hr>
+            <ul>
+                <p>&#x2022; Buffet Dinner</p>
+                <p>&#x2022; Cultural Activities</p>
+                <p>&#x2022; Shell Lei Greeting</p>
+                <p>&#x2022; Bronze Seating</p>
+                <p>&#x2022; 1 Drink Tickets</p>
+                <p>&#x2022; Park Admission - 1 Day Pass</p>
+            </ul>
+    
+            <p class="package-price">from<br><span>$107.10</span><br><span style="opacity:0.5;font-size:1.25em;text-decoration: line-through;">$124.61</span></p>
+     <a class="seating-link" href="images/design/seating-chart.png" target="_blank"><span>seating chart</span></a>
+            <a href="/reservations.htm#bronze-package" class="preview-learn-more">learn more</a>
+    
+        </div>
+    
+    
+        <div class="luau-preview" id="silver-seating">
+            <header>silver<br>package</header>
+            <hr>
+            <ul>
+                <p>&#x2022; Buffet Dinner</p>
+                <p>&#x2022; Cultural Activities</p>
+                <p>&#x2022; Flower Lei Greeting</p>
+                <p>&#x2022; Silver Seating</p>
+                <p>&#x2022; 2 Drink Tickets</p>
+                <p>&#x2022; Park Admission - 5 Day Pass</p>
+                <p>&#x2022; 20% off retail</p>
+                <p>&#x2022; 20% off Tiki treats</p>
+            </ul>
+    
+            <p class="package-price">from<br><span>$127.20</span><br><span style="opacity:0.5;font-size:1.25em;text-decoration:line-through;">$166.49</span></p>
+            <a class="seating-link" href="images/design/seating-chart.png" target="_blank"><span>seating chart</span></a>
+            <a href="/reservations.htm#silver-package" class="preview-learn-more">learn more</a>
+        </div>
+    
+        <div class="luau-preview" id="gold-seating">
+            <header>gold<br>package</header>
+            <hr>
+                <p>&#x2022; Buffet Dinner</p>
+                <p>&#x2022; Cultural Activities</p>
+                <p>&#x2022; Flower Lei Greeting</p>
+                <p>&#x2022; Gold Seating</p>
+                <p>&#x2022; 2 Drink Tickets</p>
+                <p>&#x2022; Complimentary Welcome Mai Tai</p>
+                <p>&#x2022; Souvenir Photo (1 per group)</p>
+                <p>&#x2022; Park Admission - 10 Day Pass</p>
+                <p>&#x2022; 20% off retail</p>
+                <p>&#x2022; 20% off Tiki treats</p>
+            </ul>
+    
+           <p class="package-price">from<br><span>$192.60</span><br><span style="opacity:0.5;font-size:1.25em;text-decoration:line-through;">$224.08</span></p>
+     <a class="seating-link" href="images/design/seating-chart.png" target="_blank"><span>seating chart</span></a>
+        <a href="/reservations.htm#gold-package" class="preview-learn-more">learn more</a>
         </div>
     </div>
-</div>
-<!-- ================================= -->
-<!-- ||||||||||||||||||||||||||||||||| -->
-<!-- ================================= -->
+    <div id="book-packages">
+        <a href="/reservations.htm">book now!</a>
+    </div>
 
     <!-- ================================= -->
     <!-- ||||||||||||||||||||||||||||||||| -->
     <!-- ================================= -->
-    <div id="map"></div>
+    <!-- ========== misc content ========== -->
+    <a href="/menu.htm" id="misc-second">
+        <h3>Traditional<br>Waikīkī Dining</h3>
+        <span>see menu</span>
+    </a>
+    <a href="/bookwithus.htm" id="misc-third">
+        <h3>Book With Us, & Get The<br>Best Discounts On Reservations</h3>
+        <span>learn more</span>
+    </a>
+    <!-- ========== footer ========== -->
     <footer>
-        <ul>
+        <ul id="first-footer-row">
+            <li><a href="/"><img src="images/design/sealifeparkluaulogo.png" alt="" id="footer-logo-img"></a></li>
+            <li></li>
+            <li><a href="/"><img src="images/design/sealifelogo.png" alt=""></a></li>
+        </ul>
+        <ul id="second-footer-row">
             <li>
-                <a href="/" id="logo"><img src="images/design/sealifeparkluaulogo.png" alt=""></a>
-                <div class="social">
-                    <a href="https://facebook.com/alohakailuau"> <img src="images/design/facebook_twitter_youtube_instagram.png" alt="" id="social-fb" class="delayed-img">  </a>
-                    <a href="https://twitter.com/alohakailuau"> <img src="images/design/facebook_twitter_youtube_instagram.png" alt="" id="social-tw" class="delayed-img">  </a>
-                    <a href="https://www.youtube.com/@alohakailuau"> <img src="images/design/facebook_twitter_youtube_instagram.png" alt="" id="social-yt" class="delayed-img">  </a>
-                    <a href="https://instagram.com/alohakailuau"> <img src="images/design/facebook_twitter_youtube_instagram.png" alt="" id="social-ig" class="delayed-img">  </a>
-                </div>
-                <b><a href="tel:+18664829775"><span class="material-symbols-outlined">call</span> 866-482-9775</a></b>
-
-                <a href="https://www.google.com/maps/place/Sea+Life+Park+Hawaii/@21.3137242,-157.6636201,15z/data=!4m5!3m4!1s0x0:0x5def94f09ab5dc01!8m2!3d21.3137242!4d-157.6636201" target="_blank">
-                    <p>41-202 Kalanianaʻole Hwy,<br /> Waimanalo, HI 96795</p>
+            <div id="footer-phone">
+                <a href="tel:+18664829775">
+                    <span class="material-symbols-outlined">call</span>
+                    <p>1-866-482-9775</p>
                 </a>
+            </div>
+            <div id="footer-map">
+                <a href="https://www.google.com/maps/place/Paina+Waikiki/@21.2732084,-157.8249746,17z/data=!3m2!4b1!5s0x7c007270b51920d5:0x428339b87b9698d6!4m6!3m5!1s0x7c0073df79d0095b:0x552416b74ffe7405!8m2!3d21.2732084!4d-157.8223997!16s%2Fg%2F11kp9nswqt?entry=ttu">
+                    <span class="material-symbols-outlined">location_on</span>
+                    <p>2552 Kalākaua Avenue,<br>Honolulu, HI 96815, USA</p>
+                </a>
+            </div>
+            <div id="social-icons">
+                <a href=""><img src="images/twitter.svg" alt=""></a>
+                <a href=""><img src="images/facebook.svg" alt=""></a>
+                <a href=""><img src="images/instagram.svg" alt=""></a>
+                <a href=""><img src="images/youtube.svg" alt=""></a>
+            </div>
             </li>
             <li>
-
-                <br />
                 <a href="/reservations.htm">reservations</a>
-                <br />
-                <a href="/menu.htm">dinner menu</a>
-                <br />
-                <a href="/sealife.htm">sea life park</a>
-                <br />
-                <a href="/cart/edit#viewitems">cart</a>
+                <a href="/gallery.htm">gallery</a>
+                <a href="/menu.htm">menu</a>
+                <a href="/about.htm">about</a>
+                <a href="/waikikibeachmariot.htm">waikiki beach marriott</a>
+                <a href="/bookwithus.htm">why book with us?</a>
+                <a href="/blog.htm">blog</a>
             </li>
             <li>
+                <a href="/">home</a>
+                <a href="/cart.htm">cart</a>
                 <a href="/faq.htm">faq</a>
-                <br />
+                <a href="/sitemap.htm">sitemap</a>
                 <a href="/contact.htm">contact</a>
-                <br />
-                <a href="/privacy.htm">privacy</a>
-                <br />
-                <a href="/terms.htm">terms & conditions</a>
-                
             </li>
         </ul>
-        <aside>Copyright (c) 2023 Sealife Park All Rights Reserved. <a href="/account/login">login</a></aside>
     </footer>
+    <br>
+    <br>
+    <br>
+    <br>
 </body>
-
-
 </html>

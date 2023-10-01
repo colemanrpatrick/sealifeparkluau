@@ -1,0 +1,142 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+  
+      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="css/gallery.css">
+  
+      <title>Paina Luau</title>
+  </head>
+  <body>
+  
+      <!-- ========== masthead ========== -->
+  
+          <nav id="main-nav">
+              <ul>
+                  <li class="nav-desktop">
+                      <a href="/reservations.htm">reservations</a>
+                      <span id="nested-nav">
+                          <a href="/about.htm">about</a>
+                          <div class="/drop-down" id="drop-down">
+                              <a href="/gallery.htm">gallery</a>
+                              <a href="/waikikibeachmariot.htm">waikiki beach marriott</a>
+                              <a href="/bookwithus.htm">why book with us?</a>
+                          </div>
+                      </span>
+                      <a href="/menu.htm">menu</a>
+                  </li>
+                  <li class="mobile-nav">
+                      <a href="tel:+18664829775" id="phone-mobile"><span class="material-symbols-outlined">call</span></a>
+                  </li>
+                  <li id="logo">
+                      <a href="/">
+                          <img src="images/pa'ina-luau.png" alt="">
+                      </a>
+                  </li>
+                  <li class="mobile-nav">
+                      <button class="menu-btn" id="menu-btn" name="button" onclick="idToggle('menu-btn','active');idToggle('mobile-nav','active')" type="button">
+                          <hr class="menu-btn-hr-1">
+                          <hr class="menu-btn-hr-2">
+                          <hr class="menu-btn-hr-3">
+                      </button>
+                  </li>
+                  <li class="nav-desktop">
+                      <a href="blog.htm">blog</a>
+                      <a href="contact.htm">contact</a>
+                      <a href="cart.htm">cart</a>
+                  </li>
+              </ul>
+              <a href="tel:+18664829775" id="desktop-phone"><span class="material-symbols-outlined">call</span>1-866-482-9775</a>
+          </nav>
+          <nav id="mobile-nav">
+              <a href="/reservations.htm">reservations</a>
+              <a href="/gallery.htm">gallery</a>
+              <a href="/menu.htm">menu</a>
+              <a href="/about.htm">about</a>
+              <a href="/waikikibeachmariot.htm">waikiki beach marriott</a>
+              <a href="/bookwithus.htm">why book with us?</a>
+              <a href="/blog.htm">blog</a>
+              <a href="/contact.htm">contact</a>
+              <a href="/cart.htm">cart</a>
+          </nav>
+          <a href="/reservations.htm" id="reserve-now">reserve now!</a>
+      <!-- ========== terms ========== -->
+
+        <div class="simple-header">
+        <header><h1>Cancellation Policy and Terms:</h1></header>
+        </div>
+        <div id="terms">
+            <p>You will receive a full refund if we are unable to confirm your booking. There is no service charge for any cancellation of a confirmed booking outside of 72 hours (Groups of 21 and more require 7 days notice of cancellation).</p>
+            <p>No refund for cancellations made less than 72 hours (7 days for groups of 21 and more) before the activity. You are welcome to change the date or time of a booked activity free of charge if there is an opening and is outside of the change or cancel policy.</p>
+            <p>You understand that it is your responsibility to review the voucher and to contact PainaLuau.com if any information is incorrect or to make any changes.</p>
+            <p>By clicking submit, you agree that PainaLuau.com may contact you via cell/phone or email for information on any changes in the activity due to cancellation due to weather or reasons unforeseen by the vendor (ex: mechanical problems). </p>
+            <p>A full refund will be given for any vendor cancellation and you have the right to reschedule or choose a full refund. If you would like to make any changes outside the tour or activity time please call 866-482-9775.</p>    
+        </div>       
+      <!-- ========== footer ========== -->
+  
+      <footer>
+          <ul id="first-footer-row">
+              <li><a href="/"><img src="images/pa'ina-luau.png" alt="" id="footer-logo-img"></a></li>
+              <li></li>
+              <li><a href="/"><img src="images/marriottlogo.png" alt=""></a></li>
+          </ul>
+          <ul id="second-footer-row">
+              <li>
+              <div id="footer-phone">
+                  <a href="tel:+18664829775">
+                      <span class="material-symbols-outlined">call</span>
+                      <p>1-866-482-9775</p>
+                  </a>
+              </div>
+              <div id="footer-map">
+                  <a href="https://www.google.com/maps/place/Paina+Waikiki/@21.2732084,-157.8249746,17z/data=!3m2!4b1!5s0x7c007270b51920d5:0x428339b87b9698d6!4m6!3m5!1s0x7c0073df79d0095b:0x552416b74ffe7405!8m2!3d21.2732084!4d-157.8223997!16s%2Fg%2F11kp9nswqt?entry=ttu">
+                      <span class="material-symbols-outlined">location_on</span>
+                      <p>2552 Kalākaua Avenue,<br>Honolulu, HI 96815, USA</p>
+                  </a>
+              </div>
+              <div id="social-icons">
+                  <a href=""><img src="images/twitter.svg" alt=""></a>
+                  <a href=""><img src="images/facebook.svg" alt=""></a>
+                  <a href=""><img src="images/instagram.svg" alt=""></a>
+                  <a href=""><img src="images/youtube.svg" alt=""></a>
+              </div>
+              </li>
+              <li>
+                  <a href="/reservations.htm">reservations</a>
+                  <a href="/gallery.htm">gallery</a>
+                  <a href="/menu.htm">menu</a>
+                  <a href="/about.htm">about</a>
+                  <a href="/waikikibeachmariot.htm">waikiki beach marriott</a>
+                  <a href="/bookwithus.htm">why book with us?</a>
+                  <a href="/blog.htm">blog</a>
+              </li>
+              <li>
+                  <a href="/">home</a>
+                  <a href="/cart.htm">cart</a>
+                  <a href="/faq.htm">faq</a>
+                  <a href="/sitemap.htm">sitemap</a>
+                  <a href="/contact.htm">contact</a>
+              </li>
+          </ul>
+      </footer>
+      <br>
+      <br>
+      <br>
+      <br>
+  </body>
+      <!-- ================================ -->
+      <script src="js/ie9Dexclude.js"></script>
+      <script src="js/toggle.js"></script>
+  </html>

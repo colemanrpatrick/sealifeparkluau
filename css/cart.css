@@ -89,6 +89,9 @@
     border: none;
     background: aliceblue;
     width: 75%;
+    border: 2px solid #a9cadc;
+    max-width: 25em;
+    border-radius: 1em;
 }
 .checkout-section input:focus{
 	outline-color: #009fdf;
@@ -216,8 +219,9 @@
 #accordion input[type=text], #accordion select {
     padding: 1em;
     color: #333;
-    border: none;
+    border: 2px solid #a9cadc;
     background: aliceblue;
+    border-radius: 1em;
 }
 #accordion input{
 	display: inline-block;
@@ -341,7 +345,7 @@ opacity: 0;
 	text-align: center;
 }
 #purchase.price-form {
-	padding: 2em 7em;
+	padding: 2em 2em;
 	background-image: url("../images/tapaBGwhite.jpg");
 	background-size: 10em;
 }

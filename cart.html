@@ -1,72 +1,98 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>aloha kai luau</title>
-    <meta name="viewport" content="user-scalable = yes, width=320, initial-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/cart.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+                <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lob:wght@200&family=Lato:wght@300;900&display=swap" rel="stylesheet">
-    <script src="js/jquery.lazy.min.js"></script>
-  </head>
-  <body>
-    <!-- ================================= -->
-    <!-- ||||||||||||||||||||||||||||||||| -->
-    <!-- ================================= -->
-    <div id="masthead">
-      <ul>
-        <li class="nav-left"><a href="index.html">home</a><a href="packages.html">reservations</a><a href="dinner.html">dinner menu</a></li>
-        <li><a href="index.html" id="logo"><img src="images/alohakailogo.png" alt=""></a></li>
-        <li class="nav-right"> <a href="sealife.html">sealife park</a> <a href="faq.html">faq</a> <a href="contact.html">contact</a><a href="#">cart</a></li>
-      </ul>
-    </div>
-    <!-- ================================= -->
-    <!-- ||||||||||||||||||||||||||||||||| -->
-    <!-- ================================= -->
-    <div id="masthead-mobile">
-          <a href="https://colemanrpatrick.github.io/aloha-kai-luau" id="mobile-logo"><img src="images/alohakailogo.png" alt=""></a>
-          <button type="button" name="button" id="menu-btn" class="menu-btn" onclick="idToggle('mobile-menu','active')">
-            <span class="material-symbols-outlined">menu</span>
-          </button>
-          <div id="mobile-menu" class="mobile-menu">
-            <a href="index.html">home</a>
-            <a href="packages.html">reservations</a>
-            <a href="dinner.html">dinner menu</a>
-            <a href="sealife.html">sealife park</a>
-            <a href="faq.html">faq</a>
-            <a href="contact.html">contact</a>
-            <a href="#">cart</a>
-          </div>
-    </div>
-    <img id="bop-left" src="images/birdsofparadise.png" alt="">
-    <img id="bop-right"  src="images/birdsofparadise.png" alt="">
-<!-- ================================= -->
-<!-- ||||||||||||||||||||||||||||||||| -->
-<!-- ================================= -->
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="css/main.css">
+
+   
+</head>
+<body>
+    <!-- ========== masthead ========== -->
+    <nav id="main-nav">
+        <ul>
+            <li class="nav-desktop">
+                <a href="/reservations.htm">reservations</a>
+                <span id="nested-nav">
+                    <a href="/about.htm">about</a>
+                    <div class="/drop-down" id="drop-down">
+                        <a href="/gallery.htm">gallery</a>
+                        <a href="/waikikibeachmarriott.htm">waikiki beach marriott</a>
+                        <a href="/bookwithus.htm">why book with us?</a>
+                    </div>
+                </span>
+                <a href="/menu.htm">menu</a>
+            </li>
+            <li class="mobile-nav">
+                <a href="tel:+18664829775" id="phone-mobile"><span class="material-symbols-outlined">call</span></a>
+            </li>
+            <li id="logo">
+                <a href="/">
+                    <img src="images/pa'ina-luau.png" alt="">
+                </a>
+            </li>
+            <li class="mobile-nav">
+                <button class="menu-btn" id="menu-btn" name="button" onclick="idToggle('menu-btn','active');idToggle('mobile-nav','active')" type="button">
+                    <hr class="menu-btn-hr-1">
+                    <hr class="menu-btn-hr-2">
+                    <hr class="menu-btn-hr-3">
+                </button>
+            </li>
+            <li class="nav-desktop">
+                <a href="/blog.htm">blog</a>
+                <a href="/contact.htm">contact</a>
+                <a href="/cart/edit/#viewitems">cart</a>
+            </li>
+        </ul>
+        <a href="tel:+18664829775" id="desktop-phone"><span class="material-symbols-outlined">call</span>1-866-482-9775</a>
+    </nav>
+    <nav id="mobile-nav">
+        <a href="/reservations.htm">reservations</a>
+        <a href="/gallery.htm">gallery</a>
+        <a href="/menu.htm">menu</a>
+        <a href="/about.htm">about</a>
+        <a href="/waikikibeachmariot.htm">waikiki beach marriott</a>
+        <a href="/bookwithus.htm">why book with us?</a>
+        <a href="/blog.htm">blog</a>
+        <a href="/contact.htm">contact</a>
+        <a href="/cart.htm">cart</a>
+    </nav>
+    <a href="/reservations.htm" id="reserve-now">reserve now!</a>
+
+    
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="css/cart.css">
+
+
+<a id="viewitems"></a>
+
 <div class="checkpoint">
     <section Class="post">
         <form action="/Cart/Edit" class="price-form" method="post">
             <div Class="container">
 
 
-                <input name="__RequestVerificationToken" type="hidden" value="tebjfHSlEd8ihIleM-zfUw_nMyvaDzkPTwzWvb4FkqkuTPchyKfaVsCxKyQNx_2lFpjsiJdHYm9pl6L3G8_amIF7slIKKTyDutNhnTJ0_zI1" />
+                <input name="__RequestVerificationToken" type="hidden" value="ne7JqLYqHgox_icak5F4U3iNV47i-M2BQg3VFv8erP_h80GPvE3xn01mOfle1a6LcIpXbVe7qbFTGaXeaDYsMBvi1j7Zikoyn5BNivEROmc1" />
                 <div Class="row">
                     <div Class="col-md-12 col-lg-4 order-0 order-md-0">
-
+                        
 
 <section class="checkout-section">
     <div class="container">
         <!-- checkout form  -->
-
+        
             <label>First Name</label>
-            <input type="text" name="CustomerFirstName" />
-            <br />
+            <input type="text" name="CustomerFirstName" /><br />
 
             <label>Last Name</label>
             <input type="text" name="CustomerLastName" /><br />
@@ -91,35 +117,35 @@
 
             <label>Mobile Phone</label>
             <input type="text" name="CustomerMobilePhone" /><br />
-
+        
     </div>
 </section>
 
                     </div>
                     <div Class="col-md-12 col-lg-8 order-1 order-md-1">
-
+                        
 
 
 
     <div id="accordion">
 
             <div class="card">
-                <div class="card-header" id="heading1995_20221123">
+                <div class="card-header" id="heading2392_20230906">
                     <h5 class="mb-0">
-                        <button class="btn btn-block" data-toggle="collapse" data-target="#d1995_20221123" aria-expanded="true" aria-controls="d1995_20221123" type="button">
-                            Aloha Kai Luau at Sea Life Park
+                        <button class="btn btn-block" data-toggle="collapse" data-target="#d2392_20230906" aria-expanded="true" aria-controls="d2392_20230906" type="button">
+                            Paina Luau
                         </button>
                     </h5>
                 </div>
 
 
-                <div id="d1995_20221123" class="collapse show" aria-labelledby="d1995_20221123" data-parent="#accordion">
+                <div id="d2392_20230906" class="collapse show" aria-labelledby="d2392_20230906" data-parent="#accordion">
                     <div class="card-body">
-                            <a href="/Cart/DeleteProductOrder?ProductOrderKey=1995_20221123" onclick="return confirm('Are you sure you want to remove this item?');"><i class="fas fa-trash"></i>Remove</a>
+                            <a href="/Cart/DeleteProductOrder?ProductOrderKey=2392_20230906" onclick="return confirm('Are you sure you want to remove this item?');"><i class="fas fa-trash"></i>Remove</a>
                             &nbsp;
                             <a href="/reservations" target="_blank"><i class="fas fa-eye"></i>View</a>
         					<input type="hidden" name="productorder_1" value="0" />
-        					<input type="hidden" name="productorder_1_key" value="1995_20221123" />
+        					<input type="hidden" name="productorder_1_key" value="2392_20230906" />
         					<input type="hidden" name="productorder_product_1" value="1" />
     					<br />
 
@@ -132,12 +158,12 @@
 
                                 <tr>
                                     <td>
-                                        <input name="price_1995_20221123_2" class="p1995_20221123" min="0" value = "2" type="number"/>
+                                        <input name="price_2392_20230906_5" class="p2392_20230906" min="0" value = "1" type="number"/>
                                     </td>
-                                    <td>Classic Package - Per Adult (18 yrs+)</td>
+                                    <td>Show Only Seating: Per Adult (11 yrs+)</td>
                                     <td>
 
-                                            <div class="price-n"><span>$135.08</span><br />$99.00</div>
+                	                        <div class="price-n">125.00</div>
 
                                     </td>
                                 </tr>
@@ -152,492 +178,504 @@
                                 <td colspan="3">
 
 <label for="Activity_Date">Activity Date</label>
-    <input type="text"  class="datepicker" name="ActivityDate_1995_20221123" value="11/23/2022" tabindex="1" title="Choose Activity Date "
+    <input type="text"  class="datepicker" name="ActivityDate_2392_20230906" value="09/06/2023" tabindex="1" title="Choose Activity Date " ReadOnly
     />
-<script>var vActivityDate_1995_20221123 = ["10/28/2022","10/29/2022","11/05/2022","11/12/2022","11/19/2022","11/26/2022","12/03/2022","12/10/2022","12/17/2022","12/24/2022","12/31/2022","01/07/2023","01/14/2023","01/21/2023","01/28/2023","02/04/2023","02/11/2023","02/18/2023","02/25/2023","03/04/2023","03/11/2023","03/18/2023","03/25/2023","04/01/2023","04/08/2023","04/15/2023","04/22/2023","04/29/2023","05/06/2023","05/13/2023","05/20/2023","05/27/2023","06/03/2023","06/10/2023","06/17/2023","06/24/2023","07/01/2023","07/08/2023","07/15/2023","07/22/2023","07/29/2023","08/05/2023","08/12/2023","08/19/2023","08/26/2023","09/02/2023","09/09/2023","09/16/2023","09/23/2023","09/30/2023","10/07/2023","10/14/2023","10/21/2023","10/28/2023"]; $(function (){$("[name='ActivityDate_1995_20221123']").datepicker({beforeShowDay: function(date){        var string = jQuery.datepicker.formatDate('mm/dd/yy', date);        return [ vActivityDate_1995_20221123.indexOf(string) == -1 ]    }})});var $p = $('<p>', {id: 'ActivityDate_1995_20221123_closedDates', 'class' : 'closed-date' });$p.text('"10/28/2022","10/29/2022","11/05/2022","11/12/2022","11/19/2022","11/26/2022","12/03/2022","12/10/2022","12/17/2022","12/24/2022","12/31/2022","01/07/2023","01/14/2023","01/21/2023","01/28/2023","02/04/2023","02/11/2023","02/18/2023","02/25/2023","03/04/2023","03/11/2023","03/18/2023","03/25/2023","04/01/2023","04/08/2023","04/15/2023","04/22/2023","04/29/2023","05/06/2023","05/13/2023","05/20/2023","05/27/2023","06/03/2023","06/10/2023","06/17/2023","06/24/2023","07/01/2023","07/08/2023","07/15/2023","07/22/2023","07/29/2023","08/05/2023","08/12/2023","08/19/2023","08/26/2023","09/02/2023","09/09/2023","09/16/2023","09/23/2023","09/30/2023","10/07/2023","10/14/2023","10/21/2023","10/28/2023"');$p.css({ 'opacity' : '0' , 'position' : 'absolute' , 'z-index' : '-1' , 'height' : '0' , 'overflow' : 'hidden' });$("[name='ActivityDate_1995_20221123']").after($p);</script>                                        <br />
+<script>var vActivityDate_2392_20230906 = ["08/31/2023","09/01/2023","09/05/2023","09/12/2023","09/19/2023","09/26/2023","10/03/2023","10/10/2023","10/17/2023","10/24/2023","10/31/2023","11/07/2023","11/14/2023","11/21/2023","11/28/2023","12/05/2023","12/12/2023","12/19/2023","12/26/2023","01/02/2024","01/09/2024","01/16/2024","01/23/2024","01/30/2024","02/06/2024","02/13/2024","02/20/2024","02/27/2024","03/05/2024","03/12/2024","03/19/2024","03/26/2024","04/02/2024","04/09/2024","04/16/2024","04/23/2024","04/30/2024","05/07/2024","05/14/2024","05/21/2024","05/28/2024","06/04/2024","06/11/2024","06/18/2024","06/25/2024","07/02/2024","07/09/2024","07/16/2024","07/23/2024","07/30/2024","08/06/2024","08/13/2024","08/20/2024","08/27/2024","08/31/2023","09/07/2023","09/14/2023","09/21/2023","09/28/2023","10/05/2023","10/12/2023","10/19/2023","10/26/2023","11/02/2023","11/09/2023","11/16/2023","11/23/2023","11/30/2023","12/07/2023","12/14/2023","12/21/2023","12/28/2023","01/04/2024","01/11/2024","01/18/2024","01/25/2024","02/01/2024","02/08/2024","02/15/2024","02/22/2024","02/29/2024","03/07/2024","03/14/2024","03/21/2024","03/28/2024","04/04/2024","04/11/2024","04/18/2024","04/25/2024","05/02/2024","05/09/2024","05/16/2024","05/23/2024","05/30/2024","06/06/2024","06/13/2024","06/20/2024","06/27/2024","07/04/2024","07/11/2024","07/18/2024","07/25/2024","08/01/2024","08/08/2024","08/15/2024","08/22/2024","08/29/2024","09/02/2023","09/09/2023","09/16/2023","09/23/2023","09/30/2023","10/07/2023","10/14/2023","10/21/2023","10/28/2023","11/04/2023","11/11/2023","11/18/2023","11/25/2023","12/02/2023","12/09/2023","12/16/2023","12/23/2023","12/30/2023","01/06/2024","01/13/2024","01/20/2024","01/27/2024","02/03/2024","02/10/2024","02/17/2024","02/24/2024","03/02/2024","03/09/2024","03/16/2024","03/23/2024","03/30/2024","04/06/2024","04/13/2024","04/20/2024","04/27/2024","05/04/2024","05/11/2024","05/18/2024","05/25/2024","06/01/2024","06/08/2024","06/15/2024","06/22/2024","06/29/2024","07/06/2024","07/13/2024","07/20/2024","07/27/2024","08/03/2024","08/10/2024","08/17/2024","08/24/2024","08/31/2024"]; $(function (){$("[name='ActivityDate_2392_20230906']").datepicker({beforeShowDay: function(date){        var string = jQuery.datepicker.formatDate('mm/dd/yy', date);        return [ vActivityDate_2392_20230906.indexOf(string) == -1 ]    }})});var $p = $('<p>', {id: 'ActivityDate_2392_20230906_closedDates', 'class' : 'closed-date' });$p.text('"08/31/2023","09/01/2023","09/05/2023","09/12/2023","09/19/2023","09/26/2023","10/03/2023","10/10/2023","10/17/2023","10/24/2023","10/31/2023","11/07/2023","11/14/2023","11/21/2023","11/28/2023","12/05/2023","12/12/2023","12/19/2023","12/26/2023","01/02/2024","01/09/2024","01/16/2024","01/23/2024","01/30/2024","02/06/2024","02/13/2024","02/20/2024","02/27/2024","03/05/2024","03/12/2024","03/19/2024","03/26/2024","04/02/2024","04/09/2024","04/16/2024","04/23/2024","04/30/2024","05/07/2024","05/14/2024","05/21/2024","05/28/2024","06/04/2024","06/11/2024","06/18/2024","06/25/2024","07/02/2024","07/09/2024","07/16/2024","07/23/2024","07/30/2024","08/06/2024","08/13/2024","08/20/2024","08/27/2024","08/31/2023","09/07/2023","09/14/2023","09/21/2023","09/28/2023","10/05/2023","10/12/2023","10/19/2023","10/26/2023","11/02/2023","11/09/2023","11/16/2023","11/23/2023","11/30/2023","12/07/2023","12/14/2023","12/21/2023","12/28/2023","01/04/2024","01/11/2024","01/18/2024","01/25/2024","02/01/2024","02/08/2024","02/15/2024","02/22/2024","02/29/2024","03/07/2024","03/14/2024","03/21/2024","03/28/2024","04/04/2024","04/11/2024","04/18/2024","04/25/2024","05/02/2024","05/09/2024","05/16/2024","05/23/2024","05/30/2024","06/06/2024","06/13/2024","06/20/2024","06/27/2024","07/04/2024","07/11/2024","07/18/2024","07/25/2024","08/01/2024","08/08/2024","08/15/2024","08/22/2024","08/29/2024","09/02/2023","09/09/2023","09/16/2023","09/23/2023","09/30/2023","10/07/2023","10/14/2023","10/21/2023","10/28/2023","11/04/2023","11/11/2023","11/18/2023","11/25/2023","12/02/2023","12/09/2023","12/16/2023","12/23/2023","12/30/2023","01/06/2024","01/13/2024","01/20/2024","01/27/2024","02/03/2024","02/10/2024","02/17/2024","02/24/2024","03/02/2024","03/09/2024","03/16/2024","03/23/2024","03/30/2024","04/06/2024","04/13/2024","04/20/2024","04/27/2024","05/04/2024","05/11/2024","05/18/2024","05/25/2024","06/01/2024","06/08/2024","06/15/2024","06/22/2024","06/29/2024","07/06/2024","07/13/2024","07/20/2024","07/27/2024","08/03/2024","08/10/2024","08/17/2024","08/24/2024","08/31/2024"');$p.css({ 'opacity' : '0' , 'position' : 'absolute' , 'z-index' : '-1' , 'height' : '0' , 'overflow' : 'hidden' });$("[name='ActivityDate_2392_20230906']").after($p);</script>                                        <br />
+<label for="Party_Name">Party Name</label>
+    <input type="text" name="ParticipantNamesandAges_2392_20230906" value="test test test" title="Enter Participant Names and Ages"
+    />
+                                        <br />
 <label for="Select_Your_Oahu_Hotel">Select Your Oahu Hotel</label>
-<select name="SelectYourOahuHotel_1995_20221123" tabindex="2" title="Choose Select Your Oahu Hotel"
+<select name="SelectYourOahuHotel_2392_20230906" tabindex="3" title="Choose Select Your Oahu Hotel"
 
-
+    
     >
 
     <option value="">Select Your Oahu Hotel</option>
-        <option value="152"
+        <option value="150"
                     >
             Other
         </option>
-        <option value="73"
+        <option value="71"
+                    >
+            -- Select --
+        </option>
+        <option value="72"
                     >
             Ala Moana Hotel
         </option>
-        <option value="74"
-                    >
+        <option value="73"
+                     selected
+>
             Aloha Surf
         </option>
-        <option value="75"
+        <option value="74"
                     >
             Aloha Tower Marketplace
         </option>
-        <option value="76"
+        <option value="75"
                     >
             Alohilani Resort Waikiki Beach
         </option>
-        <option value="77"
+        <option value="76"
                     >
             Ambassador Hotel
         </option>
-        <option value="78"
-                    >
-            Aqua Bamboo
-        </option>
-        <option value="79"
+        <option value="77"
                     >
             Aqua Coconut Plaza
         </option>
-        <option value="80"
+        <option value="78"
                     >
             Aqua Lotus
         </option>
-        <option value="81"
+        <option value="79"
                     >
             Aqua Oasis
         </option>
-        <option value="82"
+        <option value="80"
                     >
             Aqua Palms
         </option>
-        <option value="83"
+        <option value="81"
                     >
             Aqua Pearl
         </option>
-        <option value="84"
-                     selected
->
+        <option value="82"
+                    >
             Aqua Waikiki Wave
         </option>
-        <option value="85"
+        <option value="83"
                     >
             Aston Executive Center
         </option>
-        <option value="86"
+        <option value="84"
                     >
             Aston Waikiki Beach Hotel
         </option>
-        <option value="87"
+        <option value="85"
                     >
             Aston Waikiki Beach Tower
         </option>
-        <option value="88"
+        <option value="86"
                     >
             Aston Waikiki Beachside
         </option>
-        <option value="89"
+        <option value="87"
                     >
             Aston Waikiki Circle
         </option>
-        <option value="90"
+        <option value="88"
                     >
             Aston Waikiki Parkside
         </option>
-        <option value="91"
+        <option value="89"
                     >
             Aston Waikiki Sunset
         </option>
-        <option value="92"
+        <option value="90"
                     >
             Aulani Disney Resort
         </option>
-        <option value="93"
+        <option value="91"
+                    >
+            Bamboo Waikiki Hotel
+        </option>
+        <option value="92"
                     >
             Best Western Airport
         </option>
-        <option value="94"
+        <option value="93"
                     >
             Cabana at Waikiki
         </option>
-        <option value="95"
+        <option value="94"
                     >
             Coconut Waikiki
         </option>
-        <option value="96"
+        <option value="95"
                     >
             Courtyard By Marriott
         </option>
-        <option value="97"
+        <option value="96"
                     >
             Cruise Ship
         </option>
-        <option value="98"
+        <option value="97"
                     >
             Diamond Head Beach
         </option>
-        <option value="99"
+        <option value="98"
                     >
             Double Tree Alana Waikiki
         </option>
-        <option value="100"
+        <option value="99"
                     >
             Embassy Suites
         </option>
-        <option value="101"
+        <option value="100"
                     >
             Equus Hotel (Former Hawaii Polo Inn)
         </option>
-        <option value="102"
+        <option value="101"
                     >
             Ewa Waikiki
         </option>
-        <option value="103"
+        <option value="102"
                     >
             Fairway Villa
         </option>
-        <option value="104"
+        <option value="103"
                     >
             Grand Islander
         </option>
-        <option value="105"
+        <option value="104"
                     >
             Grand Waikikian
         </option>
-        <option value="106"
+        <option value="105"
                     >
             Hale Koa
         </option>
-        <option value="107"
+        <option value="106"
                     >
             Halekulani Hotel
         </option>
-        <option value="108"
+        <option value="107"
                     >
             Hawaii Prince Hotel
         </option>
-        <option value="109"
+        <option value="108"
                     >
             Hawaiian King
         </option>
-        <option value="110"
+        <option value="109"
                     >
             Hawaiian Monarch
         </option>
-        <option value="111"
+        <option value="110"
                     >
             Hawaiian Princess
         </option>
-        <option value="112"
+        <option value="111"
                     >
             Hawaiiana Hotel
         </option>
-        <option value="113"
+        <option value="112"
                     >
             Hilton Garden Inn Waikiki Beach
         </option>
-        <option value="114"
+        <option value="113"
                     >
             Hilton Hawaiian Village
         </option>
-        <option value="115"
+        <option value="114"
                     >
             Hilton Waikiki Beach (Prince Kuhio)
         </option>
-        <option value="116"
+        <option value="115"
                     >
             Hokele Suites
         </option>
-        <option value="117"
+        <option value="116"
                     >
             Hokulani
         </option>
-        <option value="118"
+        <option value="117"
                     >
             Hokulani Waikiki
         </option>
-        <option value="119"
+        <option value="118"
                     >
             Holiday Inn Express Honolulu-Waikiki
         </option>
-        <option value="120"
+        <option value="119"
                     >
             Holiday Inn Waikiki Beachcomber
         </option>
-        <option value="121"
+        <option value="120"
                     >
             Holiday Surf Hotel
         </option>
-        <option value="122"
+        <option value="121"
                     >
-            Hostel International Waikiki
+            Hostel International Waikiki 
         </option>
-        <option value="123"
+        <option value="122"
                     >
             Hotel La Croix
         </option>
-        <option value="124"
+        <option value="123"
                     >
             Hotel Renew
         </option>
-        <option value="125"
+        <option value="124"
                     >
             Hyatt Centric Waikiki
         </option>
-        <option value="126"
+        <option value="125"
                     >
             Hyatt Place Waikiki
         </option>
-        <option value="127"
+        <option value="126"
                     >
             Hyatt Regency-Oahu
         </option>
-        <option value="128"
+        <option value="127"
                     >
             Ihilani Spa Resort - JW Marriott
         </option>
-        <option value="129"
+        <option value="128"
                     >
             Ilikai Hotel
         </option>
-        <option value="130"
+        <option value="129"
                     >
             Ilima Hotel
         </option>
-        <option value="131"
+        <option value="130"
                     >
             Imperial Waikiki
         </option>
-        <option value="132"
+        <option value="131"
                     >
             Inn on the Park
         </option>
-        <option value="133"
+        <option value="132"
                     >
             Island Colony
         </option>
-        <option value="134"
+        <option value="133"
                     >
             Kahala Hotel and Resort
         </option>
-        <option value="135"
+        <option value="134"
                     >
             Ko`Olina Beach Club
         </option>
-        <option value="136"
+        <option value="135"
                     >
             Ko`Olina Beach Villas Resort
         </option>
-        <option value="137"
+        <option value="136"
                     >
             Kuhio Banyan
         </option>
-        <option value="138"
+        <option value="137"
                     >
             Kuhio Village Resort
         </option>
-        <option value="139"
+        <option value="138"
                     >
             Local Residence
         </option>
-        <option value="140"
+        <option value="139"
                     >
             Lotus At Diamond Head
         </option>
-        <option value="141"
+        <option value="140"
                     >
             Luana Waikiki
         </option>
-        <option value="142"
+        <option value="141"
                     >
             Marina Tower Waikiki
         </option>
-        <option value="143"
+        <option value="142"
                     >
             Marine Surf Hotel
         </option>
-        <option value="144"
+        <option value="143"
                     >
             Miramar Hotel
         </option>
-        <option value="145"
+        <option value="144"
                     >
             New Otani Kaimana Beach
         </option>
-        <option value="146"
+        <option value="145"
                     >
             Ocean Resort
         </option>
-        <option value="147"
+        <option value="146"
                     >
             Ohana East Hotel
         </option>
-        <option value="148"
+        <option value="147"
                     >
             Ohana Honolulu Airport Hotel
         </option>
-        <option value="149"
+        <option value="148"
                     >
             Ohana Islander Waikiki
         </option>
-        <option value="150"
-                    >
-            Ohana Malia
-        </option>
-        <option value="151"
+        <option value="149"
                     >
             Ohia Waikiki Hotel
         </option>
-        <option value="153"
+        <option value="151"
                     >
             Outrigger Reef
         </option>
-        <option value="154"
+        <option value="152"
                     >
             Outrigger Regency on Beachwalk
         </option>
-        <option value="155"
+        <option value="153"
                     >
             Outrigger Waikiki Main
         </option>
-        <option value="156"
+        <option value="154"
                     >
             Pacific Monarch
         </option>
-        <option value="157"
+        <option value="155"
                     >
             Pagoda Hotel
         </option>
-        <option value="158"
+        <option value="156"
                     >
             Park Shore
         </option>
-        <option value="159"
+        <option value="157"
                     >
             Pearl Hotel Waikiki
         </option>
-        <option value="160"
+        <option value="158"
                     >
             Polynesian Plaza
         </option>
-        <option value="161"
+        <option value="159"
                     >
             Queen Kapiolani
         </option>
-        <option value="162"
+        <option value="160"
                     >
             Ramada Waikiki
         </option>
-        <option value="163"
+        <option value="161"
                     >
             Ritz-Carlton Residences
         </option>
-        <option value="164"
+        <option value="162"
                     >
             Royal Aloha Vacation Club (Oahu)
         </option>
-        <option value="165"
+        <option value="163"
                     >
             Royal Garden
         </option>
-        <option value="166"
+        <option value="164"
                     >
             Royal Grove Hotel
         </option>
-        <option value="167"
+        <option value="165"
                     >
             Royal Hawaiian
         </option>
-        <option value="168"
+        <option value="166"
                     >
             Royal Kuhio
         </option>
-        <option value="169"
+        <option value="167"
                     >
             Seaside Hawaiian Hostel
         </option>
-        <option value="170"
+        <option value="168"
                     >
             Sheraton Princess Kaiulani
         </option>
-        <option value="171"
+        <option value="169"
                     >
             Sheraton Waikiki
         </option>
-        <option value="172"
+        <option value="170"
                     >
             Shoreline Hotel
         </option>
-        <option value="173"
+        <option value="171"
                     >
             Stay Waikiki
         </option>
-        <option value="174"
+        <option value="172"
                     >
             Surfjack Hotel
         </option>
-        <option value="175"
+        <option value="173"
                     >
             Surftide Hotel
         </option>
-        <option value="176"
+        <option value="174"
                     >
             The Breakers Hotel
         </option>
-        <option value="177"
+        <option value="175"
                     >
             The Laylow, Autograph Collection
         </option>
-        <option value="178"
+        <option value="176"
                     >
             The Modern Honolulu
         </option>
-        <option value="179"
+        <option value="177"
                     >
             The Modern Hotel
         </option>
-        <option value="180"
+        <option value="178"
+                    >
+            The Twin Fin Hotel
+        </option>
+        <option value="179"
                     >
             Tropical Studios in the Heart of Waikiki
         </option>
-        <option value="181"
+        <option value="180"
                     >
             Trump International Hotel and Tower
         </option>
-        <option value="182"
+        <option value="181"
                     >
             Turtle Bay Resort
         </option>
-        <option value="183"
+        <option value="182"
                     >
             Vive Hotel
         </option>
-        <option value="184"
+        <option value="183"
                     >
             Waikiki Banyan
         </option>
-        <option value="185"
+        <option value="184"
                     >
             Waikiki Beach Marriott
         </option>
-        <option value="186"
+        <option value="185"
                     >
             Waikiki Beachcomber
         </option>
-        <option value="187"
+        <option value="186"
                     >
             Waikiki Beachside Hostel
         </option>
-        <option value="188"
+        <option value="187"
                     >
             Waikiki Central Hotel
         </option>
-        <option value="189"
+        <option value="188"
                     >
             Waikiki Grand
         </option>
-        <option value="190"
+        <option value="189"
                     >
             Waikiki Hana
         </option>
-        <option value="191"
+        <option value="190"
                     >
             Waikiki Joy
+        </option>
+        <option value="191"
+                    >
+            Waikiki Malia
         </option>
         <option value="192"
                     >
@@ -669,13 +707,17 @@
         </option>
         <option value="199"
                     >
-            Westin Moana Surfrider
+            Wayfinder Waikiki
         </option>
         <option value="200"
                     >
-            White Sands Hotel
+            Westin Moana Surfrider
         </option>
         <option value="201"
+                    >
+            White Sands Hotel
+        </option>
+        <option value="202"
                     >
             Wyndham Waikiki Beachwalk
         </option>
@@ -688,7 +730,7 @@
                                 </td>
                             </tr>
                         </table>
-
+                
                     </div>
                 </div>
 
@@ -703,14 +745,14 @@
 
 
 
-
+                        
 
 <div Class="cart-edit-bottom">
-        <p><span>Total </span>$198.00</p>
+        <p><span>Total </span>$125.00</p>
         <p><span>Processing Fee Total </span>$0.00</p>
         <p><span>Other Fee Total </span>$0.00</p>
         <p><span>Discount Total </span>$0.00 </p>
-        <p><span>Your OrderTotal is </span>$198.00 <br /></p>
+        <p><span>Your OrderTotal is </span>$125.00 <br /></p>
 </div>
                     </div>
                 </div>
@@ -742,55 +784,57 @@
     <input type="hidden" name="x_country">
     <input type="hidden" name="x_phone">
     <input type="hidden" name="x_email">
-    <input type="hidden" name="x_login" value="WSP-HAWAI-XE2QSAA6uw">
+    <input type="hidden" name="x_login" value="">
     <input type="hidden" name="x_fp_sequence" value="8664829775">
-    <input type="hidden" name="x_fp_timestamp" value="1666996463">
-    <input type="hidden" name="x_amount" value="198">
-    <input type="hidden" name="x_fp_hash" value="d8a67285bbe28632e11eb5ee7cc3f161d118f56f">
+    <input type="hidden" name="x_fp_timestamp" value="1693538799">
+    <input type="hidden" name="x_amount" value="125">
+    <input type="hidden" name="x_fp_hash" value="68c114b81fd4ba480eeff747e3703976b5e38b67">
     <input type="hidden" name="x_show_form" value="PAYMENT_FORM">
     <input type="hidden" name="x_test_request" value="FALSE">
     <input type="hidden" name="x_type" value="AUTH_CAPTURE">
     <input type="hidden" name="x_gateway_id" value="B90652-01">
     <input type="hidden" name="x_currency_code" value="USD">
     <input type="hidden" name="x_cust_id" value="0">
-    <input type="hidden" name="x_line_item" value="1<|>Aloha Kai Luau at Sea Life Park<|>Aloha Kai Luau at Sea Life Park-Classic Package - Per Adult (18 yrs+)<|>2<|>99.00<|>Y<|>0<|>96177<|>EA<|>0.00<|>Processing Fee<|>0<|>DISCOUNT<|>36.08<|>161.92"><input type="hidden" name="x_line_item" value="9999<|>Processing Fee<|>Processing Fee<|>1<|>0<|>Y<|>9999<|>96177<|>EA<|>0.00<|>Processing Fee<|>198<|>DISCOUNT<|>0.00<|>0">
-    <input type="hidden" name="x_po_num" value="112-7-w">
+    <input type="hidden" name="x_line_item" value="1<|>Paina Luau<|>Paina Luau-Show Only Seating: Per Adult (11 yrs+)<|>1<|>125.00<|>Y<|>0<|>96177<|>EA<|>0.00<|>Processing Fee<|>0<|>DISCOUNT<|>0<|>125"><input type="hidden" name="x_line_item" value="9999<|>Processing Fee<|>Processing Fee<|>1<|>0<|>Y<|>9999<|>96177<|>EA<|>0.00<|>Processing Fee<|>125<|>DISCOUNT<|>0.00<|>0">
+        <input type="hidden" name="x_po_num" value="123-5-w">
     <input type="hidden" name="x_description" value="">
     <input type="hidden" name="x_reference_3" value="">
-    <input type="hidden" name="x_tax" value="0">
+    <input type="hidden" name="x_tax" value="0.00">
     <input type="hidden" name="x_freight" value="0.00">
     <input type="hidden" name="x_duty" value="0.00">
     <input type="hidden" name="discount_amount" value="0">
-    <h3 class="title">Terms and Conditions</h3>
-    <div class="terms-scroll-box">
-
+    <h3 Class="title">Terms And Conditions</h3>
+    <div Class="terms-scroll-box">
+        
 <h3 class="title">Scroll to Agree and Checkout</h3>
 
     You will receive a full refund if we are unable to confirm your booking. There is no service charge for any cancellation of a confirmed booking outside of 48 hours of the check in time. 7 days notice required for parties of 8 or more.
 <br>
-<br>No refund for cancellations made less than 48 hours (72 hours for some activities &amp; groups of 6+) before the activity. For activities that have a longer cancellation period than 48 hours, the information will be on the activity page and your voucher.
+<br>No refund for cancellations made less than 48 hours before the activity. 
 <br>
-<br>You are welcome to change the date or time of a booked activity free of charge if there is an opening on the tour and it&nbsp;is outside of the change or cancellation policy.
+<br>You are welcome to change the date or time of the luau free of charge if there is an opening and it is outside of the change or cancellation policy.
 <br>
-<br>There are no refunds on lei greetings for flights that you are not on, but we will make every effort to make sure you receive the leis on another flight as long as you call us with the new flight info.
+<br>You understand that it is your responsibility to review the voucher and to contact Aloha Kai Luau if any information is incorrect or to make any changes.
 <br>
-<br>You agree to age, weight, and other restrictions as noted for the tour or activity. You understand that it is your responsibility to review the voucher and to contact Hawaii Discount if any information is incorrect or to make any changes.
+<br>By clicking submit, you agree that Aloha Kai Luau may contact you via cell/phone or email for information on any changes in a tour or activity due to cancellation due to weather or reasons unforeseen by the vendor (ex: mechanical problems).
 <br>
-<br>By clicking submit, you agree that Hawaii Discount may contact you via cell/phone or email for information on any changes in a tour or activity due to cancellation due to weather or reasons unforeseen by the vendor (ex: mechanical problems).
-<br>
-<br>A full refund will be given for any vendor cancellation and you have the right to reschedule or choose a full refund. If you would like to make any changes outside the tour or activity time please call 866-482-9775. Hawaii Discount will make every effort to change a tour or activity within the cancellation time, but if it is within the cancellation policy, it is up to the individual activity vendor.
-<br>
-<br>Gift Certificates or unused portions of your gift certificate are nonrefundable.
+<br>A full refund will be given for any vendor cancellation and you have the right to reschedule or choose a full refund. If you would like to make any changes outside the tour or activity time please call 866-524-5828. 
 <br>
 <br />
 <br />By clicking Checkout, You agree to the Cancellation Policy Terms and Conditions.
 
         <p>
-            <i class="fas fa-lock"></i>Your order is secure.
+            <i class="fa fa-lock"></i>Your order is secure.
         </p>
         <span id="checkout-display-warning" class="text-warning" style="display:none;">If the checkout button is disabled, click Update Cart and try again.</span>
-        <button type="submit" name="submit" class="btn btn-block"  value="Checkout" id="checkout">Checkout</button>
+        <button type="submit" name="submit" class="btn btn-block" value="Checkout" id="checkout" onclick="beginCheckout()">Checkout</button>
     </div>
+
+    <script>
+        function beginCheckout() {
+            gtag('event', 'begin_checkout', {value: 125, currency: "USD", coupon: "", items: [{item_id: "1004", item_name: "Pa'ina Waikiki - Luau at the Waikiki Beach Marriott Show Only Seating: Per Adult (11 yrs+)", affiliation: "dev.painaluau.com", coupon: "", discount: 0, index: 0, item_brand: "Pa'ina Waikiki", item_category: "Activity Type-Luaus", item_category2: "Island-Oahu", item_category3: "Town-Honolulu - Oahu", item_list_id: "", item_list_description: "", item_variant: "", location_id: "", price: 125.00, quantity: 1}]});
+        }
+    </script>
 </form>
 
                 </div>
@@ -805,55 +849,62 @@
     $("[name^='Order.Customer']").removeAttr("data-val-required");
 
 </script>
-
+<script type="text/javascript" src="js/cart.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js" integrity="sha512-UdIMMlVx0HEynClOIFSyOrPggomfhBKJE28LKl8yR3ghkgugPnG6iLfRfHwushZl1MOPSY6TsuBDGPK2X4zYKg==" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/additional-methods.min.js" integrity="sha512-6Uv+497AWTmj/6V14BsQioPrm3kgwmK9HYIyWP+vClykX52b0zrDGP7lajZoIY1nNlX4oQuh7zsGjmF7D0VZYA==" crossorigin="anonymous"></script>
-<script>$(document).ready(function(){$('.price-form').on('input change', function () {$('#checkout').attr('disabled', true);$('#checkout-display-warning').attr('style', 'display:inline-block;');});$(".price-form").removeAttr("novalidate");$(".price-form").validate({ rules : {price_1995_20221123_1:{require_from_group: [1, ".p1995_20221123"],number:true,min:1},price_1995_20221123_2:{require_from_group: [1, ".p1995_20221123"],number:true,min:1},price_1995_20221123_3:{require_from_group: [1, ".p1995_20221123"],number:true,min:1},price_1995_20221123_4:{require_from_group: [1, ".p1995_20221123"],number:true,min:1},price_1995_20221123_5:{require_from_group: [1, ".p1995_20221123"],number:true,min:1},price_1995_20221123_6:{require_from_group: [1, ".p1995_20221123"],number:true,min:1},price_1995_20221123_7:{require_from_group: [1, ".p1995_20221123"],number:true,min:1},price_1995_20221123_8:{require_from_group: [1, ".p1995_20221123"],number:true,min:1},price_1995_20221123_9:{require_from_group: [1, ".p1995_20221123"],number:true,min:1},price_1995_20221123_10:{require_from_group: [1, ".p1995_20221123"],number:true,min:1},price_1995_20221123_12:{require_from_group: [1, ".p1995_20221123"],number:true,min:1},price_1995_20221123_13:{require_from_group: [1, ".p1995_20221123"],number:true,min:1},price_1995_20221123_14:{require_from_group: [1, ".p1995_20221123"],number:true,min:1},price_1995_20221123_15:{require_from_group: [1, ".p1995_20221123"],number:true,min:1},price_1995_20221123_16:{require_from_group: [1, ".p1995_20221123"],number:true,min:1},price_1995_20221123_17:{require_from_group: [1, ".p1995_20221123"],number:true,min:1},price_1995_20221123_18:{require_from_group: [1, ".p1995_20221123"],number:true,min:1},price_1995_20221123_19:{require_from_group: [1, ".p1995_20221123"],number:true,min:1},price_1995_20221123_20:{require_from_group: [1, ".p1995_20221123"],number:true,min:1},ActivityDate_1995_20221123:{required: true, date: true},SelectYourOahuHotel_1995_20221123:{required: true},CustomerFirstName: {required: true},CustomerLastName: {required: true},CustomerAddress: {required: true},CustomerCity: {required: true},CustomerRegion: {required: true},CustomerPostalCode: {required: true},CustomerCountry: {required: true},CustomerPrimaryEmail: {required: true},CustomerMobilePhone: {required: true}}, messages : {ActivityDate_1995_20221123: {required:"Choose Activity Date",date:"Activity Date must be a valid date."},SelectYourOahuHotel_1995_20221123: {required:"Select Select Your Oahu Hotel"},"CustomerFirstName": {required: "Please enter your First Name"},"CustomerLastName": {required: "Please enter your Last Name"},"CustomerAddress": {required: "Please enter your Address"},"CustomerCity": {required: "Please enter your City"},"CustomerRegion": {required: "Please enter your State or Region"},"CustomerPostalCode": {required: "Please enter your Postal Code"},"CustomerCountry": {required: "Please enter your Country"},"CustomerPrimaryEmail": {required: "Please enter your Email"},"CustomerMobilePhone": {required: "Please enter your Mobile phone number"}}});});</script>
+<script>$(document).ready(function(){$('.price-form').on('input change', function () {$('#checkout').attr('disabled', true);$('#checkout-display-warning').attr('style', 'display:inline-block;');});$(".price-form").removeAttr("novalidate");$(".price-form").validate({ rules : {price_2392_20230906_1:{require_from_group: [1, ".p2392_20230906"],number:true,min:1},price_2392_20230906_2:{require_from_group: [1, ".p2392_20230906"],number:true,min:1},price_2392_20230906_3:{require_from_group: [1, ".p2392_20230906"],number:true,min:1},price_2392_20230906_4:{require_from_group: [1, ".p2392_20230906"],number:true,min:1},price_2392_20230906_5:{require_from_group: [1, ".p2392_20230906"],number:true,min:1},price_2392_20230906_6:{require_from_group: [1, ".p2392_20230906"],number:true,min:1},price_2392_20230906_8:{require_from_group: [1, ".p2392_20230906"],number:true,min:1},ActivityDate_2392_20230906:{required: true, date: true},SelectYourOahuHotel_2392_20230906:{required: true},CustomerFirstName: {required: true},CustomerLastName: {required: true},CustomerAddress: {required: true},CustomerCity: {required: true},CustomerRegion: {required: true},CustomerPostalCode: {required: true},CustomerCountry: {required: true},CustomerPrimaryEmail: {required: true},CustomerMobilePhone: {required: true}}, messages : {ActivityDate_2392_20230906: {required:"Choose Activity Date",date:"Activity Date must be a valid date."},SelectYourOahuHotel_2392_20230906: {required:"Select Select Your Oahu Hotel"},"CustomerFirstName": {required: "Please enter your First Name"},"CustomerLastName": {required: "Please enter your Last Name"},"CustomerAddress": {required: "Please enter your Address"},"CustomerCity": {required: "Please enter your City"},"CustomerRegion": {required: "Please enter your State or Region"},"CustomerPostalCode": {required: "Please enter your Postal Code"},"CustomerCountry": {required: "Please enter your Country"},"CustomerPrimaryEmail": {required: "Please enter your Email"},"CustomerMobilePhone": {required: "Please enter your Mobile phone number"}}});});</script>
 
-<!-- ================================= -->
-<!-- ||||||||||||||||||||||||||||||||| -->
-<!-- ================================= -->
-<div id="map"></div>
-<footer>
-<ul>
-  <li>
-    <a href="https://colemanrpatrick.github.io/aloha-kai-luau" id="logo"><img src="images/alohakailogo.png" alt=""></a>
-    <b><a href="tel:+1808963800"><span class="material-symbols-outlined">call</span> (808) 926-3800</a></b>
-    <h4>Sealife Park</h4>
-    <br/>
-    <a href="https://www.google.com/maps/place/Sea+Life+Park+Hawaii/@21.3137242,-157.6636201,15z/data=!4m5!3m4!1s0x0:0x5def94f09ab5dc01!8m2!3d21.3137242!4d-157.6636201" target="_blank">
-      <p>41-202 Kalanianaʻole Hwy,<br/> Waimanalo, HI 96795</p>
-    </a>
-  </li>
-  <li>
-    <a href="sealife.html">sealife park</a>
-    <br/>
-    <a href="packages.html">reservations</a>
-    <br/>
-    <a href="dinner.html">dinner menu</a>
-    <br/>
-    <a href="#">cart</a>
-  </li>
-  <li>
-    <a href="faq.html">faq</a>
-    <br/>
-    <a href="contact.html">contact</a>
-    <br/>
-    <a href="privacy.html">privacy</a>
-    <br/>
-  </li>
-</ul>
-<aside>Copyright (c) 2023 Sealife Park All Rights Reserved.</aside>
-</footer>
+
+    <!-- ========== footer ========== -->
+    <footer>
+        <ul id="first-footer-row">
+            <li><a href="/"><img src="images/pa'ina-luau.png" alt="" id="footer-logo-img"></a></li>
+            <li></li>
+            <li><a href="/"><img src="images/marriottlogo.png" alt=""></a></li>
+        </ul>
+        <ul id="second-footer-row">
+            <li>
+                <div id="footer-phone">
+                    <a href="tel:+18664829775">
+                        <span class="material-symbols-outlined">call</span>
+                        <p>1-866-482-9775</p>
+                    </a>
+                </div>
+                <div id="footer-map">
+                    <a href="https://www.google.com/maps/place/Paina+Waikiki/@21.2732084,-157.8249746,17z/data=!3m2!4b1!5s0x7c007270b51920d5:0x428339b87b9698d6!4m6!3m5!1s0x7c0073df79d0095b:0x552416b74ffe7405!8m2!3d21.2732084!4d-157.8223997!16s%2Fg%2F11kp9nswqt?entry=ttu">
+                        <span class="material-symbols-outlined">location_on</span>
+                        <p>2552 Kalākaua Avenue,<br>Honolulu, HI 96815, USA</p>
+                    </a>
+                </div>
+                <div id="social-icons">
+                    <a href=""><img src="images/twitter.svg" alt=""></a>
+                    <a href=""><img src="images/facebook.svg" alt=""></a>
+                    <a href=""><img src="images/instagram.svg" alt=""></a>
+                    <a href=""><img src="images/youtube.svg" alt=""></a>
+                </div>
+            </li>
+            <li>
+                <a href="/reservations.htm">reservations</a>
+                <a href="/gallery.htm">gallery</a>
+                <a href="/menu.htm">menu</a>
+                <a href="/about.htm">about</a>
+                <a href="/waikikibeachmarriott.htm">waikiki beach marriott</a>
+                <a href="/bookwithus.htm">why book with us?</a>
+                <a href="/blog.htm">blog</a>
+            </li>
+            <li>
+                <a href="/">home</a>
+                <a href="/cart.htm">cart</a>
+                <a href="/sitemap.htm">sitemap</a>
+                <a href="/contact.htm">contact</a>
+            </li>
+        </ul>
+    </footer>
+    <br>
+    <br>
+    <br>
+    <br>
 </body>
-  <!--
-   The `defer` attribute causes the callback to execute after the full HTML
-   document has been parsed. For non-blocking uses, avoiding race conditions,
-   and consistent behavior across browsers, consider loading using Promises
-   with https://www.npmjs.com/package/@googlemaps/js-api-loader.
-  -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly" defer></script>
-  <script type="text/javascript" src="js/toggle.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
-  <script type="text/javascript" src="js/cartOrganizing.js"></script>
+<script src="/js/ie9exclude.js"></script>
+<script src="/js/toggle.js"></script>
 </html>

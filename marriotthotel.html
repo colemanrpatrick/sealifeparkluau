@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/gallery.css">
+
+    <title>Paina Luau</title>
+</head>
+<body>
+
+    <!-- ========== masthead ========== -->
+
+        <nav id="main-nav">
+            <ul>
+                <li class="nav-desktop">
+                    <a href="/reservations.htm">reservations</a>
+                    <span id="nested-nav">
+                        <a href="/about.htm">about</a>
+                        <div class="/drop-down" id="drop-down">
+                            <a href="/gallery.htm">gallery</a>
+                            <a href="/waikikibeachmariot.htm">waikiki beach marriott</a>
+                            <a href="/bookwithus.htm">why book with us?</a>
+                        </div>
+                    </span>
+                    <a href="/menu.htm">menu</a>
+                </li>
+                <li class="mobile-nav">
+                    <a href="tel:+18664829775" id="phone-mobile"><span class="material-symbols-outlined">call</span></a>
+                </li>
+                <li id="logo">
+                    <a href="/">
+                        <img src="images/pa'ina-luau.png" alt="">
+                    </a>
+                </li>
+                <li class="mobile-nav">
+                    <button class="menu-btn" id="menu-btn" name="button" onclick="idToggle('menu-btn','active');idToggle('mobile-nav','active')" type="button">
+                        <hr class="menu-btn-hr-1">
+                        <hr class="menu-btn-hr-2">
+                        <hr class="menu-btn-hr-3">
+                    </button>
+                </li>
+                <li class="nav-desktop">
+                    <a href="blog.htm">blog</a>
+                    <a href="contact.htm">contact</a>
+                    <a href="cart.htm">cart</a>
+                </li>
+            </ul>
+            <a href="tel:+18664829775" id="desktop-phone"><span class="material-symbols-outlined">call</span>1-866-482-9775</a>
+        </nav>
+        <nav id="mobile-nav">
+            <a href="/reservations.htm">reservations</a>
+            <a href="/gallery.htm">gallery</a>
+            <a href="/menu.htm">menu</a>
+            <a href="/about.htm">about</a>
+            <a href="/waikikibeachmariot.htm">waikiki beach marriott</a>
+            <a href="/bookwithus.htm">why book with us?</a>
+            <a href="/blog.htm">blog</a>
+            <a href="/contact.htm">contact</a>
+            <a href="/cart.htm">cart</a>
+        </nav>
+        <a href="/reservations.htm" id="reserve-now">reserve now!</a>
+
+
+        <div class="hero" style="background: url('images/hotelbackground.jpg');">
+            <header>
+                <h1>The Lūʻau at Waikīkī Beach<br/>Marriott Resort & Spa</h1>
+            </header>
+        </div>
+        <!-- ========== why book with us ========== -->
+    
+        <div id="about-marriot">
+            <p><span>E</span>verything that makes renowned Waikīkī a unique and exciting place is celebrated at Pāʻina Waikīkī! A unique dinner party lūʽau setting where the vibrant stories of Waikīkī’s legendary eras come to life through festive mele (songs), hula and the highest caliber of Polynesian performing arts.</p> 
+            <p><span>W</span>oven throughout the distinct eras of Waikīkī are the stories of its legendary surf, Hawaii’s royal families and their historic summer homes, the golden era of the beach boys, hula girls that captivated the world, and the exciting Samoan fireknife dance and how it became a part of the lūʽau spectacle in Waikīkī.</p>
+            <p><span>T</span>he rich cultural and natural beauty of Waikīkī is highlighted in songs and dances of the life-giving streams that still flow into the heart of Waikīkī today, and the tender stories of Hawaii’s beloved monarchs, their love for their people and this famed place.</p>
+            <p><span>M</span>eet our kamaʻaina, our local islanders who will share with you some of the hana noʻeau (cultural arts) they grew up with here in Waikīkī.  Kui lei – string a floral adornment perfect to wear for the evening’s festivities.  Tatau Pasefika – tattoos can be found all throughout Polynesia.  Learn about its significance and perhaps brave a temporary tattoo for the Pāʻina.  And hula of course!  Pāʻina Waikīkī is full of music and hula and so we invite everyone to join in.</p>
+            <p><span>P</span>roduced by Hawaii’s largest, longest running entertainment company, (Tihati Productions) Pāʻina Waikīkī features award winning Polynesian performing musicians, dancers, & artists including World Fireknife Champions, as well as adorable keiki performers. All sharing the stage to bring this Pāʻina to life.</p>
+            <p><span>C</span>elebrating all that makes Waikīkī the fabulous place to be, Pāʻina Waikīkī, The Lūʻau at the Waikīkī Beach Marriott Resort & Spa welcomes friends to enjoy an atmosphere of true aloha filled with incredible food, amazing music, beautiful hula, and a memory to last a lifetime!</p>
+        </div>
+
+        <!-- ========== footer ========== -->
+
+    <footer>
+        <ul id="first-footer-row">
+            <li><a href="/"><img src="images/pa'ina-luau.png" alt="" id="footer-logo-img"></a></li>
+            <li></li>
+            <li><a href="/"><img src="images/marriottlogo.png" alt=""></a></li>
+        </ul>
+        <ul id="second-footer-row">
+            <li>
+            <div id="footer-phone">
+                <a href="tel:+18664829775">
+                    <span class="material-symbols-outlined">call</span>
+                    <p>1-866-482-9775</p>
+                </a>
+            </div>
+            <div id="footer-map">
+                <a href="https://www.google.com/maps/place/Paina+Waikiki/@21.2732084,-157.8249746,17z/data=!3m2!4b1!5s0x7c007270b51920d5:0x428339b87b9698d6!4m6!3m5!1s0x7c0073df79d0095b:0x552416b74ffe7405!8m2!3d21.2732084!4d-157.8223997!16s%2Fg%2F11kp9nswqt?entry=ttu">
+                    <span class="material-symbols-outlined">location_on</span>
+                    <p>2552 Kalākaua Avenue,<br>Honolulu, HI 96815, USA</p>
+                </a>
+            </div>
+            <div id="social-icons">
+                <a href=""><img src="images/twitter.svg" alt=""></a>
+                <a href=""><img src="images/facebook.svg" alt=""></a>
+                <a href=""><img src="images/instagram.svg" alt=""></a>
+                <a href=""><img src="images/youtube.svg" alt=""></a>
+            </div>
+            </li>
+            <li>
+                <a href="/reservations.htm">reservations</a>
+                <a href="/gallery.htm">gallery</a>
+                <a href="/menu.htm">menu</a>
+                <a href="/about.htm">about</a>
+                <a href="/waikikibeachmariot.htm">waikiki beach marriott</a>
+                <a href="/bookwithus.htm">why book with us?</a>
+                <a href="/blog.htm">blog</a>
+            </li>
+            <li>
+                <a href="/">home</a>
+                <a href="/cart.htm">cart</a>
+                <a href="/faq.htm">faq</a>
+                <a href="/sitemap.htm">sitemap</a>
+                <a href="/contact.htm">contact</a>
+            </li>
+        </ul>
+    </footer>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+    <!-- ================================ -->
+    <script src="js/ie9Dexclude.js"></script>
+    <script src="js/toggle.js"></script>
+</html>
