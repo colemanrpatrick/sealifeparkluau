@@ -1,3 +1,237 @@
+
+/* update 4 */
+.reservation-hero {
+	padding: 8em;
+	margin-top: 6em;
+	background-size: cover !important;
+	background-position: 0% 33% !important;
+  background: url('../images/photos/bookwithus.jpeg');
+  }
+  .reservation-hero h1 {
+	color: white;
+	font-weight: lighter;
+	text-shadow: 0em 0em 1em black;
+	margin: 0.5em 0em;
+	font-size: 3em;
+	line-height: 0.5;
+  }
+  .reservation-hero hr {
+	border: 1px solid #ffffff59;
+  }
+  .reservation-hero h3 {
+	color: white;
+	text-shadow: 0em 0em 1em black;
+	font-size: 1.5em;
+	font-weight: lighter;
+	line-height: 2em;
+	margin-left: 1em;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: capitalize;
+  }
+  .reservation-hero hr {
+    max-width: 20em;
+  }
+@media(max-width:1000px){
+  .reservation-hero{
+    background-image: url("../images/photos/sealifeparktrio.jpeg");
+	  padding: 15em 5em 5em 5em;
+    text-align: center;
+	}
+}
+@media(max-width:500px){
+	.hero {
+	  padding: 8em 2em;
+	}
+}
+#luau-previews {
+  display: table;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+.luau-preview {
+	display: table-cell;
+	width: 33.3%;
+	padding: 3em;
+	background-image: url("../images/hibiscus-background.png");
+	background-size: 20em;
+	background-repeat: no-repeat;
+	background-position: bottom right;
+  }
+.preview-learn-more{
+  color: #002e3e;
+  font-family: "kontikialohajfregular", sans-serif;
+  background: #FAFAFA;
+  padding: 1em 4em;
+  border-radius: 0.5em;
+  display: inline-block;
+  border: 0;
+  font-size: 1em;
+  margin-top: 1em;
+}
+  #bronze-seating,
+  #silver-seating,
+  #gold-seating {
+	background-color: #FFFFF0;
+  }
+  .luau-preview header {
+	text-transform: capitalize;
+	font-weight: normal;
+	text-align: center;
+	line-height: 1em;
+	font-size: 2em;
+	font-family: 'kontikialohajfregular', 'Lobster', sans-serif;
+  }
+  .luau-preview hr {
+	max-width: 13em;
+	margin: 1em auto;
+	border: 0;
+	height: 3px;
+  }
+  .package-schedule {
+	text-align: center;
+	margin-bottom: 1em;
+	text-transform: capitalize;
+  }
+  .luau-preview ul {
+	list-style-type: disc;
+	display: block;
+	list-style-position: inside;
+	max-width: 16em;
+	margin: 0 auto;
+  }
+
+.luau-preview li {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.25em;
+}
+  .package-price {
+	text-transform: capitalize;
+	margin-top: 2em;
+  }
+  .package-price span {
+	font-size: 1.5em;
+	text-align: left;
+  }
+  
+  #bronze-seating header {
+	color: #1E1712;
+  }
+  #silver-seating header {
+	color: #002E3E;
+  }
+  #gold-seating header {
+	color: #C96E27;
+  }
+  
+  #bronze-seating hr {
+	background: #984953;
+  }
+  #silver-seating hr {
+	background-color: #4B808F;
+  }
+  #gold-seating hr {
+	background: #C96E27;
+  }
+  #bronze-seating ul,
+  #bronze-seating p,
+  #silver-seating ul,
+  #silver-seating p,
+  #gold-seating ul,
+  #gold-seating p{
+	color: #333;
+    line-height: 1.5em;
+  }
+
+  #bronze-seating ul,
+  #silver-seating ul,
+  #gold-seating ul{
+	font-size:0.9em;
+  }
+
+
+
+  @media(max-width:1080px){
+	.luau-preview {
+	padding: 3em 1.5em;
+	}
+  }
+  @media(max-width:920px){
+	.luau-preview {
+	  width: 100%;
+	  display: block;
+	  text-align: center;
+	  margin: 0 auto;
+	}
+  #book-packages {
+	padding: 2em;
+	text-align: center;
+  }
+  #book-packages a {
+	font-size: 1.5em;
+	color: #581f02;
+	font-family: "kontikialohajfregular", sans-serif;
+	background: #f9d365;
+	padding: 1em 4em;
+	border-radius: 0.5em;
+	display: inline-block;
+}
+@media(max-width:1080px){
+  .luau-preview {
+  padding: 3em 1.5em;
+    position: relative;
+  }
+}
+@media(max-width:920px){
+  .luau-preview {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+.reservation-button {
+  color: #1c1d31;
+  display: inline-block;
+  padding: 0.5em 2em;
+  font-weight: bold;
+  border: 0;
+  text-transform: capitalize;
+  border-radius: 3em;
+  background: #b7bb65;
+  cursor: pointer;
+  margin-top: 1em;
+}
+.seating-link {
+color: #1c1d31;
+  display: inline-block;
+  padding: 0.3em 1em;
+  border: 0;
+  text-transform: capitalize;
+  border-radius: 3em;
+  cursor: pointer;
+  vertical-align: baseline;
+  border: 0.1em solid;
+font-size: 1.2em;
+}
+.seating-link span{
+  font-family: "kontikialohajfregular", sans-serif;
+  font-size: 1.15em;
+  font-weight: lighter;
+  vertical-align: middle;
+}
+.reservation-button span:nth-child(1) {
+  font-family: "kontikialohajfregular", sans-serif;
+  font-size: 1.75em;
+  font-weight: lighter;
+  vertical-align: middle;
+}
+/*===========*/
+
+
+
+
 /*===========*/
 #dateInput {
   height: 0;
@@ -29,7 +263,7 @@ left: 50%;
 top: 50%;
 transform: translate(-50%,-50%);
 padding: 1em;
-width: 90%;
+width: 95%;
 max-width: 35em;
 background-image: url("../images/SecondaryContentBG.jpg");
 background-position: top center;
@@ -98,15 +332,19 @@ height: 5em;
         color: #498192;
         font-weight: bold;
     }
-
+@media(max-width:600px){
+  #datepicker{
+    font-size: 0.8em;
+  }
+}
 /*===========================*/
 .package-title {
 font-family: 'kontikialohajfregular', 'Lobster', sans-serif;
 text-transform: capitalize;
 color: #498192;
 line-height: 1em;
-font-size: 2em;
-margin-top: 1.5em;
+font-size: 1.75em;
+margin-top: 0.5em;
 }
 .next-btn,
 .prev-btn{
@@ -156,12 +394,18 @@ width: 50%;
 text-align: center;
 padding: 0em 0.25em;
 }
+
 .price-description {
 	font-family: sans-serif;
 }
 .price-container li:nth-child(3) {
 display: table-cell;
 text-align: center;
+}
+@media(max-width: 600px){
+  .price-container li:nth-child(3){
+    text-align: right !important;
+  }
 }
 .price-container .price-control {
 height: 0;
@@ -174,13 +418,35 @@ display: inline-block;
 width: 5em;
 text-align: center;
 color: #498192;
-font-size: 1.5em;
+font-size: 1.15em;
 font-family: 'kontikialohajfregular', 'Lobster', sans-serif;
+    margin-bottom: 0.25em;
+  margin-top: 0.25em;
+position: relative;
 }
-.list-price {
+.list-price.strike-price{
+  opacity: 0.5;
 }
-.sale-price{
-font-weight: bolder;
+.list-price.strike-price:after {
+  content: "_______";
+  position: absolute;
+  right:  0;
+  width: 100%;
+  height: 1em;
+  top: 0;
+  line-height: 2em;
+}
+@media(max-width: 600px){
+  .list-price,
+  .sale-price{
+    font-size: 1em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+.list-price{
+ color: #333;
+  opacity: 0.9;
 }
 .list-price::before {
 content:"list";
@@ -189,7 +455,6 @@ font-size: 0.8em;
 text-transform: capitalize;
 text-align: center;
 font-weight: lighter;
-font-family: ;
 }
 .sale-price::before{
 content:"sale";
@@ -223,7 +488,6 @@ max-width: 25em;
 margin: 1em auto;
 border-radius: 0.75em;
 border: 0.15em solid #a9a860;
-text-transform: capitalize;
 }
 .collector-container select {
 padding: 1em;
@@ -266,15 +530,17 @@ border: 0.15em solid #498192;
 
 @media(max-width: 650px){
 .spinner-container{
-  /*! max-width: 2.5em; */
   text-align: center;
   transform: scaleY(-1);
-  /*! height: auto; */
+  width: 2.5em;
+  padding: 0;
 }
 .spinner{
   display: block;
   margin: 0 auto;
   transform: scaleY(-1);
+  width: 1.25em;
+  height: 1em;
 }
 .price-container li:nth-child(1){
   width: 15%;
@@ -312,7 +578,6 @@ transition: 0.3s;
   display: block;
   background-color: #8a0000;
   text-align: center;
-  white-space: nowrap;
   padding: 0.25em 0em;
   border-radius: 2em;
   margin: 0 auto;
@@ -345,10 +610,112 @@ transition: 0.3s;
   padding: 0.15em;
   margin: 0em 0.25em;
 }
-#gold-reservation,
-#silver-reservation,
-#bronze-reservation{
+
+/*=====================*/
+
+#seating-aside {
+  background-size: 50em;
+  text-align: justify;
+  padding: 5em;
+  background: #ece2d7;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#seating-aside p {
+  line-height: 2.25em;
+}
+@media(max-width:600px){
+  #seating-aside{
+    padding: 2em;
+  }
+}
+@media(max-height:600px){
+  #reservation-container {
+	overflow-y: scroll;
+  height: 95%;
+}
+}
+
+#security-header {
+  background: none;
   border: 0;
-  background: transparent;
+  color: #498192;
+  cursor: pointer;
+}
+#security-header img {
+  width: 2em;
+  display: inline-block;
+  vertical-align: middle;
+}
+#security-header span {
+  font-size: 1.5em;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+#security-dialogue {
+  position: absolute;
+  top: 4em;
+  background: #41A0B8;
+  max-width: 40em;
+  width: 90%;
+  padding: 2em;
+  border-radius: 0.5em;
+  z-index: 2;
+  box-shadow: 0em 0.25em 0.5em rgba(0,0,0,0.33);
+  cursor: pointer;
+}
+#security-dialogue{
+  display: none;
+}
+#security-dialogue.active{
+  display: block;
+}
+
+#security-dialogue::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 1em solid transparent;
+  border-right: 1em solid transparent;
+  border-bottom: 2em solid #41A0B8; 
+  position: absolute;
+  left: 1em;
+  top: -1.5em;
+}
+#security-dialogue::after{
+  content: "x";
+  font-family: sans-serif;
+  color: white;
+  font-size: 1.15em;
+  background-color: #41A0B8;
+  border-radius: 1em;
+  padding: 0.1em 0.4em 0.1em 0.4em;
+  position: absolute;
+  right: 0.25em;
+  top: 0.25em;
+  border: 0.125em solid white;
+}
+#security-dialogue p{
+  color: white;
+  line-height: 2em;
+}
+#trust-logo-container {
+  background: ivory;
+  text-align: center;
+  padding-bottom: 1em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* #trust-logo-precheckout {
+	text-align: center;
   width: 100%;
 }
+@media(max-width:700px){
+  #trust-logo-precheckout{
+    text-align: left;
+    font-size: 0em;
+    transform: scale(0.8);
+  }
+} */

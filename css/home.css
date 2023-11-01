@@ -9,17 +9,35 @@
     overflow: hidden;
     border-bottom: 0.5em solid #f7de97;
 }
+@media(max-width:600px){
+  #hero{
+    background-image: url("../images/photos/sealifeparkluaufireceremony.jpg");
+    font-size: 0.85em;
+  }
+}
 #player {
   pointer-events: none;
   height: 45em;
   width: 100%;
   margin-top: -5em;
+  position: absolute;
 }
 @media(max-width:1700px){
   #player{
-    margin-top: -5em;
+    top: -5em;
     height: 50em;
   }
+}
+@media(max-width:800px){
+  #player{
+    transform: scale(1.5);
+  }
+}
+@media(max-width:450px){
+  #player{
+    transform: scale(2);
+    top: 0;
+  }	
 }
 #hero header {
   position: absolute;
@@ -31,6 +49,8 @@
   border-radius: 2em;
   width: 50%;
   max-width: 32em;
+  position: absolute;
+  z-index: 1;
 }
 #hero h1 {
   color: #FAFAFA;
@@ -241,7 +261,6 @@
   display: inline-block;
 }
 /*===========================*/
-
 #packages-header {
 	text-align: center;
 	font-size: 2em;
@@ -255,7 +274,6 @@
   #luau-previews {
 	width: 100%;
 	display: table;
-	border: 0.5em solid white;
   }
   .luau-preview {
 	display: table-cell;
@@ -266,27 +284,40 @@
 	background-repeat: no-repeat;
 	background-position: bottom right;
   }
-.preview-learn-more{
-  color: #002e3e;
-  font-family: "kontikialohajfregular", sans-serif;
-  background: #FAFAFA;
-  padding: 1em 4em;
-  border-radius: 0.5em;
+.seating-link{
+  color: #1c1d31;
   display: inline-block;
+  padding: 0.4em 1em;
   border: 0;
-  font-size: 1em;
+  text-transform: capitalize;
+  border-radius: 3em;
+  cursor: pointer;
+  vertical-align: baseline;
+  border: 0.1em solid;
+  font-size: 1.25em;
+  font-family: 'kontikialohajfregular', 'Lobster', sans-serif;
+}
+.preview-learn-more{
+  color: #1c1d31;
+  display: inline-block;
+  padding: 0.5em 2em;
+  border: 0;
+  font-size: 1.25em;
+  text-transform: capitalize;
+  border-radius: 3em;
+  background: #b7bb65;
+  cursor: pointer;
   margin-top: 1em;
+  font-family: 'kontikialohajfregular', 'Lobster', sans-serif;
 }
   #bronze-seating {
-	background-color: #FF6174;
-	border-right: 0.5em solid white;
+	background-color: #FFFFF0;
   }
   #silver-seating {
-	background-color: #81A8B9;
-	border-right: 0.5em solid white;
+	background-color: #FFFFF0;
   }
   #gold-seating {
-	background-color: #FCC875;
+	background-color: #FFFFF0;
   }
   .luau-preview header {
 	text-transform: capitalize;
@@ -311,9 +342,15 @@
 	list-style-type: disc;
 	display: block;
 	list-style-position: inside;
-	width: 13em;
 	margin: 0 auto;
+	line-height: 2em;
+    max-width: 20em;
   }
+
+.luau-preview li {
+  display: block;
+  text-align: left;
+}
   .package-price {
 	text-transform: capitalize;
 	margin-top: 2em;
@@ -321,6 +358,7 @@
   .package-price span {
 	font-size: 2em;
 	text-align: left;
+   font-family: 'kontikialohajfregular', 'Lobster', sans-serif;
   }
   
   #bronze-seating header {
@@ -342,58 +380,33 @@
   #gold-seating hr {
 	background: #C96E27;
   }
-  #bronze-seating ul,
-  #bronze-seating p{
-	color: #333;
-  }
-  #silver-seating ul,
-  #silver-seating p{
-	color: #333;
-  }
-  #gold-seating ul,
-  #gold-seating p{
-	color: #333;
-  }
+
   @media(max-width:1080px){
-	.luau-preview {
-	padding: 3em 1.5em;
-	}
+	  .luau-preview {
+	    padding: 3em 1.75em;
+	  }
   }
   @media(max-width:920px){
-	.luau-preview {
-	  width: 100%;
-	  display: block;
-	  text-align: center;
-	  margin: 0 auto;
-	}
-	#bronze-seating{
-	  border-right: none;
-	  border-bottom: 0.5em solid white;
-	  border-top: 0.5em solid white;
-	}
-	#silver-seating {
-	  border-right: none;
-	  border-bottom: 0.5em solid white;
-	}
-	#gold-seating {
-	  border-right: none;
-	  border-bottom: 0.5em solid white;
-	}
+	    .luau-preview {
+	      width: 100%;
+	      display: block;
+	      text-align: center;
+	      margin: 0 auto;
+	    }
+      #book-packages {
+	      padding: 2em;
+	      text-align: center;
+      }
+      #book-packages a {
+	    font-size: 1.5em;
+	    color: #581f02;
+	    font-family: "kontikialohajfregular", sans-serif;
+	    background: #f9d365;
+	    padding: 1em 4em;
+	    border-radius: 0.5em;
+	    display: inline-block;
+    }
   }
-  #book-packages {
-	padding: 2em;
-	text-align: center;
-  }
-  #book-packages a {
-	font-size: 1.5em;
-	color: #581f02;
-	font-family: "kontikialohajfregular", sans-serif;
-	background: #f9d365;
-	padding: 1em 4em;
-	border-radius: 0.5em;
-	display: inline-block;
-}
-
 
 @media(max-width:1080px){
   .luau-preview {
@@ -428,6 +441,7 @@
   padding: 2em 0em;
   text-align: center;
   background: white;
+  display: none;
 }
 #book-packages a {
   display: inline-block;
@@ -506,14 +520,6 @@
   height: 35em;
   border-bottom: 0.25em solid beige;
 }
-
-/* #misc-first{
-  background-image: url("../images/photos/evening.jpg");
-  background-size: cover;
-  background-position: right bottom;
-  width: 50%;
-  float: left;
-} */
 #misc-second{
   background-image: url("../images/photos/imugents.jpeg");
   background-size: cover;
@@ -556,7 +562,6 @@
   position: absolute;
   left: 50%;
   bottom: 10em;
-  left: ;
   transform: translateX(-50%);
   background: #FAFAFA;
   padding: 1em 2em;

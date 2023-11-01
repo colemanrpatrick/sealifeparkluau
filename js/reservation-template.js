@@ -14,6 +14,46 @@ reservationWindow.className = "hidden";
 //________________________________________________________
 //________________________________________________________
 
+let securitySection = () => {
+
+  let securityHeader;
+  let securityHeaderSpan;
+  let securityHeaderImg;
+
+  securityHeader = document.createElement("Button");
+  securityHeader.setAttribute("type","button");
+  securityHeader.setAttribute("ID","security-header");
+
+  securityHeaderSpan = document.createElement("span");
+  securityHeaderSpan.innerHTML = "Your Order Is Secure";
+
+  securityHeaderImg = document.createElement("IMG");
+  securityHeaderImg.setAttribute("src","images/design/shieldlock.svg");
+
+  securityHeader.appendChild(securityHeaderImg);
+  securityHeader.appendChild(securityHeaderSpan);
+  return securityHeader;
+};
+
+let createSecurityDialogue = () =>{
+
+  let securityHeader = document.getElementById("security-header");
+
+  let securityDialogue = document.createElement("div");
+  securityDialogue.setAttribute("id","security-dialogue");
+  securityDialogue.innerHTML = "<p>Encrypting our payment processes protects sensitive information from being the risk of unauthorized access. Rest assured your payment details are confidential and secure.</p>";
+
+  securityHeader.parentNode.insertBefore(securityDialogue,securityHeader.nextElementSibling);
+
+  securityHeader.addEventListener("click",() => {
+    idToggle("security-dialogue","active");
+  },false);
+
+  securityDialogue.addEventListener("click",() => {
+    idToggle("security-dialogue","active");
+  },false);
+};
+
 let createReservationTemplate = () => {
 
   reservationWindow.className = "active";
@@ -33,10 +73,13 @@ let createReservationTemplate = () => {
   reservationContainer.setAttribute("id","reservation-container");
 
   reservationWindow.appendChild(reservationContainer);
+
+  reservationContainer.appendChild(securitySection());
+  createSecurityDialogue();
+
   reservationContainer.appendChild(clearReservationWindowBtn);
   reservationContainer.appendChild(reservationBook);
   reservationContainer.appendChild(reservationBookControls);
-
 };
 
 let clearReservationTemplate = () => {
@@ -273,6 +316,7 @@ let createPrices = (page,priceGroupArg) => {
   let listPrice = priceGroupArg[2];
   let salePrice = priceGroupArg[3];
   let $quantity = priceGroupArg[4];
+  let $isHidden = priceGroupArg[5];
 
   let $priceContainer = document.createElement("UL");
   $priceContainer.setAttribute("class","price-container");
@@ -297,7 +341,9 @@ let createPrices = (page,priceGroupArg) => {
     $priceList.appendChild(_salePrice);
   }
 
-  document.getElementById("" + page + "").appendChild($priceContainer);
+  if(!$isHidden == true){
+    document.getElementById("" + page + "").appendChild($priceContainer);
+  }
 
   $createNewLiElement($priceContainer,createSpinners(controlName,$quantity));
   $createNewLiElement($priceContainer,$description);
@@ -318,12 +364,21 @@ let showPrices = (page,dataPrices,priceGroup) => {
     value.Description,
     value.ListPrice,
     value.Saleprice,
-    value.Quantity
+    value.Quantity,
+    value.Hidden
     ];
     if(value.Grouping == priceGroup){
       createPrices(page,priceGroupArg);
-    }
+    };
   });
+
+  let listPrice = document.getElementsByClassName("list-price");
+  for (let i = 0; i < listPrice.length; i++) {
+    if(listPrice[i].nextElementSibling !== null){
+      listPrice[i].classList += " strike-price";
+    };
+  };
+
 };
 
 let addPriceMessage = (page) =>{
@@ -416,12 +471,12 @@ let createCollectors = (page,$collector) => {
           $textInput.value = $collector.Value;
         };
 
-        if($collector.DisplayAlias !== null){
-          $textLabel.innerHTML = $collector.DisplayAlias;
-          $textInput.setAttribute("placeholder",$collector.DisplayAlias);
-        }else{
+        if(!$collector.DisplayAlias){
           $textLabel.innerHTML = $collector.Name;
           $textInput.setAttribute("placeholder",$collector.Name);
+        }else{
+          $textLabel.innerHTML = $collector.DisplayAlias;
+          $textInput.setAttribute("placeholder",$collector.DisplayAlias);
         }
         
         $textLabel.setAttribute("for",$collector.ControlName);
@@ -634,10 +689,10 @@ let showEmailPhoneTemplate = (page) => {
 //________________________________________________________
 //________________________________________________________
 
-let checkValue = ($id) => {
-  $element = document.getElementById($id);
-  alert($id+": "+$element.value);
-}
+// let checkValue = ($id) => {
+//   $element = document.getElementById($id);
+//   alert($id+": "+$element.value);
+// }
 
 let submitButton = (page) => {
 

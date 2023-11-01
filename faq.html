@@ -14,70 +14,73 @@
       <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
   
+      <link rel="stylesheet" href="css/kontikialoha.css">
       <link rel="stylesheet" href="css/main.css">
-      <link rel="stylesheet" href="css/gallery.css">
   
       <title>Paina Luau</title>
   </head>
   <body>
-  
-      <!-- ========== masthead ========== -->
-  
-          <nav id="main-nav">
-              <ul>
-                  <li class="nav-desktop">
-                      <a href="/reservations.htm">reservations</a>
-                      <span id="nested-nav">
-                          <a href="/about.htm">about</a>
-                          <div class="/drop-down" id="drop-down">
-                              <a href="/gallery.htm">gallery</a>
-                              <a href="/waikikibeachmariot.htm">waikiki beach marriott</a>
-                              <a href="/bookwithus.htm">why book with us?</a>
-                          </div>
-                      </span>
-                      <a href="/menu.htm">menu</a>
-                  </li>
-                  <li class="mobile-nav">
-                      <a href="tel:+18664829775" id="phone-mobile"><span class="material-symbols-outlined">call</span></a>
-                  </li>
-                  <li id="logo">
-                      <a href="/">
-                          <img src="images/pa'ina-luau.png" alt="">
-                      </a>
-                  </li>
-                  <li class="mobile-nav">
-                      <button class="menu-btn" id="menu-btn" name="button" onclick="idToggle('menu-btn','active');idToggle('mobile-nav','active')" type="button">
-                          <hr class="menu-btn-hr-1">
-                          <hr class="menu-btn-hr-2">
-                          <hr class="menu-btn-hr-3">
-                      </button>
-                  </li>
-                  <li class="nav-desktop">
-                      <a href="blog.htm">blog</a>
-                      <a href="contact.htm">contact</a>
-                      <a href="cart.htm">cart</a>
-                  </li>
-              </ul>
-              <a href="tel:+18664829775" id="desktop-phone"><span class="material-symbols-outlined">call</span>1-866-482-9775</a>
-          </nav>
-          <nav id="mobile-nav">
-              <a href="/reservations.htm">reservations</a>
-              <a href="/gallery.htm">gallery</a>
-              <a href="/menu.htm">menu</a>
-              <a href="/about.htm">about</a>
-              <a href="/waikikibeachmariot.htm">waikiki beach marriott</a>
-              <a href="/bookwithus.htm">why book with us?</a>
-              <a href="/blog.htm">blog</a>
-              <a href="/contact.htm">contact</a>
-              <a href="/cart.htm">cart</a>
-          </nav>
-          <a href="/reservations.htm" id="reserve-now">reserve now!</a>
+<!-- ========== masthead ========== -->
+   <img id="bop-left" src="images/design/birdsofparadise.png" alt="">
+   <img id="bop-right" src="images/design/birdsofparadise.png" alt="">
+   <nav id="main-nav">
+       <ul>
+           <li class="nav-desktop">
+               <a href="/"><span class="material-symbols-outlined">home</span></a> 
+               <a href="/reservations.htm">reservations</a>
+               <a href="/menu.htm">dinner menu</a>
+           </li>
+           <li class="mobile-nav">
+               <a href="tel:+18664829775" id="phone-mobile"><span class="material-symbols-outlined">call</span></a>
+           </li>
+           <li id="logo">
+               <a href="/">
+                   <img src="images/design/sealifeparkluaulogo.png" alt="">
+               </a>
+           </li>
+           <li class="nav-desktop">
+               <span id="nested-nav">
+                   <a href="/about.htm">the luau</a>
+                   <div class="/drop-down" id="drop-down">
+                       <a href="/gallery.htm">gallery</a>
+                       <a href="/waikikibeachmariot.htm">sealife park</a>
+                       <a href="/bookwithus.htm">faq</a>
+                   </div>
+               </span>
+               <a href="/blog.htm">blog</a>
+               <a href="/contact.htm">contact</a>
+               <a href="/cart/edit#viewitems"><span class="material-symbols-outlined">shopping_cart</span></a>
+           </li>
+           <li class="mobile-nav">
+               <button class="menu-btn" id="menu-btn" name="button" onclick="idToggle('menu-btn','active');idToggle('mobile-nav','active')" type="button">
+                   <hr class="menu-btn-hr-1">
+                   <hr class="menu-btn-hr-2">
+                   <hr class="menu-btn-hr-3">
+               </button>
+           </li>
+       </ul>
+       <a href="tel:+18664829775" id="desktop-phone"><span class="material-symbols-outlined">call</span>1-866-482-9775</a>
+   </nav>
+   <nav id="mobile-nav">
+       <a href="/reservations.htm">reservations</a>
+       <a href="/gallery.htm">dinner menu</a>
+       <a href="/menu.htm">the luau</a>
+       <a href="/about.htm">gallery</a>
+       <a href="/waikikibeachmariot.htm">sealife park</a>
+       <a href="/bookwithus.htm">faq</a>
+       <a href="/blog.htm">blog</a>
+       <a href="/contact.htm">contact</a>
+       <a href="/cart.htm">cart</a>
+   </nav>
+   <a href="/reservations.htm" id="reserve-now">reserve now!</a>
+<!-- ========== hero ========== -->
       <!-- ========== gallery ========== -->
-        <div class="hero" style="background: url('images/reservations-bg.jpg');">
+      <div class="page-container blue">
+        <div class="hero" style="background: url('images/photos/sealifeparkluauladFAQ.jpg');">
             <header>
                 <h1>F.A.Q.</h1>
                 <hr>
-                <h3>Select a package below</h3>
+                <h3>Frequently Asked Questions</h3>
             </header>
         </div>
         <ul class="accordion">
@@ -117,7 +120,7 @@
                 </article>
             </li>
         </ul>  
-        
+      </div>
       <!-- ========== footer ========== -->
   
       <footer>
@@ -165,10 +168,6 @@
               </li>
           </ul>
       </footer>
-      <br>
-      <br>
-      <br>
-      <br>
   </body>
       <!-- ================================ -->
       <script src="js/ie9Dexclude.js"></script>

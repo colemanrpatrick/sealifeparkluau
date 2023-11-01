@@ -66,34 +66,37 @@ let displayPage3 = () => {
 
 //________________________________________________________
 //________________________________________________________
+
+//________________________________________________________
+//________________________________________________________
 //Do things!!!
 //________________________________________________________
 //________________________________________________________
 
-let showOnly = document.getElementById("show-only-reservation");
-let generalAdmission = document.getElementById("general-admission-reservation");
-let vIPadmission = document.getElementById("VIP-reservation");
+let packageOne = document.getElementById("bronze-reservation");
+let packageTwo = document.getElementById("silver-reservation");
+let packageThree = document.getElementById("gold-reservation");
 
-showOnly.addEventListener("click",() => {
+packageOne.addEventListener("click",() => {
     createReservationTemplate();
     createPage1();
-    createPage2("Show Only Seating");
+    createPage2("Bronze Package");
     createPage3();
     displayPage1();
 }); 
 
-generalAdmission.addEventListener("click",() => {
+packageTwo.addEventListener("click",() => {
     createReservationTemplate();
     createPage1();
-    createPage2("General Seating");
+    createPage2("Silver Package");
     createPage3();
     displayPage1();
 }); 
 
-vIPadmission.addEventListener("click",() => {
+packageThree.addEventListener("click",() => {
     createReservationTemplate();
     createPage1();
-    createPage2("VIP Seating");
+    createPage2("Gold Package");
     createPage3();
     displayPage1();
 }); 

@@ -1,4 +1,6 @@
 /*================*/
+/* update 7*/ 
+
 *, *:before, *:after {
 	margin: 0;
 	padding: 0;
@@ -28,7 +30,8 @@ body {
 	position: relative;
 	overflow-x: hidden;
 	font-size: 32px;
-	background-color: #41332a;
+	background: url("../images/design/alohakailuaubackground.jpg");
+	background-size: 10em;
 }
 @media(max-width:2280px) {
 	body {
@@ -60,9 +63,9 @@ body {
 		font-size: 14px;
 	}
 }
-@media(max-width:300px) {
+@media(max-width:350px) {
 	body {
-		font-size: 12px;
+		font-size: 10px !important;
 	}
 }
 h1, h2, h3, h4, h5 {
@@ -122,6 +125,11 @@ p, a, b {
 }
 #logo img {
   max-width: 13em;
+}
+@media(max-width:400px){
+	#logo img{
+		font-size: 0.7em;
+	}
 }
 #drop-down a {
   display: block !important;
@@ -318,6 +326,7 @@ p, a, b {
 		text-align: center;
 		border-radius: 0;
 		bottom: 0;
+		font-size: 1.5em;
 	}
 }
 #bop-left,
@@ -336,7 +345,7 @@ p, a, b {
 	transform: rotate(-45deg);
 	top: -1em;
 }
-@media(max-width:1035px){
+@media(max-width:1205px){
   #bop-left,
   #bop-right{
 	  display: none;
@@ -348,6 +357,7 @@ footer {
   background: url("../images/design/brownpetroglyphs.jpg");
   background-size: 50em;
   background-position: center;
+  border-top: 0.5em solid white;
 }
 #footer-logo-img {
 }
@@ -441,18 +451,39 @@ footer {
 }
 
 .hero {
-	padding: 8em;
-	margin-top: 6em;
 	background-size: cover !important;
-	background-position: top center !important;
+	margin: 6em auto 0em auto;
+	position: relative;
+	height: 25em;
   }
+
+.hero .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #0000005c;
+  z-index: 0;
+}
+.hero header {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 3;
+  transform: translate(-50%,-50%);
+  width: 95%;
+  max-width: 40em;
+}
+
   .hero h1 {
 	color: white;
 	font-weight: lighter;
 	text-shadow: 0em 0em 1em black;
 	line-height: 1em;
-	margin: 1em 0em;
+	margin: 0.75em 0em;
 	text-transform: capitalize;
+	font-size: 3em;
   }
   .hero hr {
 	border: 1px solid #ffffff59;
@@ -469,7 +500,7 @@ footer {
   }
   .simple-header {
 	background-size: 25em;
-	margin-top: 4em;
+	margin-top: 6em;
 	width: 100%;
 	text-align: center;
 	position: relative;
@@ -477,10 +508,8 @@ footer {
 	font-size: 1.5em;
 	text-transform: capitalize;
 	color: white;
-	background-image: url("../images/palm_image_red.jpg");
-	padding: 2em 0em 1em 0em;
+	padding: 2em 0em 0em 0em;
 	background-repeat: no-repeat;
-	background-color: #fe9494;
 	margin-bottom: 0.2em;
   }
   .simple-header h1,
@@ -492,7 +521,7 @@ footer {
 @media(max-width:600px){
 	 .simple-header h1,
 		 .simple-header h2{
-	font-size: 1.25em;
+	font-size: 2em;
 }
 }
   @media(max-width:1000px){
@@ -518,9 +547,10 @@ footer {
 	padding: 2em;
   }
   #book-here {
-	max-width: 1200px;
 	margin: 0 auto;
 	background-color: #FAFAFA;
+	padding: 3em 2em;
+	max-width: 50em;
   }
 
 #about-marriot p {
@@ -533,8 +563,6 @@ footer {
   max-width: 1200px;
   margin: 0 auto;
 }
-
-
 #about-marriot span {
   font-size: 2em;
   float: left;
@@ -543,6 +571,35 @@ footer {
   padding-right: 0.25em;
   line-height: 1em;
 }
+
+
+.packages-container,
+.dinner-container {
+	width: 100%;
+	background-image: url("../images/design/bluepetroglyph.png");
+	background-position: top;
+	box-shadow: 0em 0.25em 0.5em rgba(0, 0, 0, 0.33);
+	position: relative;
+	text-align: center;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	background-size: 48em;
+}
+
+.dinner-container table {
+	margin: 0 auto;
+	background: white;
+	box-shadow: 0em 0.25em 0.5em rgba(0, 0, 0, 0.33);
+	border: 0.5em solid white;
+}
+
+.dinner-container th,
+.dinner-container tr {
+	text-align: left;
+	padding: 1em;
+	border-bottom: 2px solid aliceblue;
+}
+
 
 /*======= blog styling =======*/
 
@@ -686,9 +743,12 @@ footer {
 }
 }
 /* gallery */
+#gallery {
+	background: white;
+}
 #photo-gallery {
 	column-count: 4;
-	padding: 0em 5em;
+	padding: 3em 5em;
 	max-width: 1400px;
 	margin: 0 auto;
 }
@@ -727,7 +787,7 @@ footer {
 
 #photo-gallery.active{
 	position: fixed;
-	z-index: 998;
+	z-index: 995;
 	background-color: rgba(0,0,0,0.9);
 	width: 100%;
 	height: 100%;
@@ -743,13 +803,18 @@ footer {
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	z-index: 999;
+	z-index: 997;
 	display: none;
 	transform: translate(-50%,-50%);
-	max-height: 35em;
 	width: auto;
+	max-height: 35em;
 }
-
+@media(max-width: 550px){
+	#photo-gallery.active .gallery-image{
+		width: 95%;
+		
+	}
+}
 #photo-gallery.active .gallery-image.active{
 	display: block;
 }
@@ -761,9 +826,13 @@ footer {
 #photo-gallery.active #photo-controls{
 	display: block;
 	position: absolute;
-	bottom: 2em;
-	width: 100%;
+	width: 95%;
 	text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 999;
+	max-width: 1400px;
 }
 #image-gallery-next {
   color: white;
@@ -782,12 +851,19 @@ footer {
   display: inline-block;
   vertical-align: middle;
   cursor: pointer;
+  float: right;
+	  background: #000000ba;
+  border-radius: 4em;
+  padding: 0em 0.05em;
 }
 #image-gallery-prev {
   color: white;
-  background: none;
   border: 0;
   cursor: pointer;
+  float: left;
+  background: #000000ba;
+  border-radius: 4em;
+  padding: 0em 0.1em;
 }
 .gallery-index-button {
   width: 1em;
@@ -933,15 +1009,21 @@ footer {
 	margin: 0 auto;
 	margin-top: 8em;
 }
-
 #contact-form {
-  margin: 0 auto;
   text-align: center;
   padding: 3em;
   background: white;
   border-radius: 1em;
   column-count: 2;
   max-width: 800px;
+  height: 21em;
+	margin: 1em auto;
+}
+@media(max-width:750px){
+	#contact-form{
+		column-count: 1;
+		height: auto;
+	}
 }
 .form-control {
   padding: 1em;
@@ -949,28 +1031,133 @@ footer {
   max-width: 25em;
   margin: 1em auto;
   border-radius: 0.75em;
-  border: 0.15em solid #d27d7a;
+  border: 0.15em solid #006285;
   text-transform: capitalize;
+}
+.row {
+	break-inside: avoid;
 }
 .md-form label {
   display: block;
-  color: #333;
+  color: #00678a;
   font-size: 1em;
-  font-family: "Montserrat";
+  font-family: "kontikialohajfregular", sans-serif;
+  font-weight: lighter;
 }
 .container {
   text-align: center;
-  padding: 2em 0em;
-  background-image: url("../images/hibiscus-background.png");
-  background-color: #FDC6BE;
+  padding: 1em 0em;
 }
 #contact-form input[type=submit] {
-  background-color: #9D3124;
-  color: #FAFAFA;
+  background-color: #BEC166;
+  color: #012F3F;
   font-size: 1em;
   border-radius: 2em;
   text-transform: capitalize;
   border: 0;
   padding: 0.25em 2em;
   float: right;
+}
+.cart-empty {
+  padding-top: 15em;
+  text-align: center;
+  padding-bottom: 10em;
+  position: relative;
+  background-image: url("../images/island-breeze-courtyard-mariot-kona.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.cart-empty h1 {
+  color: white;
+  font-size: 2.5em;
+  text-shadow: 0em 0em 1em white;
+}
+.cart-empty p {
+  color: white;
+  font-weight: bold;
+  font-size: 1.25em;
+  max-width: 24em;
+  margin: 2em auto;
+  line-height: 1.5em;
+  text-shadow: 0em 0em 1em black;
+	width: 80%;
+}
+@media(max-width:750px){
+	#contact-form {
+	   margin: 1em;
+  }
+}
+.cart-empty a {
+  background: gold;
+  font-size: 1.5em;
+  padding: 0.5em 1em;
+  border-radius: 2em;
+  color: #252128;
+}
+.page-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  background: white;
+}
+.content-column {
+	width: 100%;
+	padding: 2em 5em;
+	position: relative;
+	background-size: 12em;
+	background-position: top;
+	background-image: url("../images/design/59243970_671404636627996_1962563358624317440_n.jpg");
+}
+.accordion{
+	width: 100%;
+  background-color: white;
+}
+.accordion .tab{
+	width: 100%;
+}
+.accordion .tab header {
+	padding: 2.25em;
+	text-align: center;
+	text-transform: capitalize;
+	font-family: ;
+	font-weight: 100;
+	background: #0c7ccd;
+	border-bottom: 2px solid aliceblue;
+	color: white;
+	cursor: pointer;
+  transition: 0.3s;
+}
+.accordion .tab.active header{
+  color:#0c7ccd;
+  background: gold;
+}
+.accordion .tab .content {
+	width: 100%;
+	padding: 3em;
+	text-align: center;
+	transform-origin: top;
+}
+.accordion .tab .content p {
+	font-size: 1em;
+	font-weight: 300;
+	line-height: 2.5em;
+	max-width: 40em;
+	margin: 0 auto;
+	width: 90%;
+}
+.accordion .tab .content{
+	display: none;
+}
+@@-webkit-keyframes fadeIn {
+	0%{ transform: scaleY(0) }
+	100%{ transform: scaleY(1)}
+}
+@@-moz-keyframes fadeIn {
+	0%{ transform: scaleY(0) }
+	100%{ transform: scaleY(1)}
+}
+.accordion .tab.active .content{
+	display: block;
+  height: auto;
+	-webkit-animation: fadeIn 0.3s ease-out;
+	-moz-animation: fadeIn 0.3s ease-out;
 }

@@ -14,6 +14,49 @@ reservationWindow.className = "hidden";
 //________________________________________________________
 //________________________________________________________
 
+let securitySection = () => {
+
+  let securityHeader;
+  // let securityHeaderSpan;
+  // let securityHeaderImg;
+
+  securityHeader = document.createElement("Button");
+  securityHeader.setAttribute("type","button");
+  securityHeader.setAttribute("ID","security-header");
+  let test = TrustLogo("https://www.positivessl.com/images/seals/positivessl_trust_seal_lg_222x54.png", "POSDV", "none");
+console.log(test);
+  // securityHeaderSpan = document.createElement("span");
+  // securityHeaderSpan.innerHTML = "Your Order Is Secure";
+
+  // securityHeaderImg = document.createElement("IMG");
+  // securityHeaderImg.setAttribute("src","images/design/shieldlock.svg");
+
+  // securityHeader.appendChild(securityHeaderImg);
+  // securityHeader.appendChild(securityHeaderSpan);
+  return securityHeader;
+};
+
+// let createSecurityDialogue = ($element) =>{
+
+//   let securityHeader = document.getElementById($element);
+
+//   let securityDialogue = document.createElement("div");
+//   securityDialogue.setAttribute("id","security-dialogue");
+//   securityDialogue.innerHTML = "<p>Encrypting our payment processes protects sensitive information from being the risk of unauthorized access. Rest assured your payment details are confidential and secure.</p>";
+//   securityDialogue.innerHTML +=
+
+
+//   securityHeader.parentNode.insertBefore(securityDialogue,securityHeader.nextElementSibling);
+
+//   securityHeader.addEventListener("click",() => {
+//     idToggle("security-dialogue","active");
+//   },false);
+
+//   securityDialogue.addEventListener("click",() => {
+//     idToggle("security-dialogue","active");
+//   },false);
+// };
+
 let createReservationTemplate = () => {
 
   reservationWindow.className = "active";
@@ -33,10 +76,12 @@ let createReservationTemplate = () => {
   reservationContainer.setAttribute("id","reservation-container");
 
   reservationWindow.appendChild(reservationContainer);
+
+  reservationContainer.appendChild(securitySection());
+
   reservationContainer.appendChild(clearReservationWindowBtn);
   reservationContainer.appendChild(reservationBook);
   reservationContainer.appendChild(reservationBookControls);
-
 };
 
 let clearReservationTemplate = () => {
@@ -121,8 +166,24 @@ let createCalendar = (page,$name) => {
 
   datePicker.setAttribute("id", "datepicker");
 
+  let calendarMessage = document.createElement("div");
+  calendarMessage.setAttribute("id","calendar-message");
+  calendarMessage.setAttribute("class","hidden");
+  calendarMessage.innerHTML = "<span class='material-symbols-outlined'>edit_calendar</span><p>Select a date to continue</p>";
+
   document.getElementById(page).appendChild(dateInput);
   document.getElementById(page).appendChild(datePicker);
+  document.getElementById(page).appendChild(calendarMessage);
+
+};
+
+let validateCart = ($id,$visible) => {
+  calendarMsg = document.getElementById($id);
+  if($visible){
+    calendarMsg.className = "visible";
+  }else{
+    calendarMsg.className = "hidden";
+  }
 };
 
 //________________________________________________________
@@ -132,7 +193,7 @@ let createCalendar = (page,$name) => {
 //________________________________________________________
 
 let showCalendar = (page, $collector) => {
-
+  
   let disabledDates = $collector.Availabilities[0].ClosedDates;
   let $name = $collector.Collectors[0].ControlName;
 
@@ -151,14 +212,15 @@ let showCalendar = (page, $collector) => {
       return [disabledDates.indexOf(disabledDatesString) == -1];
     },
   });
-
+  console.log($collector.Collectors[0].Value);
   if ($collector.Collectors[0].Value !== null) {
+    console.log($collector.Collectors[0].Value);
     $("#datepicker").datepicker("setDate",$collector.Collectors[0].Value);
     $("#dateInput").prop("value", $collector.Collectors[0].Value);
   }else{
+    console.log("no value")
     $("#datepicker").val("");
-    //  $(".ui-datepicker-current-day").removeClass("ui-datepicker-current-day");
-    //  $("#datepicker").val("");
+    $("#dateInput").prop("value", "");
   };
 
   /*====== datepicker / date input events ======*/
@@ -167,8 +229,15 @@ let showCalendar = (page, $collector) => {
     $("#datepicker").datepicker("setDate", $(this).val()).trigger("change");
   });
   $("#datepicker").change(function (disabledDates) {
+
     if ($("#dateInput").val() !== disabledDates) {
       $("#dateInput").prop("value", $(this).val());
+    };
+
+    if ($("#dateInput").val() !== "") {
+      validateCart("calendar-message",false);
+    }else{
+      validateCart("calendar-message",true);
     }
   });
 };
@@ -249,6 +318,7 @@ let createPrices = (page,priceGroupArg) => {
   let listPrice = priceGroupArg[2];
   let salePrice = priceGroupArg[3];
   let $quantity = priceGroupArg[4];
+  let $isHidden = priceGroupArg[5];
 
   let $priceContainer = document.createElement("UL");
   $priceContainer.setAttribute("class","price-container");
@@ -273,12 +343,13 @@ let createPrices = (page,priceGroupArg) => {
     $priceList.appendChild(_salePrice);
   }
 
-  document.getElementById("" + page + "").appendChild($priceContainer);
+  if(!$isHidden == true){
+    document.getElementById("" + page + "").appendChild($priceContainer);
+  }
 
   $createNewLiElement($priceContainer,createSpinners(controlName,$quantity));
   $createNewLiElement($priceContainer,$description);
   $createNewLiElement($priceContainer,$priceList);
-  
 };
 
 //________________________________________________________
@@ -295,13 +366,30 @@ let showPrices = (page,dataPrices,priceGroup) => {
     value.Description,
     value.ListPrice,
     value.Saleprice,
-    value.Quantity
+    value.Quantity,
+    value.Hidden
     ];
     if(value.Grouping == priceGroup){
       createPrices(page,priceGroupArg);
-    }
+    };
   });
+
+  let listPrice = document.getElementsByClassName("list-price");
+  for (let i = 0; i < listPrice.length; i++) {
+    if(listPrice[i].nextElementSibling !== null){
+      listPrice[i].classList += " strike-price";
+    };
+  };
+
 };
+
+let addPriceMessage = (page) =>{
+  let priceMessage = document.createElement("div");
+  priceMessage.setAttribute("id","price-message");
+  priceMessage.setAttribute("class","hidden");
+  priceMessage.innerHTML = "<span class='material-symbols-outlined'>edit_calendar</span><p>At least one participant must be added to continue</p>";  
+  document.getElementById(page).appendChild(priceMessage);
+}
 //________________________________________________________
 //________________________________________________________
 //Prices Events
@@ -314,6 +402,9 @@ let $spinnerEvents = () => {
 
     for (let i = 0; i < $plusButton.length; i++) {
       $plusButton[i].addEventListener("click",({target}) => {
+
+        validateCart("price-message",false);
+
         let $spinner = target.parentElement.previousElementSibling;
         let $input = $spinner.parentElement.firstElementChild;
         numIncrement( $spinner.getAttribute("id"), true);
@@ -324,6 +415,9 @@ let $spinnerEvents = () => {
 
     for (let i = 0; i < $minusButton.length; i++) {
       $minusButton[i].addEventListener("click",({target}) => {
+
+        validateCart("price-message",false);
+
         let $spinner = target.parentElement.nextElementSibling;
         let $input = $spinner.parentElement.firstElementChild;
         numIncrement( $spinner.getAttribute("id"), false);
@@ -379,12 +473,12 @@ let createCollectors = (page,$collector) => {
           $textInput.value = $collector.Value;
         };
 
-        if($collector.DisplayAlias !== null){
-          $textLabel.innerHTML = $collector.DisplayAlias;
-          $textInput.setAttribute("placeholder",$collector.DisplayAlias);
-        }else{
+        if(!$collector.DisplayAlias){
           $textLabel.innerHTML = $collector.Name;
           $textInput.setAttribute("placeholder",$collector.Name);
+        }else{
+          $textLabel.innerHTML = $collector.DisplayAlias;
+          $textInput.setAttribute("placeholder",$collector.DisplayAlias);
         }
         
         $textLabel.setAttribute("for",$collector.ControlName);
@@ -597,10 +691,10 @@ let showEmailPhoneTemplate = (page) => {
 //________________________________________________________
 //________________________________________________________
 
-let checkValue = ($id) => {
-  $element = document.getElementById($id);
-  alert($id+": "+$element.value);
-}
+// let checkValue = ($id) => {
+//   $element = document.getElementById($id);
+//   alert($id+": "+$element.value);
+// }
 
 let submitButton = (page) => {
 
