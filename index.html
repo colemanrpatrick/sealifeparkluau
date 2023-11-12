@@ -1,24 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SPPHN93HRS"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-SPPHN93HRS');
+</script>
 
+    <meta charset="utf-8">
+    <title>Sea Life Park Luau - Aloha Kai Luau</title>
+            <meta name="description" content="Sea Life Park Luau known as Aloha Kai Luau is located at Sea Life Park Oahu Hawaii overlooking the Ocean.">
+            <meta name="Keywords" content="Sea Life Park Luau, Aloha Kai Luau, Tickets to Aloha Kai Luau, Luau at Sea Life Park, Best Oahu Luau, Oahu Luau, Hawaii Luau">
+            <link rel="canonical" href="https://www.sealifeparkluau.com" />
+
+    <meta name="viewport" content="user-scalable = yes, width=320, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/kontikialoha.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <script src="js/jquery.lazy.min.js"></script>
+    <script type="text/javascript" src="js/toggle.js"></script>
 
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/home.css">
-
-    <title>Paina Luau</title>
 </head>
+
 <body>
-    <!-- ========== masthead ========== -->
+
+<!-- ==================== masthead ==================== -->
+
         <img id="bop-left" src="images/design/birdsofparadise.png" alt="">
         <img id="bop-right" src="images/design/birdsofparadise.png" alt="">
         <nav id="main-nav">
@@ -41,8 +54,7 @@
                         <a href="/about.htm">the luau</a>
                         <div class="/drop-down" id="drop-down">
                             <a href="/gallery.htm">gallery</a>
-                            <a href="/waikikibeachmariot.htm">sealife park</a>
-                            <a href="/bookwithus.htm">faq</a>
+                            <a href="/faq.htm">faq</a>
                         </div>
                     </span>
                     <a href="/blog.htm">blog</a>
@@ -61,17 +73,25 @@
         </nav>
         <nav id="mobile-nav">
             <a href="/reservations.htm">reservations</a>
-            <a href="/gallery.htm">dinner menu</a>
-            <a href="/menu.htm">the luau</a>
-            <a href="/about.htm">gallery</a>
-            <a href="/waikikibeachmariot.htm">sealife park</a>
-            <a href="/bookwithus.htm">faq</a>
+            <a href="/menu.htm">dinner menu</a>
+            <a href="/about.htm">the luau</a>
+            <a href="/gallery.htm">gallery</a>
+            <a href="/faq.htm">faq</a>
             <a href="/blog.htm">blog</a>
             <a href="/contact.htm">contact</a>
             <a href="/cart.htm">cart</a>
         </nav>
         <a href="/reservations.htm" id="reserve-now">reserve now!</a>
-    <!-- ========== hero ========== -->
+
+<!-- ==================== ========== ==================== -->
+
+
+
+
+
+
+    <link rel="stylesheet" href="css/home.css">
+
     <div id="hero">
         <header>
             <h1>Experience the official sea life park luau show</h1>
@@ -79,63 +99,41 @@
 
         <div id="player"></div>
 
-        <a href="/reservations.html" id="starburst">
-            <img src="images/design/starburst.png" alt="">
-        </a>
+        <!-- <a href="tel:+18664829775" id="starburst">
+            <img src="images/promos/novemberpromo.png" alt="">
+        </a> -->
 
-    <script src="https://www.youtube.com/iframe_api"></script>
-    <script>
-
-
-
-
-
-
-
+        <!-- <script src="https://www.youtube.com/iframe_api"></script>
+        <script>
             var videoId = 'usa0t6Mrs3Q';
+
             var player;
-
             function onYouTubeIframeAPIReady() {
-
-                var mediaQuery = window.matchMedia("(max-width: 700px)");
-
-                function handleMediaChange(event) {
-
-                    if (!event.matches) {
-                        // do things here 
-                            player = new YT.Player('player', {
-                                height: '360',
-                                width: '640',
-                                videoId: videoId,
-                                playerVars: {
-                                    'autoplay': 1,    // Autoplay the video
-                                    'loop': 1,        // Loop the video
-                                    'controls': 0,    // Hide video controls
-                                    'mute': 1         // Mute the video
-                                },
-                                events: {
-                                    'onReady': onPlayerReady
-                                }
-                            });
-
-                        };
-                    };
-
-                mediaQuery.addEventListener('change', handleMediaChange);
-                handleMediaChange(mediaQuery);
-
-            };
-
+                player = new YT.Player('player', {
+                    height: '360',
+                    width: '640',
+                    videoId: videoId,
+                    playerVars: {
+                        'autoplay': 1,    // Autoplay the video
+                        'loop': 1,        // Loop the video
+                        'controls': 0,    // Hide video controls
+                        'mute': 1         // Mute the video
+                    },
+                    events: {
+                        'onReady': onPlayerReady
+                    }
+                });
+            }
             function onPlayerReady(event) {
                 checkInterval = setInterval(checkVideoEnded, 1000); // Check every second
-            };
+            }
 
             function onPlayerStateChange(event) {
                 if (event.data === YT.PlayerState.PLAYING) {
                 // Video is playing.
                     clearInterval(checkInterval); // Clear the interval
-                };
-            };
+                }
+            }
 
             function checkVideoEnded() {
                 var currentTime = player.getCurrentTime();
@@ -148,11 +146,23 @@
                     clearInterval(checkInterval);
                     var playerContainer = document.getElementById('player');
                     playerContainer.style.display = 'none';
-                };
-            };
-            
-        </script>
+                }
+            }
+
+        </script> -->
     </div>
+    <div id="discounts-promo">
+        <div id="discounts-promo">
+            <h3>November Special</h3>
+            <h2>Save <span>Up To</span><br><b>25%</b><br> On Reservations*</h2>
+            <img src="images/design/palm_img.png" alt="" id="palm1">
+            <img src="images/design/palm_img.png" alt="" id="palm2">
+            <a href="/reservations.htm" id="discount-promo-go"><span>go</span><img src="images/design/goldarrow.png" alt=""></a>
+            <p id="promo-additional-details">* Exclusions Apply, <a href="promos.htm">click here</a> for details</p>
+            <a href="/promos.htm" id="discount-promo-learn-more">More Specials</a>
+        </div>
+    </div>
+
     <!-- ========== video ========== -->
     <div id="video-tile">
         <section>
@@ -170,6 +180,9 @@
         <a href="#">learn more</a>
         </section>
     </div>
+
+
+
     <!-- ========== luau packages ========== -->
     <div id="luau-previews">
 
@@ -185,13 +198,11 @@
                 <li> <p>&#x2022; Park Admission - 1 Day Pass</p></li>
             </ul>
     
-            <p class="package-price">from<br><span>$107.10</span><br><span style="opacity:0.5;font-size:1.25em;text-decoration: line-through;">$124.61</span></p>
-     <a class="seating-link" href="images/design/seating-chart.png" target="_blank"><span>seating chart</span></a>
+            <p class="package-price">from<br><span>$89</span><br><span style="opacity:0.5;font-size:1.25em;text-decoration: line-through;">$124.61</span></p>
+     			<a class="seating-link" href="images/design/seating-chart.png" target="_blank"><span>seating chart</span></a>
             <a href="/reservations.htm#bronze-package" class="preview-learn-more">learn more</a>
     
         </div>
-    
-    
         <div class="luau-preview" id="silver-seating">
             <header>silver<br>package</header>
             <hr>
@@ -206,7 +217,7 @@
                <li> <p>&#x2022; 20% off Tiki treats</p></li>
             </ul>
     
-            <p class="package-price">from<br><span>$127.20</span><br><span style="opacity:0.5;font-size:1.25em;text-decoration:line-through;">$166.49</span></p>
+            <p class="package-price">from<br><span>$119</span><br><span style="opacity:0.5;font-size:1.25em;text-decoration:line-through;">$166.49</span></p>
             <a class="seating-link" href="images/design/seating-chart.png" target="_blank"><span>seating chart</span></a>
             <a href="/reservations.htm#silver-package" class="preview-learn-more">learn more</a>
         </div>
@@ -214,6 +225,7 @@
         <div class="luau-preview" id="gold-seating">
             <header>gold<br>package</header>
             <hr>
+<ul>
                 <li><p>&#x2022; Buffet Dinner</p></li>
                 <li><p>&#x2022; Cultural Activities</p></li>
                 <li><p>&#x2022; Flower Lei Greeting</p></li>
@@ -226,25 +238,30 @@
                 <li><p>&#x2022; 20% off Tiki treats</p></li>
             </ul>
     
-           <p class="package-price">from<br><span>$192.60</span><br><span style="opacity:0.5;font-size:1.25em;text-decoration:line-through;">$224.08</span></p>
+           <p class="package-price">from<br><span>$159</span><br><span style="opacity:0.5;font-size:1.25em;text-decoration:line-through;">$224.08</span></p>
      <a class="seating-link" href="images/design/seating-chart.png" target="_blank"><span>seating chart</span></a>
         <a href="/reservations.htm#gold-package" class="preview-learn-more">learn more</a>
         </div>
     </div>
 
+ 
+    </div>
     <!-- ================================= -->
     <!-- ||||||||||||||||||||||||||||||||| -->
     <!-- ================================= -->
     <!-- ========== misc content ========== -->
     <a href="/menu.htm" id="misc-second">
-        <h3>Traditional<br>Waikīkī Dining</h3>
+        <h3>Special<br>Autumn Dining</h3>
         <span>see menu</span>
     </a>
-    <a href="/bookwithus.htm" id="misc-third">
+    <a href="/about.htm" id="misc-third">
         <h3>Book With Us, & Get The<br>Best Discounts On Reservations</h3>
         <span>learn more</span>
     </a>
     <!-- ========== footer ========== -->
+
+<!-- ==================== ========== ==================== --> 
+
     <footer>
         <ul id="first-footer-row">
             <li><a href="/"><img src="images/design/sealifeparkluaulogo.png" alt="" id="footer-logo-img"></a></li>
@@ -277,8 +294,6 @@
                 <a href="/gallery.htm">gallery</a>
                 <a href="/menu.htm">menu</a>
                 <a href="/about.htm">about</a>
-                <a href="/waikikibeachmariot.htm">waikiki beach marriott</a>
-                <a href="/bookwithus.htm">why book with us?</a>
                 <a href="/blog.htm">blog</a>
             </li>
             <li>
@@ -290,9 +305,6 @@
             </li>
         </ul>
     </footer>
-    <br>
-    <br>
-    <br>
-    <br>
+
 </body>
 </html>

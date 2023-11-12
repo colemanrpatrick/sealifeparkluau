@@ -1,6 +1,6 @@
 
 /*================*/
-/* update 12*/ 
+/* update 10*/ 
 
 *, *:before, *:after {
 	margin: 0;
@@ -328,7 +328,6 @@ p, a, b {
 		border-radius: 0;
 		bottom: 0;
 		font-size: 1.5em;
-		display: none;
 	}
 }
 #bop-left,
@@ -505,7 +504,7 @@ footer {
   }
   .simple-header {
 	background-size: 25em;
-	margin-top: 4em;
+	margin-top: 6em;
 	width: 100%;
 	text-align: center;
 	position: relative;
@@ -513,9 +512,9 @@ footer {
 	font-size: 1.5em;
 	text-transform: capitalize;
 	color: white;
+	padding: 2em 0em 1em 0em;
 	background-repeat: no-repeat;
-	background: #0000ff2b;
-	padding: 4em 2em 1em 2em;
+	margin-bottom: 0.2em;
   }
   .simple-header h1,
   .simple-header h2 {
@@ -528,10 +527,6 @@ footer {
 		 .simple-header h2{
 	font-size: 2em;
 }
-	.simple-header{
-		margin-top: 3em;
-			padding: 3em 2em 3em 2em;
-	}
 }
   @media(max-width:1000px){
 	.hero {
@@ -1117,7 +1112,6 @@ footer {
   max-width: 1400px;
   margin: 0 auto;
   background: white;
-  text-align: center;
 }
 
 
@@ -1210,24 +1204,13 @@ footer {
 /*=======================================*/
 
 .discount-promo {
-  max-width: 20em !important;;
-  text-align: center;
-}
-.discount-promo {
-  display: inline-block;
-  max-width: 35em;
+  width: 100%;
+  max-width: 50em !important;
   text-align: center;
   margin: 1em auto;
   border: 1px solid #edf0dd;
   padding: 1em;
   border-radius: 1em;
-  width: 48%;
-  vertical-align: top;
-}
-@media(max-width:1000px){
-	.discount-promo{
-		width: 95%;
-	}
 }
 .discount-promo h2 {
   color: white;
@@ -1241,7 +1224,7 @@ footer {
   text-shadow: 0em 0em 1em black;
 }
 .discount-promo header {
-  padding: 10em 0em 4em 0em;
+  padding: 7em 0em;
   background-size: cover;
   margin-top: 0;
 	border-radius: 1em;
@@ -1250,11 +1233,12 @@ footer {
 }
 @media(max-width:800px){
 	.discount-promo header {
-		padding: 6em 0em;
+		padding: 3em 0em;
 		line-height: 2.5em;
 		background-position: 33% 33%;
 	}
 }
+
 
 .discount-promo header b {
   font-size: 1.75em;
@@ -1291,14 +1275,4 @@ footer {
 	cursor: pointer;
 	margin-top: 1em;
 	font-family: 'kontikialohajfregular', 'Lobster', sans-serif;
-}
-
-/*november promo stuff*/
-.ui-state-default[data-date="20"],
-.ui-state-default[data-date="21"],
-.ui-state-default[data-date="22"],
-.ui-state-default[data-date="23"],
-.ui-state-default[data-date="24"],
-.ui-state-default[data-date="25"]{
-   background: #b94500;
 }

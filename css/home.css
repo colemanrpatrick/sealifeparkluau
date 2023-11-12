@@ -11,7 +11,7 @@
 }
 @media(max-width:600px){
   #hero{
-    background-image: url("../images/photos/sealifeparkluaufireceremony.jpg");
+    /*! background-image: url("../images/photos/sealifeparkluaufireceremony.jpg"); */
     font-size: 0.85em;
   }
 }
@@ -94,9 +94,13 @@
     max-width: 40em;
   }
 }
-@media(max-width: 500px){
+@media(max-width: 800px){
   #hero h1{
     width: 100%;
+  }
+  #hero header{
+    width: 100%;
+    border-radius: 0;
   }
 }
 #starburst {
@@ -112,6 +116,201 @@
 #starburst img {
   width: 18em;
 }
+/*===========*/
+
+#discounts-promo {
+	width: 100%;
+	position: relative;
+	height: 0;
+}
+
+#discounts-promo div {
+	width: 20em;
+	background: url("../images/design/beigepetroglyph.png");
+	position: absolute;
+	right: 3em;
+	bottom: 3em;
+	z-index: 5;
+	height: auto;
+	background-size: 30em;
+	padding: 1em;
+	text-align: center;
+	border-radius: 1em;
+	box-shadow: 0em 0.5em 1em rgba(0, 0, 0, 0.5);
+}
+
+#discounts-promo b {
+	font-size: 2em;
+	font-weight: bold;
+	vertical-align: sub;
+	font-family: 'kontikialohajfregular', 'Lobster', sans-serif;
+}
+
+#discounts-promo h3 {
+	font-weight: normal;
+	color: #044056;
+	font-size: 1.25em;
+}
+
+#discounts-promo h2 {
+	color: #023040;
+	font-weight: normal;
+	font-size: 1.75em;
+	line-height: 1.5em;
+	border-top: 0.1em solid #a58689;
+	border-bottom: 0.1em solid #a58689;
+	width: 8em;
+	margin: 0.25em auto;
+	font-family: 'kontikialohajfregular', 'Lobster', sans-serif;
+}
+
+#discounts-promo p {
+	font-size: 0.8em;
+	line-height: 1.75em;
+}
+
+#discounts-promo p a {
+	color: #333;
+	font-weight: bold;
+}
+
+#discount-promo-go img {
+	height: 1.5em;
+}
+
+#discount-promo-go span {
+	font-size: 2em;
+	text-transform: capitalize;
+	font-weight: bold;
+	font-family: 'kontikialohajfregular', 'Lobster', sans-serif;
+	margin-right: 0.15em;
+	color: #ffec8c;
+}
+
+#discount-promo-go {
+	background: #012f3f;
+	display: inline-block;
+	padding: 0em 0.5em;
+	border-radius: 1em;
+}
+
+#discount-promo-learn-more {
+	color: #f9d365;
+	display: inline-block;
+	padding: 0.5em 2em;
+	border: 0;
+	font-size: 1em;
+	text-transform: capitalize;
+	border-radius: 3em;
+	background: #580202;
+	cursor: pointer;
+	font-family: 'kontikialohajfregular', 'Lobster', sans-serif;
+	width: 100%;
+	max-width: 20em;
+}
+
+@media(max-width:1000px) {
+	#discounts-promo {
+		background-image: url("../images/design/greenTapas.png");
+		background-size: 50em;
+		background-position: center;
+		height: auto;
+		padding: 2em;
+		width: 100%;
+	}
+
+	#discounts-promo div {
+		width: 95%;
+		max-width: 45em;
+		position: relative;
+		margin: 0 auto;
+		right: auto;
+		bottom: auto;
+		z-index: 0;
+	}
+}
+
+#palm1 {
+	display: none;
+}
+
+#palm2 {
+	display: none;
+}
+
+@media(max-width:850px) {
+
+	#palm1 {
+		display: block;
+		width: 18em;
+		position: absolute;
+		transform: rotate(-45deg);
+		left: -9em;
+		top: 5em;
+	}
+
+	#palm2 {
+		display: block;
+		width: 18em;
+		position: absolute;
+		transform: rotate(45deg) scaleX(-1);
+		right: -9em;
+		top: 5em;
+	}
+
+	#discounts-promo {
+		background-image: none;
+		padding: 0;
+	}
+
+	#discounts-promo div {
+		width: 100%;
+		border-radius: 0;
+		padding: 2em;
+		background-image: url("../images/design/brownpattern.png");
+		background-size: 45em;
+		background-position: bottom;
+	}
+
+	#discounts-promo div h2,
+	#discounts-promo div h3 {
+		color: #ffec8c;
+	}
+
+	#discount-promo-learn-more {
+		font-size: 1.33em;
+	}
+
+	#discount-promo-go {
+		font-size: 1.5em;
+	}
+
+	#discounts-promo p,
+	#discounts-promo p a {
+		color: beige;
+		line-height: 3em;
+	}
+
+	#discount-promo-learn-more {
+		background: none;
+		border: 0.125em solid;
+		max-width: 10em;
+	}
+}
+
+@media(max-width: 400px) {
+	#palm1 {
+		left: -10.5m;
+	}
+
+	#palm2 {
+		right: -10.5em;
+	}
+}
+
+/*==========*/
+
+
 #video-tile{
    width: 50%;
    height: 35em;
@@ -215,7 +414,7 @@
 }
 @media(max-width:850px){
   #hero{
-    height: 45em;
+    height: 34em;
   }
 	#video-tile,
   #reading-tile{
@@ -434,6 +633,14 @@
     border-right: none;
     border-bottom: 0.5em solid white;
   }
+}
+@media(max-width: 500px){
+	  .luau-preview {
+		  font-size: 1.2em;
+	  }
+	#video-tile section, #reading-tile section{
+		font-size: 1.1em;
+	}
 }
 /*===========*/
 
